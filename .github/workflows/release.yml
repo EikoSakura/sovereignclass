@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Stamp version and download URL from the tag
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          REPO_URL="https://github.com/${GITHUB_REPOSITORY}"
+          jq --arg v "$VERSION" \
+             --arg m "$REPO_URL/releases/latest/download/module.json" \
+             --arg d "$REPO_URL/releases/download/${GITHUB_REF_NAME}/module.zip" \
+             '.version = $v | .manifest = $m | .download = $d' module.json > module.tmp.json
+          mv module.tmp.json module.json
+          cat module.json
+
+      - name: Build module.zip
+        run: zip -r module.zip module.json README.md scripts packs
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Sovereign ${{ github.ref_name }}
+          files: |
+            module.json
+            module.zip
+          generate_release_notes: true

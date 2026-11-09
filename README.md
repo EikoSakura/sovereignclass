@@ -2,6 +2,14 @@
 
 A Pathfinder Second Edition homebrew class for Foundry VTT: a ruler who bears regalia, draws power from their court, and leads a loyal follower.
 
+## Installation
+
+In Foundry, go to **Add-on Modules → Install Module** and paste this manifest URL:
+
+```
+https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.json
+```
+
 ## Requirements
 
 - Foundry VTT v13 or v14

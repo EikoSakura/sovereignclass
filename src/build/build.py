@@ -10,6 +10,9 @@ import class_data
 import feats_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
+VERSION = "1.0.0"
+REPO = "https://github.com/EikoSakura/sovereignclass"
+
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
 
 PACKS = [
@@ -93,8 +96,11 @@ manifest = {
     "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their "
                    "court. Includes the class, class features, feats, and effects. Followers come from PF2e "
                    "Companion Compendia.",
-    "version": "1.0.0",
+    "version": VERSION,
     "authors": [{"name": "Eiko"}],
+    "url": REPO,
+    "manifest": f"{REPO}/releases/latest/download/module.json",
+    "download": f"{REPO}/releases/download/v{VERSION}/module.zip",
     "compatibility": {"minimum": "13", "verified": "14"},
     "relationships": {
         "systems": [{"id": "pf2e", "type": "system", "compatibility": {}}],
