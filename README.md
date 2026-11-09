@@ -25,6 +25,7 @@ https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.jso
 | Sovereign Feats | 42 class feats, levels 1 to 20 |
 | Sovereign Actions | Sovereign's Grace, Scepter's Command, Final Stand, Accept the Gambit, Hero's Heart Guard |
 | Sovereign Effects | Effects to drag onto tokens from feat descriptions |
+| Sovereign Extras | Automated rules the pf2e system doesn't ship yet: Stellar Dancer Dedication, Stellar Dance Stance, and its stance and zenith effects |
 
 The module also adds **Chain Blade** to the Base Weapon list on weapon sheets.
 

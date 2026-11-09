@@ -1,0 +1,69 @@
+{
+  "_id": "dVUkaA5ZQdr6Xm3P",
+  "_key": "!items!dVUkaA5ZQdr6Xm3P",
+  "name": "Effect: Stellar Dance Zenith",
+  "type": "effect",
+  "img": "icons/magic/light/explosion-star-glow-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your stellar dance is at its zenith. Your Strikes with agile or finesse weapons and unarmed attacks deal additional force damage equal to the number of weapon damage dice.</p><p>Ends at the start of your next turn or when you leave Stellar Dance Stance.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Pathfinder Feybound"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "strike-damage",
+        "slug": "stellar-dance-zenith",
+        "damageType": "force",
+        "value": "@weapon.system.damage.dice",
+        "predicate": [
+          "self:effect:stance-stellar-dance-stance",
+          {
+            "or": [
+              "item:trait:agile",
+              "item:trait:finesse",
+              "item:category:unarmed"
+            ]
+          }
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-stellar-dance-zenith",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

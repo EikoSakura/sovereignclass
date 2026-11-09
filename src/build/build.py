@@ -7,10 +7,11 @@ import shutil
 import sys
 
 import class_data
+import extras_data
 import feats_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
-VERSION = "1.0.4"
+VERSION = "1.0.5"
 REPO = "https://github.com/EikoSakura/sovereignclass"
 
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
@@ -21,10 +22,11 @@ PACKS = [
     ("feats", "Feats", "Item"),
     ("actions", "Actions", "Item"),
     ("effects", "Effects", "Item"),
+    ("extras", "Extras", "Item"),
 ]
 
 data = {k: [] for k, _, _ in PACKS}
-for part in (class_data.build_all(), feats_data.build_all()):
+for part in (class_data.build_all(), feats_data.build_all(), extras_data.build_all()):
     for k, docs in part.items():
         data[k].extend(docs)
 
@@ -95,7 +97,7 @@ manifest = {
     "title": "Sovereign Class (PF2e Homebrew)",
     "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their "
                    "court. Includes the class, class features, feats, and effects. Followers come from PF2e "
-                   "Companion Compendia.",
+                   "Companion Compendia. Also includes automated extras the pf2e system doesn't ship yet.",
     "version": VERSION,
     "authors": [{"name": "Eiko"}],
     "url": REPO,

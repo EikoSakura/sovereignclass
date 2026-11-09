@@ -1,0 +1,71 @@
+{
+  "_id": "unYXc8iVIQqLkXna",
+  "_key": "!items!unYXc8iVIQqLkXna",
+  "name": "Stellar Dancer Dedication",
+  "type": "feat",
+  "img": "icons/magic/light/explosion-star-glow-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Access</strong> You were granted permission to learn it by a member of the Starlit Crown.</p><hr /><p>You've learned the stellar dance, a fey art honoring the celestial bodies. You become an expert in Performance. If you were already an expert in Performance, you instead become trained in Nature or Fey Lore (your choice).</p><p>You also gain the @UUID[Compendium.pf2e-sovereign.extras.Item.8jCscB3X7L5mPTnX]{Stellar Dance Stance} action.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "trained in Performance"
+        },
+        {
+          "value": "trained in Nature or Fey Lore"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Pathfinder Feybound"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.performance.rank",
+        "value": 2
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.extras.Item.8jCscB3X7L5mPTnX"
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype",
+        "dedication"
+      ],
+      "otherTags": []
+    },
+    "slug": "stellar-dancer-dedication",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

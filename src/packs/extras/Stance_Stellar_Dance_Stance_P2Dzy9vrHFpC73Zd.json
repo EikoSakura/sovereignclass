@@ -1,0 +1,73 @@
+{
+  "_id": "P2Dzy9vrHFpC73Zd",
+  "_key": "!items!P2Dzy9vrHFpC73Zd",
+  "name": "Stance: Stellar Dance Stance",
+  "type": "effect",
+  "img": "icons/magic/light/explosion-star-glow-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>You are in Stellar Dance Stance. Use Performance to [[/act escape skill=performance]] or [[/act tumble-through skill=performance]]; success brings your dance to its zenith (@UUID[Compendium.pf2e-sovereign.extras.Item.dVUkaA5ZQdr6Xm3P]{Zenith}).</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "encounter",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Pathfinder Feybound"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "performance",
+        "outcome": [
+          "success",
+          "criticalSuccess"
+        ],
+        "predicate": [
+          {
+            "or": [
+              "action:escape",
+              "action:tumble-through"
+            ]
+          },
+          {
+            "not": "self:effect:effect-stellar-dance-zenith"
+          }
+        ],
+        "title": "{item|name}",
+        "text": "Your dance reaches its zenith. Apply @UUID[Compendium.pf2e-sovereign.extras.Item.dVUkaA5ZQdr6Xm3P]{Effect: Stellar Dance Zenith}."
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "stance-stellar-dance-stance",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}
