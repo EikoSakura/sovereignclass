@@ -26,6 +26,8 @@ https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.jso
 | Sovereign Actions | Sovereign's Grace, Scepter's Command, Final Stand, Accept the Gambit, Hero's Heart Guard |
 | Sovereign Effects | Effects to drag onto tokens from feat descriptions |
 
+The module also adds **Chain Blade** to the Base Weapon list on weapon sheets.
+
 ## Followers
 
 A follower is a character actor with the **Follower** ancestry and a follower type (Adept, Berserker, Medic, Scout, Sharpshooter, Shieldbearer) from Companion Compendia. Add the Experienced, Veteran, and Exceptional Advancement items at 4th, 8th, and 14th level. With the Court of Hero's Heart, give the follower **Hero's Heart Guard** at 4th level: a 5-foot aura that grants adjacent allies lesser cover.

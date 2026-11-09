@@ -2,7 +2,13 @@ const MODULE_ID = "pf2e-sovereign";
 const REGALIA_TAG = "regalia-weapon";
 const WEAPON_REGALIA_SLUG = "weapon-regalia";
 
-// Registers the Sovereign trait so class feats filter correctly in the pf2e feat browser.
+// Extra base weapon types missing from the pf2e system.
+const BASE_WEAPONS = {
+  "chain-blade": "Chain Blade",
+};
+
+// Registers the Sovereign trait so class feats filter correctly in the pf2e feat browser,
+// and adds the extra base weapons to the weapon sheet's Base Weapon list.
 Hooks.once("init", () => {
   const PF2E = CONFIG.PF2E;
   if (!PF2E) return;
@@ -11,6 +17,9 @@ Hooks.once("init", () => {
   }
   if (PF2E.traitsDescriptions) {
     PF2E.traitsDescriptions.sovereign = "Abilities with this trait come from the sovereign class.";
+  }
+  if (PF2E.baseWeaponTypes) {
+    for (const [slug, label] of Object.entries(BASE_WEAPONS)) PF2E.baseWeaponTypes[slug] ??= label;
   }
 });
 
