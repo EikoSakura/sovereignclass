@@ -10,7 +10,7 @@ import class_data
 import feats_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
-VERSION = "1.0.0"
+VERSION = "1.0.1"
 REPO = "https://github.com/EikoSakura/sovereignclass"
 
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
