@@ -1,0 +1,67 @@
+{
+  "_id": "UtSBq27yRjBpHTsi",
+  "_key": "!items!UtSBq27yRjBpHTsi",
+  "name": "Sovereign's Court",
+  "type": "feat",
+  "img": "icons/environment/settlement/castle.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>A sovereign is a ruler, and thus must have subjects to rule. Choose a sovereign's court. Your court represents the place from which you came: the politics of your home, how the people view you, and the benefits it has given you and your followers. As you grow higher in level, your court grows in power, and so do your followers.</p><ul><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.DhJRvOsEbCYwqLUL]</li></ul>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "court",
+        "prompt": "Choose a court.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.DhJRvOsEbCYwqLUL"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.court}"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "sovereigns-court",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

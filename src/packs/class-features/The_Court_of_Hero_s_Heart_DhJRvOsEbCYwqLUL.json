@@ -1,0 +1,91 @@
+{
+  "_id": "DhJRvOsEbCYwqLUL",
+  "_key": "!items!DhJRvOsEbCYwqLUL",
+  "name": "The Court of Hero's Heart",
+  "type": "feat",
+  "img": "icons/magic/holy/meditation-chi-focus-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p><em>Your court may not be powerful or large necessarily, but both you and its people aspire to fight for a better tomorrow.</em></p><p><strong>Trained Skills</strong> Athletics or Acrobatics, Folktale Lore</p><p><strong>Court's Values (1st)</strong> Your court values heroism and bravery above all else. When your follower reduces their @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened} condition, it reduces by 2 instead of 1. If you are adjacent to your follower, your frightened condition is reduced by 1 at the end of their turn.</p><p><strong>Court's Training (4th)</strong> Your followers become experienced followers (@UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.Drsjs3tJmr7xVXvl]) and are taught to put the needs of others first in battle. Allies adjacent to your follower have lesser cover, and while giving cover this way, the follower gains resistance to physical damage equal to half your level. Add @UUID[Compendium.pf2e-sovereign.actions.Item.AH3L1izPmDgXcy1h] to your follower.</p><p><strong>Court's Champion (8th)</strong> Your followers become veteran followers (@UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.TtGZS1qWyw25EXNC]) and gain @UUID[Compendium.pf2e-sovereign.actions.Item.OfLqsJOFSHFNuyu2].</p><p><strong>Court's Legends (14th)</strong> Your followers become exceptional followers (@UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.FVB4oQEeV2f1Ga7J]). Final Stand can be used once per hour rather than once per day.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "courtSkill",
+        "prompt": "PF2E.SpecificRule.Prompt.Skill",
+        "adjustName": false,
+        "choices": [
+          {
+            "label": "PF2E.Skill.Athletics",
+            "value": "athletics"
+          },
+          {
+            "label": "PF2E.Skill.Acrobatics",
+            "value": "acrobatics"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.{item|flags.system.rulesSelections.courtSkill}.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.skills.folktale-lore",
+        "value": {
+          "attribute": "int",
+          "label": "Folktale Lore",
+          "rank": 1
+        }
+      },
+      {
+        "key": "RollOption",
+        "option": "sovereign-court:heros-heart"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": [
+        "sovereign-court"
+      ]
+    },
+    "slug": "the-court-of-heros-heart",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

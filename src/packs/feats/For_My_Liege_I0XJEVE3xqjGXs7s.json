@@ -1,0 +1,52 @@
+{
+  "_id": "I0XJEVE3xqjGXs7s",
+  "_key": "!items!I0XJEVE3xqjGXs7s",
+  "name": "For My Liege!",
+  "type": "feat",
+  "img": "icons/skills/social/intimidation-impressing.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Even while you lie defeated, your follower fights on. Your follower gains two actions every turn you are @UUID[Compendium.pf2e.conditionitems.Item.yZRUzMqrMmfLu0V1]{dying}, @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{paralyzed}, petrified or @UUID[Compendium.pf2e.conditionitems.Item.fBnFDH2MTzgFijKf]{unconscious}, as if you had directed them.</p>"
+    },
+    "level": {
+      "value": 10
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "for-my-liege",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

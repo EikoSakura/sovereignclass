@@ -1,0 +1,52 @@
+{
+  "_id": "AWgXCQJ2EfRW8u4C",
+  "_key": "!items!AWgXCQJ2EfRW8u4C",
+  "name": "Long Live the King",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>The title of sovereign is merely that: a title. Anyone can take up your role and lead as you have led. During your daily preparations, you can spend time designating and training a successor, an NPC you have chosen to be sovereign when you die. Once per month, when you die, you automatically bestow your power on your successor. Your successor gains all your abilities and statistics, and if they were present at your death, they can enter initiative using your character sheet with current and maximum Hit Points equal to half your maximum Hit Points. Your successor and loyal follower have a +1 circumstance bonus to Strikes against the creature that felled you.</p>"
+    },
+    "level": {
+      "value": 20
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "long-live-the-king",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

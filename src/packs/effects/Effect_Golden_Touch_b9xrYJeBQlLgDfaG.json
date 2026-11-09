@@ -1,0 +1,56 @@
+{
+  "_id": "b9xrYJeBQlLgDfaG",
+  "_key": "!items!b9xrYJeBQlLgDfaG",
+  "name": "Effect: Golden Touch",
+  "type": "effect",
+  "img": "icons/commodities/treasure/crown-gold-satin-gems-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>For 1 minute, you gain the @UUID[Compendium.pf2e-sovereign.actions.Item.WonglLltFjKXStYY] reaction.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.actions.Item.WonglLltFjKXStYY"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-golden-touch",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

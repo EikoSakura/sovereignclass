@@ -1,0 +1,86 @@
+{
+  "_id": "qmPsTHpjy4CxjY8t",
+  "_key": "!items!qmPsTHpjy4CxjY8t",
+  "name": "Effect: Weight of the Crown",
+  "type": "effect",
+  "img": "icons/equipment/head/crown-thorns-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>Set the counter to the number of allies (including your follower) who became wounded or died during this encounter. You gain a +2 circumstance bonus to damage per ally, or +3 per ally once any ally has died.</p>"
+    },
+    "duration": {
+      "expiry": null,
+      "sustained": false,
+      "unit": "encounter",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "damage",
+        "option": "weight-of-the-crown-death",
+        "toggleable": true,
+        "label": "An Ally Has Died"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "circumstance",
+        "value": "2*@item.badge.value",
+        "predicate": [
+          {
+            "not": "weight-of-the-crown-death"
+          }
+        ],
+        "label": "Weight of the Crown"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "damage",
+        "type": "circumstance",
+        "value": "3*@item.badge.value",
+        "predicate": [
+          "weight-of-the-crown-death"
+        ],
+        "label": "Weight of the Crown"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-weight-of-the-crown",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "badge": {
+      "type": "counter",
+      "value": 1,
+      "min": 1
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

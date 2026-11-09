@@ -1,0 +1,59 @@
+{
+  "_id": "HTGEDVxE41bGBc4b",
+  "_key": "!items!HTGEDVxE41bGBc4b",
+  "name": "Orb Regalia",
+  "type": "feat",
+  "img": "icons/skills/social/orb-gold-claw-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>An orb is a golden sphere, crusted in gems and with a holy symbol atop it. It represents the world, with your deity reigning above it. A sovereign who wields an orb shows that their rulership is divinely ordained.</p><p><strong>Edicts</strong> Those of your deity.</p><p><strong>Anathema</strong> Those of your deity; allow a creature to besmirch the name of your deity.</p><p><strong>Regalia's Gift</strong> You gain the @UUID[Compendium.pf2e.feats-srd.Item.hT4INKGtly4QY8KN] cleric feat, using a domain of your deity. You can only cast domain spells while wielding the orb. While wielding the orb, you count as a divine spellcaster for the purposes of wands, staves or other magic items that cast divine spells. At 8th level, you gain access to the @UUID[Compendium.pf2e.feats-srd.Item.uR44wELN9OlU68cL] cleric feat and can take it as a class feat. You use your class DC as your spell DC for domain spells.</p><p><em>Setup:</em> create a Focus spellcasting entry (divine, Charisma) for your domain spells; its DC should match your class DC.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.feats-srd.Item.hT4INKGtly4QY8KN"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": [
+        "sovereign-regalia"
+      ]
+    },
+    "slug": "orb-regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

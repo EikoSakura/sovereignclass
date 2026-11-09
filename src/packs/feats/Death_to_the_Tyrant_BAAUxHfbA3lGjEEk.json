@@ -1,0 +1,57 @@
+{
+  "_id": "BAAUxHfbA3lGjEEk",
+  "_key": "!items!BAAUxHfbA3lGjEEk",
+  "name": "Death to the Tyrant",
+  "type": "feat",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You stoke the fires of the people to take down those that abuse their position of leadership. Select a creature within 60 feet that has other creatures obeying it, and make a Society check against the creature's Will DC: @Check[society|defense:will].</p><hr /><p><strong>Critical Success</strong> You shake the confidence of the creature's minions. They take a -2 circumstance penalty to their attack rolls for 1 minute. Once the creature is slain, these minions might be willing to end combat early if you have not harmed them. (@UUID[Compendium.pf2e-sovereign.effects.Item.gPIKNapZQVzwLH8m])</p><p><strong>Success</strong> As critical success, but the penalty is -1. (@UUID[Compendium.pf2e-sovereign.effects.Item.6li58MAdwtzm6okr])</p><p><strong>Critical Failure</strong> You ignite the fury of the creature's minions. They gain a +2 circumstance bonus to their next attack roll against you within 1 minute.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "emotion",
+        "linguistic",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "death-to-the-tyrant",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

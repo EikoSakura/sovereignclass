@@ -1,0 +1,59 @@
+{
+  "_id": "e9bRojA4NUQux7jd",
+  "_key": "!items!e9bRojA4NUQux7jd",
+  "name": "Effect: Deep Reflection",
+  "type": "effect",
+  "img": "icons/sundries/survival/mirror-plain.webp",
+  "system": {
+    "description": {
+      "value": "<p>+1 circumstance bonus to your next skill check. Removed automatically after the roll.</p>"
+    },
+    "duration": {
+      "expiry": null,
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "skill-check",
+        "type": "circumstance",
+        "value": 1,
+        "removeAfterRoll": "if-enabled"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-deep-reflection",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

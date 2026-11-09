@@ -1,0 +1,70 @@
+{
+  "_id": "8j31mliaNMj4QR2n",
+  "_key": "!items!8j31mliaNMj4QR2n",
+  "name": "Invoke Rank",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
+  "system": {
+    "actionType": {
+      "value": "free"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Trigger</strong> You are about to roll initiative.</p><hr /><p>Invoking your rank as sovereign with confidence can make even the surliest opponents doubt themselves. You use Society to roll initiative, and creatures that can recognize sovereignty (such as humans, devils or vampires, but not demons or animals) must make a Will save against your class DC or be @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{off-guard} against you or your loyal follower's first Strike this turn: @Check[will|against:class].</p><p><em>Toggle Invoke Rank on before rolling initiative to switch it to Society.</em></p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "invoke-rank",
+        "toggleable": true,
+        "label": "Invoke Rank (Society Initiative)"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.initiative.statistic",
+        "value": "society",
+        "predicate": [
+          "invoke-rank"
+        ],
+        "phase": "beforeDerived"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "invoke-rank",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

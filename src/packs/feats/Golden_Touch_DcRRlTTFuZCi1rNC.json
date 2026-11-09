@@ -1,0 +1,61 @@
+{
+  "_id": "DcRRlTTFuZCi1rNC",
+  "_key": "!items!DcRRlTTFuZCi1rNC",
+  "name": "Golden Touch",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-satin-gems-red.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wearing your jewellery regalia.</p><p><strong>Frequency</strong> once per day</p><hr /><p>Anything you touch seems to improve in quality, be it the plans of your court or the luck of your allies. You lay your hand on an adjacent ally. For the next minute, your ally gains the Sovereign's Grace reaction. (@UUID[Compendium.pf2e-sovereign.effects.Item.b9xrYJeBQlLgDfaG])</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "jewellery regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "manipulate",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "golden-touch",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

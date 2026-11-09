@@ -1,0 +1,62 @@
+{
+  "_id": "oiIXOTmA1HCSzlmp",
+  "_key": "!items!oiIXOTmA1HCSzlmp",
+  "name": "Glorious Inspiration",
+  "type": "feat",
+  "img": "icons/skills/social/thumbsup-approval-like.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>When you succeed, others around you can't help but feel inspired to do as you do. When you critically succeed at a Strike, all allies within 60 feet gain a +1 circumstance bonus to their Strikes until the start of your next turn. (@UUID[Compendium.pf2e-sovereign.effects.Item.0BEztxKiDOaByKiS])</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "outcome": [
+          "criticalSuccess"
+        ],
+        "title": "{item|name}",
+        "text": "Allies within 60 feet gain @UUID[Compendium.pf2e-sovereign.effects.Item.0BEztxKiDOaByKiS]."
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "glorious-inspiration",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

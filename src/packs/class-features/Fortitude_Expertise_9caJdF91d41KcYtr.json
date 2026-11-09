@@ -1,0 +1,59 @@
+{
+  "_id": "9caJdF91d41KcYtr",
+  "_key": "!items!9caJdF91d41KcYtr",
+  "name": "Fortitude Expertise",
+  "type": "feat",
+  "img": "icons/magic/life/cross-explosion-burst-green.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your physique has grown hardy in your adventures. Your proficiency rank for Fortitude saves increases to expert.</p>"
+    },
+    "level": {
+      "value": 9
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "fortitude-expertise",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "proficiencies": {
+        "fortitude": {
+          "rank": 2
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

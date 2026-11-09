@@ -1,0 +1,59 @@
+{
+  "_id": "Tn1sfdQHcWmexBEz",
+  "_key": "!items!Tn1sfdQHcWmexBEz",
+  "name": "Jewellery Regalia",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-satin-gems-red.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Jewellery regalia can take many forms: a crown on one's head, rings on one's fingers, amulets or studded clothing. Jewellery that acts as regalia is often excessively ornate, made of unbelievably rare materials to highlight the total supremacy of its sovereign.</p><p><strong>Edicts</strong> Prove yourself absolutely superior to your foes.</p><p><strong>Anathema</strong> Give up on something because of your personal failures.</p><p><strong>Regalia's Gift</strong> While you are wearing your jewellery, you gain the @UUID[Compendium.pf2e-sovereign.actions.Item.WonglLltFjKXStYY] reaction.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.actions.Item.WonglLltFjKXStYY"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": [
+        "sovereign-regalia"
+      ]
+    },
+    "slug": "jewellery-regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

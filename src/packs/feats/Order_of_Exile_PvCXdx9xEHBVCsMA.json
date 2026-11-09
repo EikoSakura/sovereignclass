@@ -1,0 +1,56 @@
+{
+  "_id": "PvCXdx9xEHBVCsMA",
+  "_key": "!items!PvCXdx9xEHBVCsMA",
+  "name": "Order of Exile",
+  "type": "feat",
+  "img": "icons/magic/holy/barrier-shield-winged-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your word is so acute that you can banish extraplanar creatures from your reality entirely. You cast @UUID[Compendium.pf2e.spells-srd.Item.bay4AfSu2iIozNNW] as an occult innate spell, using your class DC as your spell DC.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "order-of-exile",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

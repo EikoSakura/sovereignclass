@@ -1,0 +1,114 @@
+{
+  "id": "pf2e-sovereign",
+  "title": "Sovereign Class (PF2e Homebrew)",
+  "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their court. Includes the class, class features, feats, and effects. Followers come from PF2e Companion Compendia.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Eiko"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "14"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "pf2e",
+        "type": "system",
+        "compatibility": {}
+      }
+    ],
+    "requires": [
+      {
+        "id": "pf2e-animal-companions",
+        "type": "module",
+        "compatibility": {}
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/sovereign.mjs"
+  ],
+  "packs": [
+    {
+      "name": "classes",
+      "label": "Sovereign Classes",
+      "path": "packs/classes",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "class-features",
+      "label": "Sovereign Class Features",
+      "path": "packs/class-features",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "feats",
+      "label": "Sovereign Feats",
+      "path": "packs/feats",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "actions",
+      "label": "Sovereign Actions",
+      "path": "packs/actions",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "effects",
+      "label": "Sovereign Effects",
+      "path": "packs/effects",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "Sovereign",
+      "sorting": "m",
+      "color": "#6b4f1d",
+      "packs": [
+        "classes",
+        "class-features",
+        "feats",
+        "actions",
+        "effects"
+      ],
+      "folders": []
+    }
+  ],
+  "flags": {
+    "canUpload": true
+  }
+}

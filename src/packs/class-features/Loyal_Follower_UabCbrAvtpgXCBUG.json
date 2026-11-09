@@ -1,0 +1,57 @@
+{
+  "_id": "UabCbrAvtpgXCBUG",
+  "_key": "!items!UabCbrAvtpgXCBUG",
+  "name": "Loyal Follower",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-handshake-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>You are always accompanied by a loyal follower, a retainer who has sworn to fight and die for your cause. They have the minion trait and begin as a novice follower.</p><p>Use @UUID[Compendium.pf2e.actionspf2e.Item.H72AAzknXiojqXdY] to command your follower. Your follower's level equals yours, and their tier advances through your court's features at 4th, 8th and 14th level.</p><p><em>Setup (PF2e Companion Compendia):</em> create a character actor for your follower, add the @UUID[Compendium.pf2e-animal-companions.AC-Features.Item.mefI4QYwzSIQiwGj] ancestry and one follower type: @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.A4lRasm15Gtkhj9G], @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.UGypwzL2kf2lpvGK], @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.ZgVoPylxwZuz9B4k], @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.BrQt3St9A9ntCRus], @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.qexqlVIb13Z8Yub6], @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.HO6R7mNIBU6LgJpo].</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.actionspf2e.Item.H72AAzknXiojqXdY"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "loyal-follower",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

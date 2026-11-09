@@ -1,0 +1,52 @@
+{
+  "_id": "cgKG9HPHU2GPqti4",
+  "_key": "!items!cgKG9HPHU2GPqti4",
+  "name": "Trusted Advisor",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-writing-letter.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your loyal follower gives you sage advice and insight into the trustworthiness of others. Despite being a minion, your loyal follower gains 1 reaction at the start of its turns, which it can use only to @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW] you on a @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo] check or a Perception check to @UUID[Compendium.pf2e.actionspf2e.Item.1xRFPTFtWtGJ9ELw]. Its very presence counts as preparation to Aid. It automatically succeeds at its check to Aid you with those skills, or automatically critically succeeds if you're a master of the skill in question.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "trusted-advisor",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

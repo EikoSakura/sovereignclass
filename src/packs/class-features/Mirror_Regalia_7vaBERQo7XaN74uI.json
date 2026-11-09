@@ -1,0 +1,95 @@
+{
+  "_id": "7vaBERQo7XaN74uI",
+  "_key": "!items!7vaBERQo7XaN74uI",
+  "name": "Mirror Regalia",
+  "type": "feat",
+  "img": "icons/sundries/survival/mirror-plain.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Common with obsidian mirrors in Arcadia or bronze mirrors in Tian Xia, a handheld mirror is often used by sovereigns to keep themselves humble. A mirror inspires self-reflection and wisdom.</p><p><strong>Edicts</strong> Take measured action that weighs out the good and evil of any outcome.</p><p><strong>Anathema</strong> Allow yourself to become vain and stop serving your own people.</p><p><strong>Regalia's Gift</strong> While wielding your mirror, you have a +2 circumstance bonus to saves against mental effects and resistance equal to half your level to mental and spirit damage. You are immune to the stupefied and confused conditions.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "mirror-regalia",
+        "toggleable": true,
+        "label": "Wielding Mirror Regalia",
+        "value": true
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "circumstance",
+        "value": 2,
+        "predicate": [
+          "mirror-regalia",
+          "item:trait:mental"
+        ],
+        "label": "Mirror Regalia"
+      },
+      {
+        "key": "Resistance",
+        "type": [
+          "mental",
+          "spirit"
+        ],
+        "value": "floor(@actor.level/2)",
+        "predicate": [
+          "mirror-regalia"
+        ]
+      },
+      {
+        "key": "Immunity",
+        "type": [
+          "stupefied",
+          "confused"
+        ],
+        "predicate": [
+          "mirror-regalia"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": [
+        "sovereign-regalia"
+      ]
+    },
+    "slug": "mirror-regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

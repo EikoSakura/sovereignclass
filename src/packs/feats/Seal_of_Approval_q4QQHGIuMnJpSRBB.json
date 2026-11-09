@@ -1,0 +1,52 @@
+{
+  "_id": "q4QQHGIuMnJpSRBB",
+  "_key": "!items!q4QQHGIuMnJpSRBB",
+  "name": "Seal of Approval",
+  "type": "feat",
+  "img": "icons/commodities/treasure/brooch-crown-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You make it obvious that someone is acting on your behalf by adorning them in some seal of approval, such as a signet ring, a royal seal, or a coat of arms. Your allies can use your Diplomacy modifier to negotiate with others on your behalf.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "seal-of-approval",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

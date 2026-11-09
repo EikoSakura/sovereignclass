@@ -1,0 +1,74 @@
+{
+  "_id": "FboCJDB9nYHCcCui",
+  "_key": "!items!FboCJDB9nYHCcCui",
+  "name": "Loyal Protector",
+  "type": "feat",
+  "img": "icons/equipment/shield/heater-steel-worn.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your loyal follower is trained to keep you safe. So long as your follower is adjacent to you, you benefit from lesser cover.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Loyal Follower"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "loyal-protector",
+        "toggleable": true,
+        "label": "Follower Adjacent (Lesser Cover)"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "loyal-protector"
+        ],
+        "label": "Loyal Protector"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "loyal-protector",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

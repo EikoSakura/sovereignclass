@@ -1,0 +1,57 @@
+{
+  "_id": "qXrocBv8jBwAoZFT",
+  "_key": "!items!qXrocBv8jBwAoZFT",
+  "name": "Call to Halt",
+  "type": "feat",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You command your foes to stop where they are. Make a Society check against the Will DC of each creature you choose within 30 feet: @Check[society|defense:will]. Regardless of your result, the targets are temporarily immune for 10 minutes.</p><hr /><p><strong>Critical Success</strong> The target is @UUID[Compendium.pf2e.conditionitems.Item.6uEgoh53GbXuHpTF]{paralyzed} for 1 round and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened 2}.</p><p><strong>Success</strong> The target takes a -10-foot penalty to all its Speeds for 1 minute and becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened 1}. (@UUID[Compendium.pf2e-sovereign.effects.Item.1Xt1b9AKG5eDcBVV])</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "emotion",
+        "incapacitation",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "call-to-halt",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

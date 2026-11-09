@@ -1,0 +1,69 @@
+{
+  "_id": "eOu5y1o5i7iEJxiB",
+  "_key": "!items!eOu5y1o5i7iEJxiB",
+  "name": "Effect: Excommunicated (Success)",
+  "type": "effect",
+  "img": "icons/magic/holy/barrier-shield-winged-cross.webp",
+  "system": {
+    "description": {
+      "value": "<p>Use this on a creature that knows no divine spells: -1 circumstance penalty to saves and AC against divine spells for 1 minute. A creature that knows divine spells is @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} instead.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "ac",
+          "saving-throw"
+        ],
+        "type": "circumstance",
+        "value": -1,
+        "predicate": [
+          {
+            "or": [
+              "item:trait:divine",
+              "origin:item:trait:divine"
+            ]
+          }
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-excommunicated-success",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

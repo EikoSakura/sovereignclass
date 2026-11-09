@@ -1,0 +1,57 @@
+{
+  "_id": "GLj4KUY2W4afsphr",
+  "_key": "!items!GLj4KUY2W4afsphr",
+  "name": "At Your Service",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-handshake-gray.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You are not above aiding others in their work. Designate an ally within 30 feet; this action counts as sufficient preparation to @UUID[Compendium.pf2e.actionspf2e.Item.HCl3pzVefiv9ZKQW] that ally. When you use the Aid reaction to help that ally, you can roll Society in place of the usual check.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "emotion",
+        "linguistic",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "at-your-service",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

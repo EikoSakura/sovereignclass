@@ -1,0 +1,56 @@
+{
+  "_id": "Fc3kP8eylaN7Zawr",
+  "_key": "!items!Fc3kP8eylaN7Zawr",
+  "name": "A King's Ransom",
+  "type": "feat",
+  "img": "icons/commodities/currency/coins-assorted-mix-copper-silver-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>You can raise emergency funds rapidly when needed. You roll to @UUID[Compendium.pf2e.actionspf2e.Item.QyzlsLrqM0EEwd7j], earning twenty times the normal value. For the next week, you take a -10 circumstance penalty to Earn Income as your court recovers from these expenses.</p><p><strong>Special</strong> If using the Earn Riches rule from Adventures+, you only earn twice the normal value.</p>"
+    },
+    "level": {
+      "value": 10
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "a-kings-ransom",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

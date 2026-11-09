@@ -1,0 +1,49 @@
+{
+  "_id": "WonglLltFjKXStYY",
+  "_key": "!items!WonglLltFjKXStYY",
+  "name": "Sovereign's Grace",
+  "type": "action",
+  "img": "icons/commodities/treasure/crown-gold-satin-gems-red.webp",
+  "system": {
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": null,
+    "description": {
+      "value": "<p><strong>Frequency</strong> once per day</p><p><strong>Trigger</strong> You fail or critically fail a roll.</p><hr /><p>Your jewellery empowers your fate, giving you control of your future. You can reroll the triggering check, but you must use the new result, even if it's worse.</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "slug": "sovereigns-grace",
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "fortune"
+      ]
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

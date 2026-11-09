@@ -1,0 +1,59 @@
+{
+  "_id": "yoN8vaMpD9gjubum",
+  "_key": "!items!yoN8vaMpD9gjubum",
+  "name": "Regalia-Bearer",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You have entrusted your follower with your regalia, allowing them to wear it in your stead. Your follower can wield your regalia, gaining use of abilities or feats derived from your regalia.</p>"
+    },
+    "level": {
+      "value": 10
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "regalia"
+        },
+        {
+          "value": "loyal follower"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "regalia-bearer",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

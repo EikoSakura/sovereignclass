@@ -1,0 +1,61 @@
+{
+  "_id": "pJY7moms95bdyDD4",
+  "_key": "!items!pJY7moms95bdyDD4",
+  "name": "Excommunicate!",
+  "type": "feat",
+  "img": "icons/magic/holy/barrier-shield-winged-cross.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You forbid your foes from benefitting from the divine, using your word as a religious leader. Make a Religion check against the Will DC of a creature within 30 feet: @Check[religion|defense:will].</p><hr /><p><strong>Critical Success</strong> You forbid the creature from drawing on the divine. If it knows any divine spells, it becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{stupefied 2} for 1 minute. If it does not, it takes a -2 circumstance penalty to its saves and AC against divine spells for the duration. (@UUID[Compendium.pf2e-sovereign.effects.Item.SlskvcGUOoN3atxB])</p><p><strong>Success</strong> As critical success, but stupefied 1 or a -1 penalty. (@UUID[Compendium.pf2e-sovereign.effects.Item.eOu5y1o5i7iEJxiB])</p><p><strong>Failure</strong> The creature is unaffected.</p><p><strong>Critical Failure</strong> Others doubt your authority over the divine. You become @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{stupefied 1} for 1 minute.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "expert in Religion"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "emotion",
+        "linguistic",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "excommunicate",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

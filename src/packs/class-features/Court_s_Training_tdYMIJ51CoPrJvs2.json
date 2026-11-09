@@ -1,0 +1,52 @@
+{
+  "_id": "tdYMIJ51CoPrJvs2",
+  "_key": "!items!tdYMIJ51CoPrJvs2",
+  "name": "Court's Training",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your followers become experienced followers, and you gain your court's Court's Training benefit. Add @UUID[Compendium.pf2e-animal-companions.AC-Followers.Item.Drsjs3tJmr7xVXvl] to your follower.</p><p><strong>Hero's Heart</strong> Allies adjacent to your follower have lesser cover, and the follower gains physical resistance while guarding. Add @UUID[Compendium.pf2e-sovereign.actions.Item.AH3L1izPmDgXcy1h] to your follower.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "courts-training",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

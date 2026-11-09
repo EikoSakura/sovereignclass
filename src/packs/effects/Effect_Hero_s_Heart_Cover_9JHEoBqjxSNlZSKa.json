@@ -1,0 +1,59 @@
+{
+  "_id": "9JHEoBqjxSNlZSKa",
+  "_key": "!items!9JHEoBqjxSNlZSKa",
+  "name": "Effect: Hero's Heart Cover",
+  "type": "effect",
+  "img": "icons/equipment/shield/heater-steel-worn.webp",
+  "system": {
+    "description": {
+      "value": "<p>Granted by a follower's @UUID[Compendium.pf2e-sovereign.actions.Item.AH3L1izPmDgXcy1h] aura.</p><p>You have lesser cover (+1 circumstance bonus to AC) while adjacent to the follower. The effect ends when you leave the aura.</p>"
+    },
+    "duration": {
+      "expiry": null,
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "circumstance",
+        "value": 1,
+        "label": "Lesser Cover (Hero's Heart)"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-heros-heart-cover",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

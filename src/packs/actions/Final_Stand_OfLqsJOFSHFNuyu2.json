@@ -1,0 +1,47 @@
+{
+  "_id": "OfLqsJOFSHFNuyu2",
+  "_key": "!items!OfLqsJOFSHFNuyu2",
+  "name": "Final Stand",
+  "type": "action",
+  "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+  "system": {
+    "actionType": {
+      "value": "free"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "defensive",
+    "description": {
+      "value": "<p><strong>Frequency</strong> once per day (once per hour with Court's Legends)</p><p><strong>Trigger</strong> The follower would be reduced to 0 Hit Points but not immediately killed.</p><hr /><p>Your follower is so loyal to your cause that they fight to the finish. They avoid being knocked out and remain at 1 Hit Point, and their @UUID[Compendium.pf2e.conditionitems.Item.Yl48xTdMh3aeQYL2]{Wounded} condition increases by 1.</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "slug": "final-stand",
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

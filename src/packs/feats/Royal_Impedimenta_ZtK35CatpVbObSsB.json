@@ -1,0 +1,52 @@
+{
+  "_id": "ZtK35CatpVbObSsB",
+  "_key": "!items!ZtK35CatpVbObSsB",
+  "name": "Royal Impedimenta",
+  "type": "feat",
+  "img": "icons/containers/bags/pack-leather-white-tan.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your follower is accustomed to carrying things for you. Your follower's Bulk limit increases by 2. Your follower can use an action to draw an item and hand it to you.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "royal-impedimenta",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "FdOff12jbkKrimRZ",
+  "_key": "!items!FdOff12jbkKrimRZ",
+  "name": "By My Side",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Wherever you go, your follower goes with you. When you @UUID[Compendium.pf2e.actionspf2e.Item.Bcxarzksqt9ezrs6] while adjacent to your follower, your follower Strides with you.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "by-my-side",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

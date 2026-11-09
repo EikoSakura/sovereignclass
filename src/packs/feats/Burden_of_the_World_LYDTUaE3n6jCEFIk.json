@@ -1,0 +1,57 @@
+{
+  "_id": "LYDTUaE3n6jCEFIk",
+  "_key": "!items!LYDTUaE3n6jCEFIk",
+  "name": "Burden of the World",
+  "type": "feat",
+  "img": "icons/skills/social/orb-gold-claw-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wielding your orb regalia.</p><hr /><p>You accept the suffering of your allies upon yourself. Select an ally within 30 feet who is suffering from a negative condition. You cure the ally of the condition, and gain it yourself, for the same duration that your ally would have been affected by it.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "orb regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "divine",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "burden-of-the-world",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

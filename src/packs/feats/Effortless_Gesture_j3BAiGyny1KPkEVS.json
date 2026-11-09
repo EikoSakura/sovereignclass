@@ -1,0 +1,58 @@
+{
+  "_id": "j3BAiGyny1KPkEVS",
+  "_key": "!items!j3BAiGyny1KPkEVS",
+  "name": "Effortless Gesture",
+  "type": "feat",
+  "img": "icons/commodities/treasure/sceptre-jeweled-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wielding your scepter regalia.</p><hr /><p>You command your allies as if they were your most devout followers. You command an ally to perform a basic action, such as @UUID[Compendium.pf2e.actionspf2e.Item.UHpkTuCtyaPqiCAB], @UUID[Compendium.pf2e.actionspf2e.Item.Bcxarzksqt9ezrs6] or @UUID[Compendium.pf2e.actionspf2e.Item.VjxZFuUXrCU94MWR]. You are then @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{off-guard} until the start of your next turn as you split your attention between yourself and them.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "scepter regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "flourish",
+        "manipulate",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "effortless-gesture",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "8fhhNKHpYm4B7J6h",
+  "_key": "!items!8fhhNKHpYm4B7J6h",
+  "name": "Weight of the Crown",
+  "type": "feat",
+  "img": "icons/equipment/head/crown-thorns-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>The sacrifices of your allies weigh heavy on your shoulders. For each allied creature who became wounded during a combat encounter, you gain a +2 circumstance bonus to your damage until the encounter's end. If an ally (including your follower) dies, the overall bonus increases to +3 for each wounded or dead ally. (@UUID[Compendium.pf2e-sovereign.effects.Item.qmPsTHpjy4CxjY8t])</p>"
+    },
+    "level": {
+      "value": 14
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "weight-of-the-crown",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

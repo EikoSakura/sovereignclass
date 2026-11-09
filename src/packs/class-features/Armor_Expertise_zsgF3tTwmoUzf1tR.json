@@ -1,0 +1,111 @@
+{
+  "_id": "zsgF3tTwmoUzf1tR",
+  "_key": "!items!zsgF3tTwmoUzf1tR",
+  "name": "Armor Expertise",
+  "type": "feat",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>You have spent so much time in armor that you know how to make the most of its protection. Your proficiency ranks for light and medium armor, as well as for unarmored defense, increase to expert. You gain the armor specialization effects of medium armor.</p>"
+    },
+    "level": {
+      "value": 11
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "Resistance",
+        "type": "piercing",
+        "value": "1 + @armor.system.runes.potency",
+        "predicate": [
+          "armor:category:medium",
+          "armor:group:composite"
+        ]
+      },
+      {
+        "key": "Resistance",
+        "type": "bludgeoning",
+        "value": "1 + @armor.system.runes.potency",
+        "predicate": [
+          "armor:category:medium",
+          "armor:group:leather"
+        ]
+      },
+      {
+        "key": "Resistance",
+        "type": "slashing",
+        "value": "1 + @armor.system.runes.potency",
+        "predicate": [
+          "armor:category:medium",
+          "armor:group:plate"
+        ]
+      },
+      {
+        "key": "Resistance",
+        "type": "precision",
+        "value": "3 + @armor.system.runes.potency",
+        "predicate": [
+          "armor:category:medium",
+          "armor:group:skeletal"
+        ]
+      },
+      {
+        "key": "Resistance",
+        "type": "critical-hits",
+        "value": "4 + @armor.system.runes.potency",
+        "predicate": [
+          "armor:category:medium",
+          "armor:group:chain"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "armor-expertise",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "proficiencies": {
+        "light": {
+          "rank": 2
+        },
+        "medium": {
+          "rank": 2
+        },
+        "unarmored": {
+          "rank": 2
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

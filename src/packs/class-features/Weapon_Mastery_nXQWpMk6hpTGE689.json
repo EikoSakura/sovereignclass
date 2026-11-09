@@ -1,0 +1,65 @@
+{
+  "_id": "nXQWpMk6hpTGE689",
+  "_key": "!items!nXQWpMk6hpTGE689",
+  "name": "Weapon Mastery",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-tip-chipped-blood-red.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your weapon is an extension of yourself, and therefore an extension of your court. Your proficiency ranks for unarmed attacks, simple weapons, and martial weapons increase to master.</p>"
+    },
+    "level": {
+      "value": 13
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "weapon-mastery",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "proficiencies": {
+        "martial": {
+          "rank": 3
+        },
+        "simple": {
+          "rank": 3
+        },
+        "unarmed": {
+          "rank": 3
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

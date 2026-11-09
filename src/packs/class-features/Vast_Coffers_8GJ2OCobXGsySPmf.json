@@ -1,0 +1,52 @@
+{
+  "_id": "8GJ2OCobXGsySPmf",
+  "_key": "!items!8GJ2OCobXGsySPmf",
+  "name": "Vast Coffers",
+  "type": "feat",
+  "img": "icons/commodities/currency/coins-assorted-mix-copper-silver-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>As a sovereign, you have quite an amount of wealth to draw from. You can roll Society to @UUID[Compendium.pf2e.actionspf2e.Item.QyzlsLrqM0EEwd7j] no matter where you are, as members of your court bring you gold from your treasury. You begin with double the starting gold a normal character begins play with.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "vast-coffers",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

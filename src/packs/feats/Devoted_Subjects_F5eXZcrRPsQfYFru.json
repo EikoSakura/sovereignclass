@@ -1,0 +1,70 @@
+{
+  "_id": "F5eXZcrRPsQfYFru",
+  "_key": "!items!F5eXZcrRPsQfYFru",
+  "name": "Devoted Subjects",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-unity-alliance.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>A group of your subjects have come to follow you, aiding their sovereign however they can. These individuals don't function as followers and won't accompany you into dangerous areas or situations. However, they can train by your side, assist you in creating items, or help you spread your heroic tales.</p><p>When you are in a place where your subjects could reasonably assist you, you gain a +1 circumstance bonus to checks to Craft, Coerce, Earn Income, Make an Impression, and Subsist, as well as other downtime activities at the GM's discretion. Your subjects also help you train: for every 5 days you spend retraining, you make a week's worth of progress.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "skill-check",
+        "option": "devoted-subjects",
+        "toggleable": true,
+        "label": "Subjects Assisting (Craft, Coerce, Earn Income, Impression, Subsist)"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "skill-check",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "devoted-subjects"
+        ],
+        "label": "Devoted Subjects"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "devoted-subjects",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "UJuQulCZn5t6uD9L",
+  "_key": "!items!UJuQulCZn5t6uD9L",
+  "name": "After Them!",
+  "type": "feat",
+  "img": "icons/skills/movement/arrow-upward-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Trigger</strong> An enemy within line of sight attempts to move away from you.</p><hr /><p>You command your follower to pursue your foe. Your follower Strides up to their Speed, following the enemy until it stops moving or your follower has moved its full Speed. You can use After Them! to Burrow, Climb, Fly, or Swim instead of Stride if your follower has the corresponding movement type.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "after-them",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

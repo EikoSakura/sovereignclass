@@ -1,0 +1,56 @@
+{
+  "_id": "RpCWYnJBRsAt0Spj",
+  "_key": "!items!RpCWYnJBRsAt0Spj",
+  "name": "Sovereign's Escort",
+  "type": "feat",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wearing your armor regalia.</p><p><strong>Trigger</strong> An adjacent ally Strides.</p><hr /><p>You escort the meek through danger, taking hits aimed for them when needed. You Stride alongside your ally up to their Speed. If the ally triggers any reactions during this movement, your Stride ends, and you are subject to the reaction instead of your ally.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "armor regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "sovereigns-escort",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

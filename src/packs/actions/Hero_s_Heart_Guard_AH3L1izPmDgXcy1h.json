@@ -1,0 +1,78 @@
+{
+  "_id": "AH3L1izPmDgXcy1h",
+  "_key": "!items!AH3L1izPmDgXcy1h",
+  "name": "Hero's Heart Guard",
+  "type": "action",
+  "img": "icons/equipment/shield/heater-steel-worn.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "defensive",
+    "description": {
+      "value": "<p><em>Add this to your follower at 4th level (Court's Training, Court of Hero's Heart).</em></p><p>Your follower is taught to put the needs of others first in battle. Allies adjacent to the follower (a 5-foot aura) have lesser cover, a +1 circumstance bonus to AC (@UUID[Compendium.pf2e-sovereign.effects.Item.9JHEoBqjxSNlZSKa]). While guarding, the follower has resistance to physical damage equal to half its level. Turn off <em>Hero's Heart Guard</em> to drop the aura.</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "heros-heart-guard",
+        "toggleable": true,
+        "label": "Hero's Heart Guard",
+        "value": true
+      },
+      {
+        "key": "Aura",
+        "slug": "heros-heart-guard",
+        "radius": 5,
+        "traits": [
+          "aura"
+        ],
+        "predicate": [
+          "heros-heart-guard"
+        ],
+        "effects": [
+          {
+            "affects": "allies",
+            "includesSelf": false,
+            "uuid": "Compendium.pf2e-sovereign.effects.Item.9JHEoBqjxSNlZSKa"
+          }
+        ]
+      },
+      {
+        "key": "Resistance",
+        "type": "physical",
+        "value": "max(1,floor(@actor.level/2))",
+        "predicate": [
+          "heros-heart-guard"
+        ]
+      }
+    ],
+    "slug": "heros-heart-guard",
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

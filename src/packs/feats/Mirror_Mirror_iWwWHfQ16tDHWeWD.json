@@ -1,0 +1,60 @@
+{
+  "_id": "iWwWHfQ16tDHWeWD",
+  "_key": "!items!iWwWHfQ16tDHWeWD",
+  "name": "Mirror, Mirror",
+  "type": "feat",
+  "img": "icons/sundries/survival/mirror-plain.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your mirror allows you to see things not just before you, but all around you. You cast @UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE] as an occult innate spell with a range of 1 mile.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "mirror regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "mirror-mirror",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

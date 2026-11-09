@@ -1,0 +1,56 @@
+{
+  "_id": "QV3tVpqJoPUum3Ix",
+  "_key": "!items!QV3tVpqJoPUum3Ix",
+  "name": "Deep Reflection",
+  "type": "feat",
+  "img": "icons/sundries/survival/mirror-plain.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wielding your mirror regalia.</p><hr /><p>You gaze into your mirror, thinking carefully of the possible consequences of your actions. You @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo] using Society. Rather than ask questions about things around you or that have already happened, you can ask questions about the near future, especially the consequences of your actions, such as what is likely to happen if you go left down a dungeon rather than right. You have a +1 circumstance bonus to your next skill action after using Deep Reflection. (@UUID[Compendium.pf2e-sovereign.effects.Item.e9bRojA4NUQux7jd])</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "mirror regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "deep-reflection",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

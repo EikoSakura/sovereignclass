@@ -1,0 +1,82 @@
+{
+  "_id": "1BeXcFV89uz1IFDl",
+  "_key": "!items!1BeXcFV89uz1IFDl",
+  "name": "Expanded Regalia",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your power has grown to the point of expanding your regalia to greater levels. You gain a second regalia, including its edicts and anathema.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "secondRegalia",
+        "prompt": "Choose a second regalia.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.ox7yNKZCIM4EL7sZ"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.c5HqMJeWYPayrGOa"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.Tn1sfdQHcWmexBEz"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.HTGEDVxE41bGBc4b"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.7vaBERQo7XaN74uI"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.nmvWOTTRMe5TEyEz"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.secondRegalia}"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "expanded-regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

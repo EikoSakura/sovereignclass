@@ -1,0 +1,61 @@
+{
+  "_id": "0rvoxDeAEkq0KyH0",
+  "_key": "!items!0rvoxDeAEkq0KyH0",
+  "name": "Effect: Queen's Gambit",
+  "type": "effect",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<p>You are @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{off-guard} until the start of your next turn and can use @UUID[Compendium.pf2e-sovereign.actions.Item.zJrWCwTFUIItfpyO].</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
+        "inMemoryOnly": true
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.actions.Item.zJrWCwTFUIItfpyO"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-queens-gambit",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

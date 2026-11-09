@@ -1,0 +1,56 @@
+{
+  "_id": "tFwtPMbiGEoIrU6M",
+  "_key": "!items!tFwtPMbiGEoIrU6M",
+  "name": "Off With Their Head",
+  "type": "feat",
+  "img": "icons/skills/wounds/injury-pain-body-orange.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You command that a creature be decapitated. The creature gains weakness to slashing damage equal to half your level until the start of your next turn. If the creature is reduced to 0 Hit Points by slashing damage during this time, it is decapitated. All hostile creatures within 15 feet of the creature become @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened 1}. If the creature has multiple heads and loses one through this effect, it becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{frightened 2}. (@UUID[Compendium.pf2e-sovereign.effects.Item.iiPckpzSW7IJbKAd])</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "linguistic",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "off-with-their-head",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

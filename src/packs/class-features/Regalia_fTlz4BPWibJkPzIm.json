@@ -1,0 +1,82 @@
+{
+  "_id": "fTlz4BPWibJkPzIm",
+  "_key": "!items!fTlz4BPWibJkPzIm",
+  "name": "Regalia",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-gold-laurel-wreath.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>A lot can be learned of a sovereign and the way they rule depending on the regalia they carry. Choose a regalia. Your regalia is a physical object which defines your personal abilities as well as how you lead others. So long as you have your regalia on your person, you gain its effects.</p><ul><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.ox7yNKZCIM4EL7sZ]</li><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.c5HqMJeWYPayrGOa]</li><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.Tn1sfdQHcWmexBEz]</li><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.HTGEDVxE41bGBc4b]</li><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.7vaBERQo7XaN74uI]</li><li>@UUID[Compendium.pf2e-sovereign.class-features.Item.nmvWOTTRMe5TEyEz]</li></ul>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "regalia",
+        "prompt": "Choose a regalia.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.ox7yNKZCIM4EL7sZ"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.c5HqMJeWYPayrGOa"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.Tn1sfdQHcWmexBEz"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.HTGEDVxE41bGBc4b"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.7vaBERQo7XaN74uI"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.class-features.Item.nmvWOTTRMe5TEyEz"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.regalia}"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

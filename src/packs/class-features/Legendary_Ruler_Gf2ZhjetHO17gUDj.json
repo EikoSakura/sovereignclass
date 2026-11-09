@@ -1,0 +1,59 @@
+{
+  "_id": "Gf2ZhjetHO17gUDj",
+  "_key": "!items!Gf2ZhjetHO17gUDj",
+  "name": "Legendary Ruler",
+  "type": "feat",
+  "img": "icons/sundries/flags/banner-pink.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>None can ever doubt your place at the head of your court. Your proficiency rank for your sovereign class DC increases to legendary.</p>"
+    },
+    "level": {
+      "value": 19
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.proficiencies.classDCs.sovereign.rank",
+        "value": 4
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "legendary-ruler",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

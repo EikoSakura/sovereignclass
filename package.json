@@ -1,0 +1,11 @@
+{
+  "name": "pf2e-sovereign",
+  "private": true,
+  "description": "Build tooling for the Sovereign PF2e homebrew class module.",
+  "scripts": {
+    "build": "cd src/build && python build.py && node compile.mjs ../.."
+  },
+  "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^1.1.0"
+  }
+}

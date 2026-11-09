@@ -1,0 +1,52 @@
+{
+  "_id": "PZJgQSCAChtTHxhM",
+  "_key": "!items!PZJgQSCAChtTHxhM",
+  "name": "Generous Benefactor",
+  "type": "feat",
+  "img": "icons/commodities/currency/coins-assorted-mix-copper-silver-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>By sponsoring others, you motivate them to do much better in their work. For every 150 gp you spend on another creature, you give them an increasing +1 circumstance bonus (up to +4) on a downtime roll to Craft. The money is used up in the Crafting attempt, so if you give it to another player, they cannot return it.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "generous-benefactor",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

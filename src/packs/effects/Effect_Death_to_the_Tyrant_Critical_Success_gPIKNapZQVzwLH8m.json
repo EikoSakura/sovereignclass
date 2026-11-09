@@ -1,0 +1,58 @@
+{
+  "_id": "gPIKNapZQVzwLH8m",
+  "_key": "!items!gPIKNapZQVzwLH8m",
+  "name": "Effect: Death to the Tyrant (Critical Success)",
+  "type": "effect",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<p>The tyrant's minions take a -2 circumstance penalty to attack rolls for 1 minute. Once the tyrant is slain, these minions might be willing to end combat early if they have not been harmed.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "attack-roll",
+        "type": "circumstance",
+        "value": -2
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-death-to-the-tyrant-critical-success",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

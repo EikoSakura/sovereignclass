@@ -1,0 +1,72 @@
+{
+  "_id": "yriDrAREmd7Eiavd",
+  "_key": "!items!yriDrAREmd7Eiavd",
+  "name": "Make Way",
+  "type": "feat",
+  "img": "icons/skills/social/intimidation-impressing.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>People know to get out of your way as you move through them. You and allies within 60 feet of you do not treat crowds as difficult terrain. While involved in a chase in an urban environment, you have a +2 circumstance bonus to all checks involving navigating crowds.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "make-way",
+        "toggleable": true,
+        "label": "Make Way (Navigating Crowds in a Chase)"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "skill-check",
+          "perception"
+        ],
+        "type": "circumstance",
+        "value": 2,
+        "predicate": [
+          "make-way"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "make-way",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

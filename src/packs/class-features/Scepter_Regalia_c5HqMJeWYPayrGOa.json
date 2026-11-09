@@ -1,0 +1,59 @@
+{
+  "_id": "c5HqMJeWYPayrGOa",
+  "_key": "!items!c5HqMJeWYPayrGOa",
+  "name": "Scepter Regalia",
+  "type": "feat",
+  "img": "icons/commodities/treasure/sceptre-jeweled-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>A scepter is an ornamental rod topped with a finial that illustrates the ruler's ideals. It highlights a sovereign's capable leadership, tactical acumen and right to rule over their subjects.</p><p><strong>Edicts</strong> Make decisive choices that benefit your court.</p><p><strong>Anathema</strong> Put a decision off for being difficult on a personal level.</p><p><strong>Regalia's Gift</strong> While wielding your scepter, you gain greater control of your followers. When you issue a command to a follower, you can spend an extra action to give your follower an additional action. You can spend all three actions to give your follower four actions, though your follower must then make a Fortitude save against your class DC or become fatigued.</p><p>You gain @UUID[Compendium.pf2e-sovereign.actions.Item.SneClAJhYWSiGdZR].</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.actions.Item.SneClAJhYWSiGdZR"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": [
+        "sovereign-regalia"
+      ]
+    },
+    "slug": "scepter-regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

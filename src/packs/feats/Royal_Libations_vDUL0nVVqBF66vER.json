@@ -1,0 +1,52 @@
+{
+  "_id": "vDUL0nVVqBF66vER",
+  "_key": "!items!vDUL0nVVqBF66vER",
+  "name": "Royal Libations",
+  "type": "feat",
+  "img": "icons/consumables/drinks/wine-amphora-clay-pink.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You raise a glass and drink it, passing it to your allies. Whenever you consume a potion or an alchemical consumable while adjacent to an ally or follower, both you and that ally gain the effects of the consumable. Only one other creature can benefit from this effect.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "royal-libations",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

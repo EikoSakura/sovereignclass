@@ -1,0 +1,57 @@
+{
+  "_id": "BXb7d6GZdPwkxyLD",
+  "_key": "!items!BXb7d6GZdPwkxyLD",
+  "name": "Rousing Speech",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-peace-alliance.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>By speaking from the heart, you ignite the passion of your allies and inspire them to fight on. You and all allies gain temporary Hit Points equal to your level + 2 for 10 minutes. (@UUID[Compendium.pf2e-sovereign.effects.Item.TQzQKgNuhEdSfWZg])</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "emotion",
+        "linguistic",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "rousing-speech",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

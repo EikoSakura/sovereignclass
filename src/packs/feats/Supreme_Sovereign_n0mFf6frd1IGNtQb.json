@@ -1,0 +1,68 @@
+{
+  "_id": "n0mFf6frd1IGNtQb",
+  "_key": "!items!n0mFf6frd1IGNtQb",
+  "name": "Supreme Sovereign",
+  "type": "feat",
+  "img": "icons/commodities/treasure/crown-blue-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>When you have an active follower in an encounter, you are @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{quickened}; you can use the extra action only to @UUID[Compendium.pf2e.actionspf2e.Item.H72AAzknXiojqXdY]{Direct your Follower}.</p>"
+    },
+    "level": {
+      "value": 20
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "supreme-sovereign",
+        "toggleable": true,
+        "label": "Follower Active in Encounter"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl",
+        "inMemoryOnly": true,
+        "predicate": [
+          "supreme-sovereign"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "supreme-sovereign",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

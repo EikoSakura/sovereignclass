@@ -1,0 +1,58 @@
+{
+  "_id": "0BEztxKiDOaByKiS",
+  "_key": "!items!0BEztxKiDOaByKiS",
+  "name": "Effect: Glorious Inspiration",
+  "type": "effect",
+  "img": "icons/skills/social/thumbsup-approval-like.webp",
+  "system": {
+    "description": {
+      "value": "<p>Granted by Glorious Inspiration. +1 circumstance bonus to Strikes until the start of the sovereign's next turn.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "strike-attack-roll",
+        "type": "circumstance",
+        "value": 1
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-glorious-inspiration",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

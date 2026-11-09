@@ -1,0 +1,52 @@
+{
+  "_id": "DP5C4O62Z2u7jRfX",
+  "_key": "!items!DP5C4O62Z2u7jRfX",
+  "name": "Queen's Gambit",
+  "type": "feat",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>By leaving yourself open to attack, you can tempt your opponents into taking up a disadvantageous position. You become @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{off-guard} until the start of your next turn, and gain the @UUID[Compendium.pf2e-sovereign.actions.Item.zJrWCwTFUIItfpyO] reaction. (@UUID[Compendium.pf2e-sovereign.effects.Item.0rvoxDeAEkq0KyH0])</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "queens-gambit",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

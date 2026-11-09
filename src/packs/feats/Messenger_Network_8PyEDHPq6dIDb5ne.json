@@ -1,0 +1,52 @@
+{
+  "_id": "8PyEDHPq6dIDb5ne",
+  "_key": "!items!8PyEDHPq6dIDb5ne",
+  "name": "Messenger Network",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-writing-letter.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You have messengers traveling the lands in your name. You can learn news of locations within 100 miles during your daily preparations, and have information issued to members of your court within this area. Information travels as fast as your couriers, usually about one day per 32 miles, as the messengers are usually on horseback.</p>"
+    },
+    "level": {
+      "value": 10
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "messenger-network",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

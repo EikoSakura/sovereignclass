@@ -1,0 +1,69 @@
+{
+  "_id": "ox7yNKZCIM4EL7sZ",
+  "_key": "!items!ox7yNKZCIM4EL7sZ",
+  "name": "Armor Regalia",
+  "type": "feat",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your regalia is a suit of armor, crafted of the finest metals and emblazoned with symbols of your court. A sovereign who dons armor as their regalia shows that they are totally loyal to their court, and are willing to die for their people.</p><p><strong>Edicts</strong> Defend the people of your court with your life.</p><p><strong>Anathema</strong> Harm the people of your court.</p><p><strong>Regalia's Gift</strong> You are trained in heavy armor. When your proficiency for light and medium armor increases, your heavy armor proficiency increases too. While you are wearing heavy armor, you gain resistance to physical damage equal to half your level.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.proficiencies.defenses.heavy.rank",
+        "value": "ternary(gte(@actor.level,17),3,ternary(gte(@actor.level,11),2,1))"
+      },
+      {
+        "key": "Resistance",
+        "type": "physical",
+        "value": "floor(@actor.level/2)",
+        "predicate": [
+          "armor:category:heavy"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": [
+        "sovereign-regalia"
+      ]
+    },
+    "slug": "armor-regalia",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

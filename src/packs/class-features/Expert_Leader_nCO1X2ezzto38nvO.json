@@ -1,0 +1,59 @@
+{
+  "_id": "nCO1X2ezzto38nvO",
+  "_key": "!items!nCO1X2ezzto38nvO",
+  "name": "Expert Leader",
+  "type": "feat",
+  "img": "icons/sundries/flags/banner-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Even while adventuring, you ensure that you are able to effectively guide your people. Your proficiency rank for your sovereign class DC increases to expert.</p>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.proficiencies.classDCs.sovereign.rank",
+        "value": 2
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "expert-leader",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

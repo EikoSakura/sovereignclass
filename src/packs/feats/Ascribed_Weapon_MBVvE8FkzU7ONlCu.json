@@ -1,0 +1,56 @@
+{
+  "_id": "MBVvE8FkzU7ONlCu",
+  "_key": "!items!MBVvE8FkzU7ONlCu",
+  "name": "Ascribed Weapon",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-guard-gold-red.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You have named your weapon, and its name is as well known as your own. When you invest in a specific magic weapon, you can choose to transfer its powers into your weapon regalia. Your weapon regalia gains the abilities, runes and activations of the specific magic weapon, but retains its form; for example, if your weapon regalia is a longsword and you invested a <em>Chainbreaker</em>, you would have a +1 striking longsword with the Chainbreaker's abilities and Liberating Strike activation.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "weapon regalia"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "ascribed-weapon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

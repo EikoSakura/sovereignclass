@@ -1,0 +1,65 @@
+{
+  "_id": "xDRDeu4pgvUQASFG",
+  "_key": "!items!xDRDeu4pgvUQASFG",
+  "name": "Armor Mastery",
+  "type": "feat",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your armor protects your heart, and the heart of your people. Your proficiency ranks for light and medium armor, as well as for unarmored defense, increase to master.</p>"
+    },
+    "level": {
+      "value": 17
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "armor-mastery",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "proficiencies": {
+        "light": {
+          "rank": 3
+        },
+        "medium": {
+          "rank": 3
+        },
+        "unarmored": {
+          "rank": 3
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

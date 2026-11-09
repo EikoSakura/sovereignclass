@@ -1,0 +1,67 @@
+{
+  "_id": "eqOIf2KjclUvsB4W",
+  "_key": "!items!eqOIf2KjclUvsB4W",
+  "name": "Graceful Mastery",
+  "type": "feat",
+  "img": "icons/skills/movement/arrow-upward-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>You cannot afford to look oafish or clumsy, and have learned to be quick on your feet. Your proficiency rank for Reflex saves increases to master. When you roll a success on a Reflex save, you get a critical success instead.</p>"
+    },
+    "level": {
+      "value": 15
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "AdjustDegreeOfSuccess",
+        "selector": "reflex",
+        "adjustment": {
+          "success": "to-critical-success"
+        }
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "graceful-mastery",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "proficiencies": {
+        "reflex": {
+          "rank": 3
+        }
+      }
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "_id": "j7azsZqCVNo79QON",
+  "_key": "!items!j7azsZqCVNo79QON",
+  "name": "Sovereign's Double",
+  "type": "feat",
+  "img": "icons/skills/social/theft-pickpocket-bribery-brown.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You have gained the service of an impersonator, a double who is trained to look and speak like you. They have a Deception modifier equal to your class DC - 10, and will Disguise themselves as you when needed. When they Disguise themselves as you, they can simultaneously Disguise you as an ordinary citizen, allowing you to slip out of the spotlight. Your double has the same AC, Hit Points and saves as your follower, and will not enter combat.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "sovereigns-double",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "_id": "TQzQKgNuhEdSfWZg",
+  "_key": "!items!TQzQKgNuhEdSfWZg",
+  "name": "Effect: Rousing Speech",
+  "type": "effect",
+  "img": "icons/skills/social/diplomacy-peace-alliance.webp",
+  "system": {
+    "description": {
+      "value": "<p>Temporary Hit Points equal to the sovereign's level + 2 for 10 minutes. Apply from the sovereign's chat card so the effect knows whose level to use.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 10
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [
+      {
+        "key": "TempHP",
+        "value": "@item.origin.level + 2"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-rousing-speech",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

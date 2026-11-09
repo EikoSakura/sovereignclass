@@ -1,0 +1,58 @@
+{
+  "_id": "n3CsLzLJVplOV4vw",
+  "_key": "!items!n3CsLzLJVplOV4vw",
+  "name": "Royal Rebuke",
+  "type": "feat",
+  "img": "icons/skills/social/peace-luck-insult.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> An ally within 60 feet failed a saving throw against a mental or linguistic effect since your last turn.</p><hr /><p>You give a short, impassioned speech explaining why your foes are wrong, and you and your allies are righteous. You roll Society to counteract the effect, recovering half of any lost HP if applicable.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "emotion",
+        "exploration",
+        "linguistic",
+        "mental",
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "royal-rebuke",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

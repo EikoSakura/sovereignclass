@@ -1,0 +1,46 @@
+{
+  "_id": "SneClAJhYWSiGdZR",
+  "_key": "!items!SneClAJhYWSiGdZR",
+  "name": "Scepter's Command",
+  "type": "action",
+  "img": "icons/commodities/treasure/sceptre-jeweled-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": null,
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wielding your scepter regalia.</p><hr /><p>When you @UUID[Compendium.pf2e.actionspf2e.Item.H72AAzknXiojqXdY], you can spend 1 extra action to give your follower 1 additional action (3 actions total). If you spend all 3 of your actions this way, your follower gets 4 actions instead, but must then attempt a Fortitude save against your class DC or become @UUID[Compendium.pf2e.conditionitems.Item.HL2l2VRSaQHu9lUw]{Fatigued}: @Check[fortitude|against:class].</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "slug": "scepters-command",
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate"
+      ]
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

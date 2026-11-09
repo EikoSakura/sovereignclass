@@ -1,0 +1,56 @@
+{
+  "_id": "CQlzFLxtRIHyT682",
+  "_key": "!items!CQlzFLxtRIHyT682",
+  "name": "Kneel Before Your Superior!",
+  "type": "feat",
+  "img": "icons/equipment/head/crown-gold-red.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Frequency</strong> once per day</p><hr /><p>Your power is so great that even your foes are forced to bow to you. You can cast @UUID[Compendium.pf2e.spells-srd.Item.fkDeKktdmbeplYRY] as a 9th-rank innate divine spell using your class DC.</p>"
+    },
+    "level": {
+      "value": 18
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "kneel-before-your-superior",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

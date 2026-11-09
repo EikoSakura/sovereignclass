@@ -1,0 +1,52 @@
+{
+  "_id": "yQ54iBOIxVBnN6nB",
+  "_key": "!items!yQ54iBOIxVBnN6nB",
+  "name": "Poison Taster",
+  "type": "feat",
+  "img": "icons/consumables/potions/bottle-round-corked-green.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your follower acts as a poison taster, checking your and your companions' food before you eat, and carrying solutions to poison when you need it. Every day, your follower creates a number of antidotes and antiplagues equal to your party size, of an item level equal to your level. Your follower has a +2 circumstance bonus to detect poison or disease in your meals, and samples your and your allies' meals every day.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "sovereign"
+      ],
+      "otherTags": []
+    },
+    "slug": "poison-taster",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

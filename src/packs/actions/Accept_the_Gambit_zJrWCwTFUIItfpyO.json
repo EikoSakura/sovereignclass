@@ -1,0 +1,43 @@
+{
+  "_id": "zJrWCwTFUIItfpyO",
+  "_key": "!items!zJrWCwTFUIItfpyO",
+  "name": "Accept the Gambit",
+  "type": "action",
+  "img": "icons/skills/melee/maneuver-sword-katana-yellow.webp",
+  "system": {
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": null,
+    "description": {
+      "value": "<p><strong>Trigger</strong> A creature attempts to Strike you while you are off-guard due to Queen's Gambit.</p><hr /><p>Your follower @UUID[Compendium.pf2e.actionspf2e.Item.Bcxarzksqt9ezrs6]{Strides} and @UUID[Compendium.pf2e.actionspf2e.Item.VjxZFuUXrCU94MWR]{Strikes} the triggering creature. If the creature failed its Strike, the follower gains a +1 circumstance bonus to their Strike; on a critical failure, a +2 circumstance bonus. The Strike deals additional precision damage equal to [[/r (floor(@actor.level/2))d6[precision]]] (1d6 per 2 of your levels).</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Sovereign (Homebrew)"
+    },
+    "rules": [],
+    "slug": "accept-the-gambit",
+    "traits": {
+      "rarity": "common",
+      "value": []
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}
