@@ -13,7 +13,7 @@
     },
     "category": "classfeature",
     "description": {
-      "value": "<p>A weapon is perhaps the simplest piece of regalia in terms of symbolism: no matter how ornate it is, it is a tool of war that shows that you are willing to slay others for your court.</p><p><strong>Edicts</strong> Execute those who pose a threat to your court when imprisoning them could lead to further danger.</p><p><strong>Anathema</strong> Flee from a fight you could reasonably win.</p><p><strong>Regalia's Gift</strong> Your weapon is more powerful than others of its kind. Increase its damage die size by one step, to a maximum of d12.</p><p><em>You choose your regalia's weapon type (such as longsword or mace) when you gain this feature. Any weapon of that type you wield gets the larger damage die.</em></p>"
+      "value": "<p>A weapon is perhaps the simplest piece of regalia in terms of symbolism: no matter how ornate it is, it is a tool of war that shows that you are willing to slay others for your court.</p><p><strong>Edicts</strong> Execute those who pose a threat to your court when imprisoning them could lead to further danger.</p><p><strong>Anathema</strong> Flee from a fight you could reasonably win.</p><p><strong>Regalia's Gift</strong> Your weapon is more powerful than others of its kind. Increase its damage die size by one step, to a maximum of d12.</p><p><em>Pick your regalia's weapon type (such as longsword or mace) from the <strong>Regalia Weapon</strong> dropdown on your Actions tab. Change it whenever you take up a new regalia weapon. Weapons of that type get the larger damage die.</em></p>"
     },
     "level": {
       "value": 1
@@ -28,12 +28,15 @@
     },
     "rules": [
       {
-        "key": "ChoiceSet",
-        "flag": "regaliaWeapon",
-        "choices": {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "weapon-regalia",
+        "label": "Regalia Weapon",
+        "toggleable": true,
+        "alwaysActive": true,
+        "suboptions": {
           "config": "baseWeaponTypes"
-        },
-        "prompt": "PF2E.SpecificRule.Prompt.Weapon"
+        }
       },
       {
         "key": "DamageDice",
@@ -42,7 +45,7 @@
           "upgrade": true
         },
         "predicate": [
-          "item:base:{item|flags.system.rulesSelections.regaliaWeapon}"
+          "item:base:{item|flags.system.rulesSelections.weaponRegalia}"
         ]
       }
     ],

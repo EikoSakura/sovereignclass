@@ -175,15 +175,16 @@ def build_regalia():
                "Flee from a fight you could reasonably win.") +
         block("Regalia's Gift", "Your weapon is more powerful than others of its kind. Increase its damage die size "
               "by one step, to a maximum of d12.") +
-        p("<em>You choose your regalia's weapon type (such as longsword or mace) when you gain this feature. Any "
-          "weapon of that type you wield gets the larger damage die.</em>"),
+        p("<em>Pick your regalia's weapon type (such as longsword or mace) from the <strong>Regalia Weapon</strong> "
+          "dropdown on your Actions tab. Change it whenever you take up a new regalia weapon. Weapons of that type "
+          "get the larger damage die.</em>"),
         category="classfeature", traits=["sovereign"], other_tags=common_tags,
         img="icons/weapons/swords/sword-guard-gold-red.webp",
         rules=[
-            {"key": "ChoiceSet", "flag": "regaliaWeapon", "choices": {"config": "baseWeaponTypes"},
-             "prompt": "PF2E.SpecificRule.Prompt.Weapon"},
+            {"key": "RollOption", "domain": "all", "option": "weapon-regalia", "label": "Regalia Weapon",
+             "toggleable": True, "alwaysActive": True, "suboptions": {"config": "baseWeaponTypes"}},
             {"key": "DamageDice", "selector": "strike-damage", "override": {"upgrade": True},
-             "predicate": ["item:base:{item|flags.system.rulesSelections.regaliaWeapon}"]},
+             "predicate": ["item:base:{item|flags.system.rulesSelections.weaponRegalia}"]},
         ]))
 
     # The picker feature
