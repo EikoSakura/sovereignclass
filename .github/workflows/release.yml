@@ -26,7 +26,7 @@ jobs:
           cat module.json
 
       - name: Build module.zip
-        run: zip -r module.zip module.json README.md scripts packs
+        run: zip -r module.zip module.json README.md scripts styles packs
 
       - name: Publish release
         uses: softprops/action-gh-release@v2

@@ -10,7 +10,7 @@ import class_data
 import feats_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 REPO = "https://github.com/EikoSakura/sovereignclass"
 
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
@@ -107,6 +107,7 @@ manifest = {
         "requires": [{"id": "pf2e-animal-companions", "type": "module", "compatibility": {}}],
     },
     "esmodules": ["scripts/sovereign.mjs"],
+    "styles": ["styles/sovereign.css"],
     "packs": [
         {"name": name, "label": f"Sovereign {label}", "path": f"packs/{name}", "type": typ, "system": "pf2e",
          "ownership": {"PLAYER": "OBSERVER", "ASSISTANT": "OWNER"}, "flags": {}}
@@ -120,20 +121,7 @@ os.makedirs(MODULE_DIR, exist_ok=True)
 with open(os.path.join(MODULE_DIR, "module.json"), "w", encoding="utf-8") as fh:
     json.dump(manifest, fh, indent=2)
 
-os.makedirs(os.path.join(MODULE_DIR, "scripts"), exist_ok=True)
-with open(os.path.join(MODULE_DIR, "scripts", "sovereign.mjs"), "w", encoding="utf-8") as fh:
-    fh.write("""// Registers the Sovereign trait so class feats filter correctly in the pf2e feat browser.
-Hooks.once("init", () => {
-  const PF2E = CONFIG.PF2E;
-  if (!PF2E) return;
-  for (const key of ["classTraits", "featTraits", "actionTraits"]) {
-    if (PF2E[key]) PF2E[key].sovereign = "Sovereign";
-  }
-  if (PF2E.traitsDescriptions) {
-    PF2E.traitsDescriptions.sovereign = "Abilities with this trait come from the sovereign class.";
-  }
-});
-""")
+# scripts/ and styles/ are hand-written and live in the repo; build.py does not touch them.
 
 for pack, docs in data.items():
     print(f"{pack}: {len(docs)}")

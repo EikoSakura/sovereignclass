@@ -175,16 +175,13 @@ def build_regalia():
                "Flee from a fight you could reasonably win.") +
         block("Regalia's Gift", "Your weapon is more powerful than others of its kind. Increase its damage die size "
               "by one step, to a maximum of d12.") +
-        p("<em>Pick your regalia's weapon type (such as longsword or mace) from the <strong>Regalia Weapon</strong> "
-          "dropdown on your Actions tab. Change it whenever you take up a new regalia weapon. Weapons of that type "
-          "get the larger damage die.</em>"),
+        p("<em>Click the crown next to a weapon in your inventory to make it your regalia. Click another weapon's "
+          "crown to switch.</em>"),
         category="classfeature", traits=["sovereign"], other_tags=common_tags,
         img="icons/weapons/swords/sword-guard-gold-red.webp",
         rules=[
-            {"key": "RollOption", "domain": "all", "option": "weapon-regalia", "label": "Regalia Weapon",
-             "toggleable": True, "alwaysActive": True, "suboptions": {"config": "baseWeaponTypes"}},
             {"key": "DamageDice", "selector": "strike-damage", "override": {"upgrade": True},
-             "predicate": ["item:base:{item|flags.system.rulesSelections.weaponRegalia}"]},
+             "predicate": ["item:tag:regalia-weapon"]},
         ]))
 
     # The picker feature

@@ -2,7 +2,7 @@
   "id": "pf2e-sovereign",
   "title": "Sovereign Class (PF2e Homebrew)",
   "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their court. Includes the class, class features, feats, and effects. Followers come from PF2e Companion Compendia.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     {
       "name": "Eiko"
@@ -10,7 +10,7 @@
   ],
   "url": "https://github.com/EikoSakura/sovereignclass",
   "manifest": "https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.json",
-  "download": "https://github.com/EikoSakura/sovereignclass/releases/download/v1.0.2/module.zip",
+  "download": "https://github.com/EikoSakura/sovereignclass/releases/download/v1.0.3/module.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -33,6 +33,9 @@
   },
   "esmodules": [
     "scripts/sovereign.mjs"
+  ],
+  "styles": [
+    "styles/sovereign.css"
   ],
   "packs": [
     {
