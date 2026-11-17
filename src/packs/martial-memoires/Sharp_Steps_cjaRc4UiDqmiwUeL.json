@@ -1,0 +1,57 @@
+{
+  "_id": "cjaRc4UiDqmiwUeL",
+  "_key": "!items!cjaRc4UiDqmiwUeL",
+  "name": "Sharp Steps",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance and one of your copied blades could be recalled.</p><hr /><p>You dash toward your blade to recover it in a deadly flourish. Stride toward the required blade. If you end your movement adjacent to it, you immediately pick it up and use Blade Spin.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Blade Spin"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype",
+        "flourish"
+      ],
+      "otherTags": []
+    },
+    "slug": "sharp-steps",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

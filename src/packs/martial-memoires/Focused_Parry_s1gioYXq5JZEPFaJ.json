@@ -1,0 +1,88 @@
+{
+  "_id": "s1gioYXq5JZEPFaJ",
+  "_key": "!items!s1gioYXq5JZEPFaJ",
+  "name": "Focused Parry",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>As steel whirls around you, foes who try to attack you are blocked effortlessly. While you're in Bladework Stance, your Favored Blade gains the parry trait. If it already has it, the circumstance bonus to AC increases to +2.</p><p><em>Foundry:</em> turn on the toggle if your Favored Blade already had the parry trait.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "weapon-traits",
+        "value": "parry",
+        "definition": [
+          "item:tag:favored-blade"
+        ],
+        "predicate": [
+          "self:effect:bladework-stance"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "focused-parry-native",
+        "toggleable": true,
+        "label": "Favored Blade already has parry"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "circumstance",
+        "value": 2,
+        "slug": "focused-parry",
+        "predicate": [
+          "self:effect:bladework-stance",
+          "self:effect:parry",
+          "focused-parry-native"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "focused-parry",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

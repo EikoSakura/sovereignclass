@@ -1,0 +1,77 @@
+{
+  "_id": "WUd64qhxrKH6n38c",
+  "_key": "!items!WUd64qhxrKH6n38c",
+  "name": "Ubiquitous Blade",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You're able to control your blades with more precision over long distances. Your Favored Blade gains the reach trait and the range of its thrown trait becomes 25 feet. If it already had the thrown trait, it instead increases its range increment by 10 feet.</p>"
+    },
+    "level": {
+      "value": 14
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "weapon-traits",
+        "value": "reach",
+        "definition": [
+          "item:tag:favored-blade",
+          "item:melee"
+        ]
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "range-increment",
+        "value": 10,
+        "definition": [
+          "item:tag:favored-blade",
+          "item:ranged"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "ubiquitous-blade",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

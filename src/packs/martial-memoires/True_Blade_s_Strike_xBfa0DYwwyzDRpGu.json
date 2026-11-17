@@ -1,0 +1,56 @@
+{
+  "_id": "xBfa0DYwwyzDRpGu",
+  "_key": "!items!xBfa0DYwwyzDRpGu",
+  "name": "True Blade's Strike",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>You coalesce all your blades into your Favored Blade for a killing blow. Make a melee Strike with your Favored Blade. Its damage die increases by one step, and for every blade flying above you, you deal an additional die of damage. This Strike counts as three attacks when calculating your multiple attack penalty. After using this activity, you exit your Bladework Stance.</p><p><em>Foundry:</em> turn on the True Blade's Strike toggle from Bladework Stance for the Strike; it upgrades the die and adds dice equal to the stance's blade count.</p>"
+    },
+    "level": {
+      "value": 20
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "true-blades-strike",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

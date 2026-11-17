@@ -1,0 +1,57 @@
+{
+  "_id": "245wIPN0m1B3wjrj",
+  "_key": "!items!245wIPN0m1B3wjrj",
+  "name": "Effect: Blade Surfing",
+  "type": "effect",
+  "img": "icons/magic/air/wind-weather-sailing-ship.webp",
+  "system": {
+    "description": {
+      "value": "<p>You surf on a copy of your Favored Blade: fly Speed equal to your land Speed. That copy doesn't count as flying above you. Dismiss with a single concentrate action.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "BaseSpeed",
+        "selector": "fly",
+        "value": "@actor.attributes.speed.value"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-blade-surfing",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

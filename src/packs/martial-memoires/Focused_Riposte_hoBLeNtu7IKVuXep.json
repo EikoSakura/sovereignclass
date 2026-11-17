@@ -1,0 +1,56 @@
+{
+  "_id": "hoBLeNtu7IKVuXep",
+  "_key": "!items!hoBLeNtu7IKVuXep",
+  "name": "Focused Riposte",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance and have a circumstance bonus to AC from the parry trait.</p><hr /><p><strong>Trigger</strong> An enemy within your weapon's first range increment critically misses you with a Strike.</p><p>Steel flies around you to protect and attack. You Strike the triggering enemy.</p>"
+    },
+    "level": {
+      "value": 10
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "focused-riposte",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

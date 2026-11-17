@@ -1,0 +1,57 @@
+{
+  "_id": "JY3AVTZjD6BTjBI5",
+  "_key": "!items!JY3AVTZjD6BTjBI5",
+  "name": "Flying Pincer",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>Using two blades at once, you force your enemy between a blade and a sharp place. Make two Strikes against the same enemy, the first one at your current multiple attack penalty and the second at a -2 penalty. The enemy is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against both Strikes. At least one of them must be a thrown Strike with a copy of your blade.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype",
+        "flourish"
+      ],
+      "otherTags": []
+    },
+    "slug": "flying-pincer",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

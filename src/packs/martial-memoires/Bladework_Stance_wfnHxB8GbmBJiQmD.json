@@ -1,0 +1,49 @@
+{
+  "_id": "wfnHxB8GbmBJiQmD",
+  "_key": "!items!wfnHxB8GbmBJiQmD",
+  "name": "Bladework Stance",
+  "type": "action",
+  "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": null,
+    "description": {
+      "value": "<p><strong>Requirements</strong> You are wielding your Favored Blade.</p><hr /><p>You summon a number of copies of your Favored Blade equal to its number of weapon damage dice and make them fly above you. While a copy is flying above you, you count as wielding it.</p><p>While in Bladework Stance, your Favored Blade and its copies gain the thrown 15 ft. trait, or increase their range increment by 10 feet if they already have it.</p><p>You can use a single action with the concentrate trait to call back one or more copies within your Favored Blade's first range increment, or to move one or more copies flying around you to any place within your first range increment.</p><p>If a copy would return to your hand, due to the effect of a returning rune for example, you can immediately make it fly above you.</p><p>Wielding your copied blades requires focus and synergy with your Favored Blade. Any effect that would apply only to the Favored Blade, such as the penalty to Strikes from the Disarm action, also applies to the copies.</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "slug": "bladework-stance",
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "stance"
+      ]
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "selfEffect": {
+      "name": "Stance: Bladework Stance",
+      "uuid": "Compendium.pf2e-sovereign.martial-memoires.Item.rdfo8hFqzw1VGGkJ"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

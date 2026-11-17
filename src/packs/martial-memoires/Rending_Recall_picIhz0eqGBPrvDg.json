@@ -1,0 +1,45 @@
+{
+  "_id": "picIhz0eqGBPrvDg",
+  "_key": "!items!picIhz0eqGBPrvDg",
+  "name": "Rending Recall",
+  "type": "action",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": null,
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance and an enemy within your Favored Blade's first range increment has at least one copy of your Favored Blade stuck in them.</p><hr /><p>You recall all blades within your weapon's first range increment. Creatures take @Damage[(1d6+1)[persistent,bleed]] damage for each blade that was stuck in them, with a @Check[fortitude|against:class-spell|basic] save against your soaring blade DC.</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "slug": "rending-recall",
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "concentrate"
+      ]
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

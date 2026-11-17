@@ -30,7 +30,13 @@ https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.jso
 | Summons Unleashed: Convoker & Eidolons | The Convoker class archetype (Convoker Assembly, 7 archetype feats, the *convoke*, *assembled assault* and *combination convocation* focus spells), the summoner's side of 8 new eidolons, and their effects |
 | Summons Unleashed: Eidolon Ancestries | The eidolon actor's side of the 8 new eidolons (Coatl, Kami, Mycological, Program, Rakshasa, Saboteur, Sphinx, Time): an ancestry, Strength and Dexterity key-attribute builds, and initial, symbiosis and transcendence abilities |
 
+| Martial Memoires: Soaring Blade | The Soaring Blade archetype: dedication, Bladework Stance (with its effect), 15 archetype feats, and the Rending Recall and Punitive Strike actions |
+
 The module also adds **Chain Blade** to the Base Weapon list on weapon sheets.
+
+## Soaring Blade
+
+Take **Soaring Blade Dedication**, then mark your Favored Blade with the feather toggle on its inventory row. Entering **Bladework Stance** counts the blades flying above you (its badge, set from the Favored Blade's damage dice) and gives the Favored Blade thrown 15 ft. (or +10 feet of range increment). The stance effect also carries toggles for Raining Assault / Downpour of Steel splash and True Blade's Strike, which read that blade count.
 
 ## Summons Unleashed eidolons
 

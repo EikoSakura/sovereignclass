@@ -1,0 +1,161 @@
+{
+  "_id": "rdfo8hFqzw1VGGkJ",
+  "_key": "!items!rdfo8hFqzw1VGGkJ",
+  "name": "Stance: Bladework Stance",
+  "type": "effect",
+  "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your Favored Blade and its copies fly above you. The badge counts the blades flying above you (set from your Favored Blade's damage dice when you enter the stance; adjust it as blades leave or return).</p><p>Melee Favored Blades without the thrown trait gain thrown 15 ft.; ranged thrown ones gain +10 feet of range increment.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "weapon-traits",
+        "value": "thrown-15",
+        "definition": [
+          "item:tag:favored-blade",
+          "item:melee",
+          {
+            "not": "item:thrown-melee"
+          }
+        ],
+        "predicate": [
+          {
+            "not": "feat:ubiquitous-blade"
+          }
+        ]
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "weapon-traits",
+        "value": "thrown-25",
+        "definition": [
+          "item:tag:favored-blade",
+          "item:melee",
+          {
+            "not": "item:thrown-melee"
+          }
+        ],
+        "predicate": [
+          "feat:ubiquitous-blade"
+        ]
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "range-increment",
+        "value": 10,
+        "definition": [
+          "item:tag:favored-blade",
+          "item:ranged"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "soaring-blade-splash",
+        "toggleable": true,
+        "label": "Raining Assault / Downpour of Steel splash",
+        "predicate": [
+          {
+            "or": [
+              "feat:raining-assault",
+              "feat:downpour-of-steel"
+            ]
+          }
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "strike-damage",
+        "slug": "soaring-blade-splash",
+        "damageCategory": "splash",
+        "value": "@item.badge.value",
+        "predicate": [
+          "item:tag:favored-blade",
+          "soaring-blade-splash"
+        ]
+      },
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "true-blades-strike",
+        "toggleable": true,
+        "label": "True Blade's Strike",
+        "predicate": [
+          "feat:true-blades-strike"
+        ]
+      },
+      {
+        "key": "DamageDice",
+        "selector": "strike-damage",
+        "slug": "true-blades-strike-step",
+        "override": {
+          "upgrade": true
+        },
+        "predicate": [
+          "item:tag:favored-blade",
+          "item:melee",
+          "true-blades-strike"
+        ]
+      },
+      {
+        "key": "DamageDice",
+        "selector": "strike-damage",
+        "slug": "true-blades-strike-dice",
+        "diceNumber": "@item.badge.value",
+        "predicate": [
+          "item:tag:favored-blade",
+          "item:melee",
+          "true-blades-strike"
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "stance-bladework-stance",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "badge": {
+      "type": "counter",
+      "value": 1,
+      "label": "Blades flying"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

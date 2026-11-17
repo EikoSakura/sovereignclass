@@ -1,0 +1,62 @@
+{
+  "_id": "iAkkTrPLVsLOZbrQ",
+  "_key": "!items!iAkkTrPLVsLOZbrQ",
+  "name": "Impaling Strikes",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>When you hit an enemy with a Strike with a copy of your Favored Blade, you can have it stay stuck in your enemy. They can remove it with a single Interact action.</p><p>You gain the @UUID[Compendium.pf2e-sovereign.martial-memoires.Item.picIhz0eqGBPrvDg]{Rending Recall} action.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.martial-memoires.Item.picIhz0eqGBPrvDg",
+        "allowDuplicate": false
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "impaling-strikes",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "_id": "oSmLsNbNdmy2pPbW",
+  "_key": "!items!oSmLsNbNdmy2pPbW",
+  "name": "Battlefield Control",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>You leave your blades in place; your enemies shouldn't forget them. Send a blade within a space within your blade's first range increment. The copy then starts floating in the chosen space for a maximum of one minute.</p><p>You gain the @UUID[Compendium.pf2e-sovereign.martial-memoires.Item.42rXFpX4oPU9t8FV]{Punitive Strike} reaction.</p>"
+    },
+    "level": {
+      "value": 16
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.martial-memoires.Item.42rXFpX4oPU9t8FV",
+        "allowDuplicate": false
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "battlefield-control",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

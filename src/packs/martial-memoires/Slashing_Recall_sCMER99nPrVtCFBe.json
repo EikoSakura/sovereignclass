@@ -1,0 +1,56 @@
+{
+  "_id": "sCMER99nPrVtCFBe",
+  "_key": "!items!sCMER99nPrVtCFBe",
+  "name": "Slashing Recall",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>With a little more concentration, your blades stay deadly even when returning to you. Recall all blades within your Favored Blade's first range increment. Draw a line between you and the starting position of each blade. Any creature inside them takes damage equal to your Favored Blade's damage dice with a @Check[reflex|against:class-spell|basic] save against your soaring blade DC.</p><p>The damage type is the same as your Favored Blade. An enemy can only take this damage once, even if inside the path of two or more blades.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "slashing-recall",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

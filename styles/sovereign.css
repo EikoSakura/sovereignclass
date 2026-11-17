@@ -415,3 +415,24 @@
   width: 100%;
   font-size: 0.8rem;
 }
+
+/* Soaring Blade: Favored Blade toggle on inventory weapon rows */
+.pf2e-sovereign-favored-blade {
+  color: var(--color-text-light-6, #8a8a8a);
+  opacity: 0.45;
+  cursor: pointer;
+}
+
+.pf2e-sovereign-favored-blade:hover {
+  opacity: 0.9;
+}
+
+.pf2e-sovereign-favored-blade.active {
+  color: #6aa5ff;
+  opacity: 1;
+  text-shadow: 0 0 4px rgba(106, 165, 255, 0.55);
+}
+
+.pf2e-sovereign-favored-blade.readonly {
+  cursor: default;
+}

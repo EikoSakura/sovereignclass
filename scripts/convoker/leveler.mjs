@@ -1,42 +1,48 @@
 // PF2e Leveler only offers content from the compendiums enabled in its settings (pf2e's own by default).
-// Once per world, the GM's client adds Summons Unleashed to Leveler's Class Features (Convoker Assembly and the
-// new eidolons) and Feats (Convoker archetype feats) lists. A GM who removes it later is respected.
+// The GM's client adds each Sovereign homebrew pack to the right Leveler categories once per world; a pack the
+// GM removes later is respected (it's remembered as registered).
 import { MODULE_ID, SU_PACK, notify } from "./core.mjs";
 
 const LEVELER = "pf2e-leveler";
-const CATEGORIES = ["classFeatures", "feats"];
+const REGISTRATIONS = [
+  { pack: SU_PACK, categories: ["classFeatures", "feats"], label: "Summons Unleashed (Convoker and new eidolons)" },
+  { pack: `${MODULE_ID}.martial-memoires`, categories: ["feats"], label: "Martial Memoires (Soaring Blade)" },
+];
 
 export function registerLevelerSetting() {
-  game.settings.register(MODULE_ID, "levelerRegistered", {
-    scope: "world",
-    config: false,
-    type: Boolean,
-    default: false,
-  });
+  game.settings.register(MODULE_ID, "levelerRegistered", { scope: "world", config: false, type: Boolean, default: false });
+  game.settings.register(MODULE_ID, "levelerRegisteredPacks", { scope: "world", config: false, type: Array, default: [] });
 }
 
-function addKeys(selections) {
+function addKeys(selections, reg) {
   const out = foundry.utils.deepClone(selections ?? {});
-  for (const category of CATEGORIES) {
+  for (const category of reg.categories) {
     const keys = Array.isArray(out[category]) ? out[category] : [];
-    out[category] = [...new Set([...keys, SU_PACK])];
+    out[category] = [...new Set([...keys, reg.pack])];
   }
   return out;
 }
 
 export async function registerWithLeveler() {
-  if (!game.modules.get(LEVELER)?.active || !game.packs.get(SU_PACK)) return;
-  if (game.users.activeGM?.id !== game.user.id) return;
-  if (game.settings.get(MODULE_ID, "levelerRegistered")) return;
+  if (!game.modules.get(LEVELER)?.active || game.users.activeGM?.id !== game.user.id) return;
+  const done = new Set(game.settings.get(MODULE_ID, "levelerRegisteredPacks") ?? []);
+  if (game.settings.get(MODULE_ID, "levelerRegistered")) done.add(SU_PACK);
+  const todo = REGISTRATIONS.filter((r) => !done.has(r.pack) && game.packs.get(r.pack));
+  if (!todo.length) return;
   try {
-    await game.settings.set(LEVELER, "customCompendiums", addKeys(game.settings.get(LEVELER, "customCompendiums")));
-    // If the GM limits which compendiums players can use in Leveler, allow this one there too.
-    const access = game.settings.get(LEVELER, "playerCompendiumAccess");
-    if (access && typeof access === "object" && access.selections) {
-      await game.settings.set(LEVELER, "playerCompendiumAccess", { ...access, selections: addKeys(access.selections) });
+    let custom = game.settings.get(LEVELER, "customCompendiums");
+    let access = game.settings.get(LEVELER, "playerCompendiumAccess");
+    for (const reg of todo) {
+      custom = addKeys(custom, reg);
+      // If the GM limits which compendiums players can use in Leveler, allow this one there too.
+      if (access && typeof access === "object" && access.selections) access = { ...access, selections: addKeys(access.selections, reg) };
+      done.add(reg.pack);
     }
+    await game.settings.set(LEVELER, "customCompendiums", custom);
+    if (access?.selections) await game.settings.set(LEVELER, "playerCompendiumAccess", access);
+    await game.settings.set(MODULE_ID, "levelerRegisteredPacks", [...done]);
     await game.settings.set(MODULE_ID, "levelerRegistered", true);
-    notify("Added Summons Unleashed (Convoker and new eidolons) to PF2e Leveler's compendiums.");
+    notify(`Added ${todo.map((r) => r.label).join(" and ")} to PF2e Leveler's compendiums.`);
   } catch (err) {
     console.warn(`${MODULE_ID} | Couldn't register with PF2e Leveler`, err);
   }

@@ -9,10 +9,11 @@ import sys
 import class_data
 import extras_data
 import feats_data
+import soaring_data
 import summons_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
-VERSION = "1.3.2"
+VERSION = "1.4.0"
 REPO = "https://github.com/EikoSakura/sovereignclass"
 
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
@@ -26,12 +27,15 @@ PACKS = [
     ("extras", "Sovereign Extras", "Item"),
     ("summons-unleashed", "Summons Unleashed: Convoker & Eidolons", "Item"),
     ("su-eidolons", "Summons Unleashed: Eidolon Ancestries", "Item"),
+    ("martial-memoires", "Martial Memoires: Soaring Blade", "Item"),
 ]
 SOVEREIGN_PACKS = ["classes", "class-features", "feats", "actions", "effects", "extras"]
 SUMMONS_PACKS = ["summons-unleashed", "su-eidolons"]
+MARTIAL_PACKS = ["martial-memoires"]
 
 data = {k: [] for k, _, _ in PACKS}
-for part in (class_data.build_all(), feats_data.build_all(), extras_data.build_all(), summons_data.build_all()):
+for part in (class_data.build_all(), feats_data.build_all(), extras_data.build_all(), summons_data.build_all(),
+             soaring_data.build_all()):
     for k, docs in part.items():
         data[k].extend(docs)
 
@@ -103,7 +107,8 @@ manifest = {
     "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their "
                    "court. Includes the class, class features, feats, and effects. Followers come from PF2e "
                    "Companion Compendia. Also includes automated extras the pf2e system doesn't ship yet, and the "
-                   "Summons Unleashed homebrew: the Convoker summoner class archetype and eight new eidolons.",
+                   "Summons Unleashed homebrew: the Convoker summoner class archetype and eight new eidolons; and the "
+                   "Soaring Blade archetype from Martial Memoires.",
     "version": VERSION,
     "authors": [{"name": "Eiko"}],
     "url": REPO,
@@ -114,7 +119,7 @@ manifest = {
         "systems": [{"id": "pf2e", "type": "system", "compatibility": {}}],
         "requires": [{"id": "pf2e-animal-companions", "type": "module", "compatibility": {}}],
     },
-    "esmodules": ["scripts/sovereign.mjs", "scripts/convoker/index.mjs"],
+    "esmodules": ["scripts/sovereign.mjs", "scripts/convoker/index.mjs", "scripts/soaring-blade.mjs"],
     "socket": True,
     "styles": ["styles/sovereign.css"],
     "packs": [
@@ -124,7 +129,9 @@ manifest = {
     ],
     "packFolders": [{"name": "Sovereign", "sorting": "m", "color": "#6b4f1d", "packs": SOVEREIGN_PACKS,
                      "folders": [{"name": "Summons Unleashed", "sorting": "m", "color": "#2d4a6b",
-                                  "packs": SUMMONS_PACKS, "folders": []}]}],
+                                  "packs": SUMMONS_PACKS, "folders": []},
+                                 {"name": "Martial Memoires", "sorting": "m", "color": "#6b2d2d",
+                                  "packs": MARTIAL_PACKS, "folders": []}]}],
     "flags": {"canUpload": True},
 }
 os.makedirs(MODULE_DIR, exist_ok=True)

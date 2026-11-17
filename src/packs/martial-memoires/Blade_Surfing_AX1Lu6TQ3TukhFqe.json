@@ -1,0 +1,60 @@
+{
+  "_id": "AX1Lu6TQ3TukhFqe",
+  "_key": "!items!AX1Lu6TQ3TukhFqe",
+  "name": "Blade Surfing",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "class",
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>You hop on one copy of your Favored Blade. You gain a fly Speed equal to your land Speed. As long as you're surfing on your blade, it doesn't count as flying above you.</p><p>You can dismiss this effect as a single action with the concentrate trait, the blade flying back above you. If you dismiss this effect while in the air, you start falling normally.</p>"
+    },
+    "level": {
+      "value": 12
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Soaring Blade Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "blade-surfing",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "selfEffect": {
+      "name": "Effect: Blade Surfing",
+      "uuid": "Compendium.pf2e-sovereign.martial-memoires.Item.245wIPN0m1B3wjrj"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

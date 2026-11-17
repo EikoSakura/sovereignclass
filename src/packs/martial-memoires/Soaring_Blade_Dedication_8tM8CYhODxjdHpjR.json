@@ -1,0 +1,63 @@
+{
+  "_id": "8tM8CYhODxjdHpjR",
+  "_key": "!items!8tM8CYhODxjdHpjR",
+  "name": "Soaring Blade Dedication",
+  "type": "feat",
+  "img": "icons/weapons/swords/sword-flanged-lightning.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your mastery of your favored blade lets you wield it with your mind alone. Choose either a single one-handed slashing or piercing melee weapon with the agile or finesse trait or a single slashing or piercing one-handed ranged thrown weapon. It becomes your <strong>Favored Blade</strong>. You can change your favored blade by spending 1 day of downtime with a new weapon. The DC for an ability gained via this archetype is either your class DC or spell DC, whichever is higher, and is called your soaring blade DC.</p><p>You gain the @UUID[Compendium.pf2e-sovereign.martial-memoires.Item.wfnHxB8GbmBJiQmD]{Bladework Stance} action.</p><p><em>Foundry:</em> mark your Favored Blade with the flying-blade toggle on its row in your inventory.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "trained in martial weapons"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-sovereign.martial-memoires.Item.wfnHxB8GbmBJiQmD",
+        "allowDuplicate": false
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "archetype",
+        "dedication"
+      ],
+      "otherTags": []
+    },
+    "slug": "soaring-blade-dedication",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}
