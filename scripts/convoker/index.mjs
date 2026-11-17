@@ -8,6 +8,7 @@ import { assaultFlow, castMessageInfo, cleanupFusion, convokeFlow, endAssault, f
 import { injectSheetTab, openAssembly, refreshAssemblies } from "./app.mjs";
 import { fillEvolutionDefaults, invalidateEvolutionOptions, isEvolution, removeEvolutionSlot } from "./evolutions.mjs";
 import { registerKamiWard } from "./kami.mjs";
+import { scheduleInvestedWeaponSync } from "./eidolon-runes.mjs";
 import { patchLevelerSubclassData, registerLevelerSetting, registerWithLeveler } from "./leveler.mjs";
 import { invalidateAncestryOptions, scheduleConvokerSpellTidy, scheduleEidolonSkillSync, summonerOfEidolon } from "./core.mjs";
 import { exportAssembly, patchExportImport, restoreBundle } from "./bundle.mjs";
@@ -29,7 +30,10 @@ Hooks.once("ready", () => {
   patchLevelerSubclassData();
   // Bring existing eidolons' skills in line with their summoners.
   const summoners = new Set(game.actors.map((a) => summonerOfEidolon(a)?.id).filter(Boolean));
-  for (const id of summoners) scheduleEidolonSkillSync(game.actors.get(id));
+  for (const id of summoners) {
+    scheduleEidolonSkillSync(game.actors.get(id));
+    scheduleInvestedWeaponSync(game.actors.get(id));
+  }
   game.modules.get(MODULE_ID).api = {
     openAssembly,
     convoke: (actor) => convokeFlow(actor),
@@ -115,6 +119,7 @@ Hooks.on("createItem", async (item, _options, userId) => {
     return;
   }
   refreshAssemblies(actor);
+  if (mine(userId) && item.type === "weapon") scheduleInvestedWeaponSync(actor);
   if (mine(userId) && ["spell", "spellcastingEntry"].includes(item.type)) scheduleConvokerSpellTidy(actor);
   if (mine(userId) && ["feat", "lore", "class", "background", "ancestry", "heritage"].includes(item.type)) {
     scheduleEidolonSkillSync(actor);
@@ -142,6 +147,7 @@ Hooks.on("deleteItem", async (item, _options, userId) => {
   if (!actor) return;
   refreshAssemblies(actor);
   if (!mine(userId)) return;
+  if (item.type === "weapon") scheduleInvestedWeaponSync(actor);
   if (["feat", "lore"].includes(item.type)) scheduleEidolonSkillSync(actor);
   if (item.flags?.[MODULE_ID]?.fusion) await cleanupFusion(item);
   if (item.type === "feat" && FEAT_SPELLS[item.slug]) await revokeFeatSpell(actor, item);
@@ -151,6 +157,7 @@ Hooks.on("deleteItem", async (item, _options, userId) => {
 Hooks.on("updateItem", (item, _changes, _options, userId) => {
   refreshAssemblies(item.actor);
   if (mine(userId) && item.actor && ["lore", "feat"].includes(item.type)) scheduleEidolonSkillSync(item.actor);
+  if (mine(userId) && item.actor && item.type === "weapon") scheduleInvestedWeaponSync(item.actor);
 });
 
 // ---------------------------------------------------------------------------------------------------------------- actors and tokens
@@ -160,7 +167,10 @@ Hooks.on("updateActor", async (actor, changes, _options, userId) => {
   // A Shared Data link to a summoner was just set on this eidolon.
   if (mine(userId) && foundry.utils.hasProperty(changes, "flags.pf2e-toolbelt")) {
     const summoner = summonerOfEidolon(actor);
-    if (summoner) scheduleEidolonSkillSync(summoner);
+    if (summoner) {
+      scheduleEidolonSkillSync(summoner);
+      scheduleInvestedWeaponSync(summoner);
+    }
   }
   if (!mine(userId) || !isConvoker(actor)) return;
   const level = foundry.utils.getProperty(changes, "system.details.level.value");

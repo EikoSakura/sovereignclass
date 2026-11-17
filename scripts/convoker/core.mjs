@@ -327,6 +327,7 @@ export async function linkEidolon(summoner, eidolon, index) {
     "system.details.level.value": summoner.level,
   });
   scheduleEidolonSkillSync(summoner);
+  import("./eidolon-runes.mjs").then((m) => m.scheduleInvestedWeaponSync(summoner));
 }
 
 export async function unlinkEidolon(summoner, index) {
