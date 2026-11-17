@@ -120,14 +120,11 @@
         "key": "ChoiceSet",
         "flag": "assemblyEidolon1",
         "adjustName": false,
-        "prompt": "Choose assembly eidolon 1 (it must match your tradition).",
+        "prompt": "Choose assembly eidolon 1 (it should match your tradition).",
         "choices": {
-          "itemType": "feat",
+          "itemType": "ancestry",
           "filter": [
-            "item:tag:summoner-eidolon",
-            {
-              "not": "item:slug:convoker-assembly"
-            }
+            "item:trait:eidolon"
           ]
         }
       },
@@ -135,14 +132,11 @@
         "key": "ChoiceSet",
         "flag": "assemblyEidolon2",
         "adjustName": false,
-        "prompt": "Choose assembly eidolon 2 (it must match your tradition).",
+        "prompt": "Choose assembly eidolon 2 (it should match your tradition).",
         "choices": {
-          "itemType": "feat",
+          "itemType": "ancestry",
           "filter": [
-            "item:tag:summoner-eidolon",
-            {
-              "not": "item:slug:convoker-assembly"
-            }
+            "item:trait:eidolon"
           ]
         }
       },
@@ -150,14 +144,11 @@
         "key": "ChoiceSet",
         "flag": "assemblyEidolon3",
         "adjustName": false,
-        "prompt": "Choose assembly eidolon 3 (it must match your tradition).",
+        "prompt": "Choose assembly eidolon 3 (it should match your tradition).",
         "choices": {
-          "itemType": "feat",
+          "itemType": "ancestry",
           "filter": [
-            "item:tag:summoner-eidolon",
-            {
-              "not": "item:slug:convoker-assembly"
-            }
+            "item:trait:eidolon"
           ]
         }
       }

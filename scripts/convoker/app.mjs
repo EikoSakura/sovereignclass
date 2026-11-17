@@ -112,7 +112,7 @@ class AssemblyApp extends ApplicationV2 {
         : "";
       const missing = m.missing ? `<span class="warn">The linked actor was deleted</span>` : "";
       return `<li class="slot empty" data-slot="${m.index}">
-        <div class="drop"><i class="fa-solid fa-user-plus"></i><span>Drop an eidolon actor here</span></div>
+        <div class="drop"><i class="fa-solid fa-user-plus"></i><span>Drop an eidolon actor or ancestry here</span></div>
         ${type}${missing}${create}</li>`;
     }
     const a = m.actor;
@@ -203,6 +203,7 @@ class AssemblyApp extends ApplicationV2 {
     event.preventDefault();
     event.currentTarget.classList.remove("drag-over");
     const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event);
+    if (data?.type === "Item") return this.#onDropAncestry(data, index);
     if (data?.type !== "Actor") return;
     const eidolon = await fromUuid(data.uuid);
     if (!eidolon?.isOfType?.("character")) return notify("Drop a character actor with an eidolon ancestry.", "warn");
@@ -212,6 +213,22 @@ class AssemblyApp extends ApplicationV2 {
     const other = getConvoker(eidolon);
     if (other && other.id !== this.actor.id) return notify(`${eidolon.name} already belongs to ${other.name}'s assembly.`, "warn");
     await linkEidolon(this.actor, eidolon, index);
+  }
+
+  // An eidolon ancestry (any compendium, e.g. Summoners+) dropped on an empty slot creates that eidolon.
+  async #onDropAncestry(data, index) {
+    const item = await fromUuid(data.uuid);
+    if (item?.type !== "ancestry" || !item.system.traits?.value?.includes("eidolon")) {
+      return notify("Drop an eidolon ancestry (or an eidolon actor) on a slot.", "warn");
+    }
+    const member = getMembers(this.actor)[index];
+    if (member?.actor) return notify(`Unlink ${member.actor.name} from that slot first.`, "warn");
+    try {
+      const eidolon = await createEidolonActor(this.actor, index, item.uuid);
+      notify(`${eidolon.name} created and linked.`);
+    } catch (err) {
+      notify(err.message, "error");
+    }
   }
 
   // ------------------------------------------------------------------------------------------------------------ actions

@@ -643,7 +643,8 @@ def _convoker():
 
     # ---------------------------------------------------------------- 1st level: Assembly (picked as the Eidolon)
     trad_choices = [{"label": f"PF2E.Trait{t.capitalize()}", "value": t} for t in TRADITION_SKILL]
-    eid_filter = {"itemType": "feat", "filter": ["item:tag:summoner-eidolon", {"not": "item:slug:convoker-assembly"}]}
+    # Any eidolon ancestry from any compendium or the world: this module, Companion Compendia, Summoners+, homebrew.
+    eid_filter = {"itemType": "ancestry", "filter": ["item:trait:eidolon"]}
     rules = [
         {"key": "ChoiceSet", "flag": "convokerTradition", "rollOption": "convoker-tradition", "adjustName": False,
          "prompt": "Choose your assembly's magical tradition.", "choices": trad_choices},
@@ -658,7 +659,7 @@ def _convoker():
     ]
     for i in (1, 2, 3):
         rules.append({"key": "ChoiceSet", "flag": f"assemblyEidolon{i}", "adjustName": False,
-                      "prompt": f"Choose assembly eidolon {i} (it must match your tradition).",
+                      "prompt": f"Choose assembly eidolon {i} (it should match your tradition).",
                       "choices": eid_filter})
 
     desc = (
@@ -827,8 +828,7 @@ def _convoker():
                 "your assembly."),
         rules=[{"key": "ChoiceSet", "flag": "expandedEidolon", "adjustName": True,
                 "prompt": "Choose the eidolon to add to your assembly.",
-                "choices": {"itemType": "feat", "filter": ["item:tag:summoner-eidolon",
-                                                           {"not": "item:slug:convoker-assembly"}]}}]))
+                "choices": {"itemType": "ancestry", "filter": ["item:trait:eidolon"]}}]))
     D[-1]["system"]["maxTakable"] = 3
     D.append(cfeat("warping-convoke", "Warping Convoke", 8,
         p("By drawing on the very teleportation magicks that allow for the summoning of your convocation, you "

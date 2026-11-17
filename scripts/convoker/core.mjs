@@ -307,15 +307,23 @@ export async function ancestryFor(typeUuid) {
   if (!typeUuid) return null;
   const type = await fromUuid(typeUuid);
   if (!type) return null;
+  // Assembly picks are eidolon ancestries (any compendium, e.g. Summoners+); use them as-is.
+  if (type.type === "ancestry") return type.uuid;
+  // Older picks were the summoner-side eidolon feature: find the ancestry of the same name.
   for (const packId of [EI_PACK, CC_EIDOLON_PACK]) {
     const uuid = await packUuid(packId, type.name, "ancestry");
     if (uuid) return uuid;
   }
-  return null;
+  for (const pack of game.packs.filter((p) => p.metadata.type === "Item")) {
+    const index = await pack.getIndex({ fields: ["type"] });
+    const hit = index.find((e) => e.type === "ancestry" && e.name === type.name);
+    if (hit) return hit.uuid;
+  }
+  return game.items.find((i) => i.type === "ancestry" && i.name === type.name)?.uuid ?? null;
 }
 
-export async function createEidolonActor(summoner, index) {
-  const typeUuid = slotTypes(summoner)[index];
+export async function createEidolonActor(summoner, index, typeOverride = null) {
+  const typeUuid = typeOverride ?? slotTypes(summoner)[index];
   const type = typeUuid ? await fromUuid(typeUuid) : null;
   const ancestryUuid = await ancestryFor(typeUuid);
   const ancestry = ancestryUuid ? await fromUuid(ancestryUuid) : null;

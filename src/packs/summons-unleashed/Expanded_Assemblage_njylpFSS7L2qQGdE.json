@@ -37,12 +37,9 @@
         "adjustName": true,
         "prompt": "Choose the eidolon to add to your assembly.",
         "choices": {
-          "itemType": "feat",
+          "itemType": "ancestry",
           "filter": [
-            "item:tag:summoner-eidolon",
-            {
-              "not": "item:slug:convoker-assembly"
-            }
+            "item:trait:eidolon"
           ]
         }
       }
