@@ -326,6 +326,7 @@ export async function linkEidolon(summoner, eidolon, index) {
     flags: eidolonLinkFlags(summoner),
     "system.details.level.value": summoner.level,
   });
+  scheduleEidolonSkillSync(summoner);
 }
 
 export async function unlinkEidolon(summoner, index) {
@@ -573,4 +574,72 @@ export async function revokeFeatSpell(actor, feat) {
 
 export function findSpell(actor, slug) {
   return actor.itemTypes.spell.find((s) => s.slug === slug) ?? null;
+}
+
+// ---------------------------------------------------------------------------------------------------------------- skills
+// An eidolon's skill proficiencies are the same as its summoner's. Each eidolon's skill ranks (and Lore skills)
+// mirror the summoner's; the eidolon's ancestry still makes it at least trained in its own skills, which matters
+// for a Convoker, who isn't trained in their eidolons' skills.
+export function eidolonsOf(summoner) {
+  const out = new Map();
+  if (isConvoker(summoner)) for (const e of linkedEidolons(summoner)) out.set(e.id, e);
+  for (const actor of game.actors) {
+    if (out.has(actor.id) || actor.id === summoner.id) continue;
+    const master = actor.getFlag("pf2e-toolbelt", "shareData.data.master");
+    if (master === summoner.id && actor.traits?.has?.("eidolon")) out.set(actor.id, actor);
+  }
+  return [...out.values()];
+}
+
+export function summonerOfEidolon(eidolon) {
+  const convoker = getConvoker(eidolon);
+  if (convoker) return convoker;
+  if (!eidolon?.traits?.has?.("eidolon")) return null;
+  const master = eidolon.getFlag?.("pf2e-toolbelt", "shareData.data.master");
+  return master ? game.actors.get(master) ?? null : null;
+}
+
+export async function syncEidolonSkills(summoner) {
+  if (!summoner?.isOfType?.("character")) return;
+  const skills = Object.keys(CONFIG.PF2E.skills ?? {});
+  const lores = summoner.itemTypes.lore ?? [];
+  for (const eidolon of eidolonsOf(summoner)) {
+    if (!eidolon.isOwner) continue;
+    const update = {};
+    for (const slug of skills) {
+      const want = Number(summoner.skills?.[slug]?.rank ?? 0);
+      const have = Number(eidolon._source.system.skills?.[slug]?.rank ?? 0);
+      if (want !== have) update[`system.skills.${slug}.rank`] = want;
+    }
+    if (Object.keys(update).length) await eidolon.update(update);
+
+    // Lore skills: copy the summoner's, keep them in step, drop ones the summoner lost.
+    const synced = eidolon.itemTypes.lore.filter((l) => l.flags?.[MODULE_ID]?.syncedLore);
+    const create = [];
+    const changes = [];
+    for (const lore of lores) {
+      const rank = Number(lore.system.proficient?.value ?? 0);
+      const existing = eidolon.itemTypes.lore.find((l) => l.name === lore.name);
+      if (!existing) {
+        create.push({ name: lore.name, type: "lore", system: { proficient: { value: rank } },
+          flags: { [MODULE_ID]: { syncedLore: true } } });
+      } else if (Number(existing.system.proficient?.value ?? 0) < rank) {
+        changes.push({ _id: existing.id, "system.proficient.value": rank });
+      }
+    }
+    const stale = synced.filter((l) => !lores.some((s) => s.name === l.name)).map((l) => l.id);
+    if (create.length) await eidolon.createEmbeddedDocuments("Item", create);
+    if (changes.length) await eidolon.updateEmbeddedDocuments("Item", changes);
+    if (stale.length) await eidolon.deleteEmbeddedDocuments("Item", stale);
+  }
+}
+
+const skillTimers = new Map();
+export function scheduleEidolonSkillSync(summoner) {
+  if (!summoner?.isOwner) return;
+  clearTimeout(skillTimers.get(summoner.id));
+  skillTimers.set(summoner.id, setTimeout(() => {
+    skillTimers.delete(summoner.id);
+    syncEidolonSkills(summoner).catch((err) => console.error(`${MODULE_ID} | eidolon skill sync failed`, err));
+  }, 800));
 }

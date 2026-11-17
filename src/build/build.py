@@ -13,7 +13,7 @@ import soaring_data
 import summons_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
-VERSION = "1.4.0"
+VERSION = "1.4.1"
 REPO = "https://github.com/EikoSakura/sovereignclass"
 
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
