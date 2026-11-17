@@ -21,19 +21,20 @@
 
 /* ---------------------------------------------------------------- Convoker: Assembly window */
 .pf2e-sovereign.assembly-app .window-content {
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
   padding: 0.75rem;
 }
 
-.assembly-app header.summoner {
+.pf2e-sovereign-assembly-view header.summoner {
   display: flex;
   gap: 0.75rem;
   align-items: center;
 }
 
-.assembly-app header.summoner > img {
+.pf2e-sovereign-assembly-view header.summoner > img {
   width: 56px;
   height: 56px;
   object-fit: cover;
@@ -41,20 +42,20 @@
   border: 1px solid var(--color-border, #7a7971);
 }
 
-.assembly-app header.summoner h2 {
+.pf2e-sovereign-assembly-view header.summoner h2 {
   margin: 0 0 0.25rem;
   border: none;
   font-size: 1.25rem;
 }
 
-.assembly-app .chips {
+.pf2e-sovereign-assembly-view .chips {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
 }
 
-.assembly-app .chip,
-.assembly-app .badge {
+.pf2e-sovereign-assembly-view .chip,
+.pf2e-sovereign-assembly-view .badge {
   font-size: 0.75rem;
   padding: 0.1rem 0.45rem;
   border-radius: 4px;
@@ -62,7 +63,7 @@
   text-transform: capitalize;
 }
 
-.assembly-app .notice {
+.pf2e-sovereign-assembly-view .notice {
   margin: 0;
   padding: 0.4rem 0.6rem;
   border-radius: 4px;
@@ -73,21 +74,21 @@
   align-items: center;
 }
 
-.assembly-app .notice.warn {
+.pf2e-sovereign-assembly-view .notice.warn {
   border-color: #c9a227;
   background: rgba(201, 162, 39, 0.14);
 }
 
-.assembly-app .notice a {
+.pf2e-sovereign-assembly-view .notice a {
   margin-left: auto;
 }
 
-.assembly-app .notice button {
+.pf2e-sovereign-assembly-view .notice button {
   width: auto;
   margin-left: auto;
 }
 
-.assembly-app ol.slots {
+.pf2e-sovereign-assembly-view ol.slots {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -96,7 +97,7 @@
   gap: 0.5rem;
 }
 
-.assembly-app li.slot {
+.pf2e-sovereign-assembly-view li.slot {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -107,16 +108,16 @@
   min-height: 150px;
 }
 
-.assembly-app li.slot.is-primary {
+.pf2e-sovereign-assembly-view li.slot.is-primary {
   border: 2px solid #4f7ec2;
 }
 
-.assembly-app li.slot.drag-over {
+.pf2e-sovereign-assembly-view li.slot.drag-over {
   outline: 2px dashed #4f7ec2;
 }
 
-.assembly-app li.slot.locked,
-.assembly-app li.slot.empty {
+.pf2e-sovereign-assembly-view li.slot.locked,
+.pf2e-sovereign-assembly-view li.slot.empty {
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -124,11 +125,11 @@
   opacity: 0.85;
 }
 
-.assembly-app li.slot.locked {
+.pf2e-sovereign-assembly-view li.slot.locked {
   opacity: 0.5;
 }
 
-.assembly-app li.slot .drop {
+.pf2e-sovereign-assembly-view li.slot .drop {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,16 +137,16 @@
   font-size: 0.85rem;
 }
 
-.assembly-app li.slot .drop i {
+.pf2e-sovereign-assembly-view li.slot .drop i {
   font-size: 1.5rem;
 }
 
-.assembly-app li.slot .art {
+.pf2e-sovereign-assembly-view li.slot .art {
   position: relative;
   align-self: center;
 }
 
-.assembly-app li.slot img.portrait {
+.pf2e-sovereign-assembly-view li.slot img.portrait {
   width: 96px;
   height: 96px;
   object-fit: cover;
@@ -154,13 +155,13 @@
   cursor: pointer;
 }
 
-.assembly-app li.slot .token-art {
+.pf2e-sovereign-assembly-view li.slot .token-art {
   position: absolute;
   right: -10px;
   bottom: -6px;
 }
 
-.assembly-app li.slot .token-art img {
+.pf2e-sovereign-assembly-view li.slot .token-art img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -169,33 +170,33 @@
   object-fit: contain;
 }
 
-.assembly-app li.slot .info {
+.pf2e-sovereign-assembly-view li.slot .info {
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
   text-align: center;
 }
 
-.assembly-app li.slot .name {
+.pf2e-sovereign-assembly-view li.slot .name {
   font-weight: bold;
 }
 
-.assembly-app li.slot .type {
+.pf2e-sovereign-assembly-view li.slot .type {
   font-size: 0.8rem;
 }
 
-.assembly-app li.slot .muted,
-.assembly-app li.slot .meta {
+.pf2e-sovereign-assembly-view li.slot .muted,
+.pf2e-sovereign-assembly-view li.slot .meta {
   font-size: 0.75rem;
   opacity: 0.75;
 }
 
-.assembly-app li.slot .warn {
+.pf2e-sovereign-assembly-view li.slot .warn {
   font-size: 0.75rem;
   color: #c9a227;
 }
 
-.assembly-app .badges {
+.pf2e-sovereign-assembly-view .badges {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -203,27 +204,27 @@
   min-height: 1.1rem;
 }
 
-.assembly-app .badge.primary { border-color: #4f7ec2; color: #6a9be0; }
-.assembly-app .badge.manifested { border-color: #4caf50; color: #66bb6a; }
-.assembly-app .badge.fused { border-color: #b04fc2; color: #c77ad6; }
+.pf2e-sovereign-assembly-view .badge.primary { border-color: #4f7ec2; color: #6a9be0; }
+.pf2e-sovereign-assembly-view .badge.manifested { border-color: #4caf50; color: #66bb6a; }
+.pf2e-sovereign-assembly-view .badge.fused { border-color: #b04fc2; color: #c77ad6; }
 
-.assembly-app li.slot .controls {
+.pf2e-sovereign-assembly-view li.slot .controls {
   margin-top: auto;
   display: flex;
   gap: 0.35rem;
   align-items: center;
 }
 
-.assembly-app li.slot .controls button {
+.pf2e-sovereign-assembly-view li.slot .controls button {
   flex: 1;
   font-size: 0.8rem;
 }
 
-.assembly-app li.slot button {
+.pf2e-sovereign-assembly-view li.slot button {
   font-size: 0.8rem;
 }
 
-.assembly-app footer.bar {
+.pf2e-sovereign-assembly-view footer.bar {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -232,18 +233,18 @@
   padding-top: 0.5rem;
 }
 
-.assembly-app footer.bar .group {
+.pf2e-sovereign-assembly-view footer.bar .group {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
 }
 
-.assembly-app footer.bar button {
+.pf2e-sovereign-assembly-view footer.bar button {
   width: auto;
   white-space: nowrap;
 }
 
-.assembly-app footer.bar button.primary {
+.pf2e-sovereign-assembly-view footer.bar button.primary {
   border-color: #4f7ec2;
   background: rgba(79, 126, 194, 0.2);
 }
@@ -317,4 +318,95 @@
 .pf2e-sovereign-card ul {
   margin: 0.2rem 0;
   padding-left: 1.2rem;
+}
+
+.pf2e-sovereign-assembly-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Assembly tab on the summoner's character sheet */
+.tab.sovereign-assembly {
+  padding: 0.5rem;
+  overflow-y: auto;
+}
+
+.tab.sovereign-assembly .pf2e-sovereign-assembly-view ol.slots {
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+}
+
+.tab.sovereign-assembly .pf2e-sovereign-assembly-view img.portrait {
+  width: 72px;
+  height: 72px;
+}
+
+/* Evolution feats table */
+.pf2e-sovereign-assembly-view .evolution-section h3 {
+  margin: 0.25rem 0;
+  font-size: 1rem;
+  border-bottom: 1px solid var(--color-border, #7a7971);
+}
+
+.pf2e-sovereign-assembly-view table.evolutions {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.pf2e-sovereign-assembly-view table.evolutions th,
+.pf2e-sovereign-assembly-view table.evolutions td {
+  padding: 0.2rem 0.3rem;
+  border-bottom: 1px solid rgba(122, 121, 113, 0.4);
+  vertical-align: middle;
+}
+
+.pf2e-sovereign-assembly-view table.evolutions thead th {
+  text-align: center;
+  font-weight: normal;
+}
+
+.pf2e-sovereign-assembly-view table.evolutions thead th img {
+  width: 28px;
+  height: 28px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin: 0 auto 0.1rem;
+}
+
+.pf2e-sovereign-assembly-view table.evolutions th.slot-name {
+  text-align: left;
+  white-space: nowrap;
+}
+
+.pf2e-sovereign-assembly-view table.evolutions th.slot-name small {
+  display: block;
+  opacity: 0.7;
+  font-weight: normal;
+}
+
+.pf2e-sovereign-assembly-view table.evolutions select {
+  width: 100%;
+  font-size: 0.8rem;
+}
+
+.pf2e-sovereign-assembly-view .evo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.3rem;
+}
+
+.pf2e-sovereign-assembly-view .evo-footer button {
+  width: auto;
+  white-space: nowrap;
+}
+
+.pf2e-sovereign-assembly-view .hint {
+  font-size: 0.8rem;
+  opacity: 0.8;
 }

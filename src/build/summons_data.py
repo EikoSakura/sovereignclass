@@ -200,7 +200,9 @@ def _abilities():
                    "until the start of its next turn, and you gain this bonus so long as you are adjacent to your "
                    "eidolon. This bonus increases to +2 against unholy effects or effects originating from unholy "
                    "creatures.",
-                   f"Apply {L(kami_ward_eff, 'Effect: Kami Ward')} to the eidolon, and to yourself while adjacent."),
+                   f"Using this action applies {L(kami_ward_eff, 'Effect: Kami Ward')} to the eidolon. While its "
+                   "summoner's token is adjacent, the summoner gets the same effect automatically, and loses it when "
+                   "they move apart or the ward ends."),
                  [], {"selfEffect": {"name": "Effect: Kami Ward", "uuid": kami_ward_eff}}),
         symbiosis=("Warded Regeneration", "action", 1, ["eidolon", "healing", "primal", "vitality"],
                    {"max": 1, "per": "PT10M"},
@@ -874,8 +876,10 @@ def _effects():
         p("+1 circumstance bonus to AC and saving throws, +2 against unholy effects or effects from unholy "
           "creatures. The summoner gains this while adjacent to the eidolon."),
         duration=("rounds", 1, "turn-start"), img="icons/magic/nature/leaf-glow-teal.webp",
-        rules=[{"key": "FlatModifier", "selector": ["ac", "saving-throw"], "type": "circumstance", "value": 1},
-               {"key": "FlatModifier", "selector": ["ac", "saving-throw"], "type": "circumstance", "value": 2,
+        rules=[{"key": "FlatModifier", "slug": "kami-ward", "selector": ["ac", "saving-throw"],
+                "type": "circumstance", "value": 1, "predicate": [{"not": "unholy"}, {"not": "origin:trait:unholy"}]},
+               {"key": "FlatModifier", "slug": "kami-ward-unholy", "selector": ["ac", "saving-throw"],
+                "type": "circumstance", "value": 2,
                 "predicate": [{"or": ["unholy", "origin:trait:unholy"]}]}])))
     E.append(pub(effect(SU, "effect-warded-regeneration", "Effect: Warded Regeneration",
         p("Your kami eidolon wards you: +1 status bonus to AC."),

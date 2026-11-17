@@ -13,7 +13,7 @@
     },
     "category": "classfeature",
     "description": {
-      "value": "<p>Your eidolon can spend a single action to gain a +1 circumstance bonus to AC and saving throws until the start of its next turn, and you gain this bonus so long as you are adjacent to your eidolon. This bonus increases to +2 against unholy effects or effects originating from unholy creatures.</p><p>Apply @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.KZWX9RWfJcxewi4n]{Effect: Kami Ward} to the eidolon, and to yourself while adjacent.</p>"
+      "value": "<p>Your eidolon can spend a single action to gain a +1 circumstance bonus to AC and saving throws until the start of its next turn, and you gain this bonus so long as you are adjacent to your eidolon. This bonus increases to +2 against unholy effects or effects originating from unholy creatures.</p><p>Using this action applies @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.KZWX9RWfJcxewi4n]{Effect: Kami Ward} to the eidolon. While its summoner's token is adjacent, the summoner gets the same effect automatically, and loses it when they move apart or the ward ends.</p>"
     },
     "level": {
       "value": 1

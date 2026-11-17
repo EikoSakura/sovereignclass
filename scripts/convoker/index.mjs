@@ -5,7 +5,9 @@ import {
 } from "./core.mjs";
 import { manifest, unmanifest } from "./canvas.mjs";
 import { assaultFlow, castMessageInfo, cleanupFusion, convokeFlow, endAssault, fuseFlow, setPrimaryFlow } from "./flows.mjs";
-import { openAssembly, refreshAssemblies } from "./app.mjs";
+import { injectSheetTab, openAssembly, refreshAssemblies } from "./app.mjs";
+import { fillEvolutionDefaults, invalidateEvolutionOptions, isEvolution, removeEvolutionSlot } from "./evolutions.mjs";
+import { registerKamiWard } from "./kami.mjs";
 import { exportAssembly, patchExportImport, restoreBundle } from "./bundle.mjs";
 
 const mine = (userId) => userId === game.user.id;
@@ -16,6 +18,7 @@ Hooks.once("setup", () => {
 
 Hooks.once("ready", () => {
   registerSocket();
+  registerKamiWard();
   game.modules.get(MODULE_ID).api = {
     openAssembly,
     convoke: (actor) => convokeFlow(actor),
@@ -27,7 +30,9 @@ Hooks.once("ready", () => {
   };
 });
 
-// ---------------------------------------------------------------------------------------------------------------- sheet button
+// ---------------------------------------------------------------------------------------------------------------- sheet tab and button
+Hooks.on("renderCharacterSheetPF2e", (sheet, html) => injectSheetTab(sheet, html));
+
 Hooks.on("getActorSheetHeaderButtons", (sheet, buttons) => {
   const actor = sheet.actor;
   if (!actor || !(isConvoker(actor) || getConvoker(actor))) return;
@@ -86,17 +91,26 @@ Hooks.on("pf2e.endTurn", (combatant, _encounter, userId) => {
 
 Hooks.on("pf2e.restForTheNight", (actor) => {
   if (isConvoker(actor) && actor.isOwner && linkedEidolons(actor).length > 1) {
-    openAssembly(actor, { notice: "Daily preparations: choose today's primary eidolon." });
+    openAssembly(actor, { notice: "Daily preparations: choose today's primary eidolon, and retrain any evolution feats." });
   }
 });
 
 // ---------------------------------------------------------------------------------------------------------------- items
 Hooks.on("createItem", async (item, _options, userId) => {
   const actor = item.actor;
-  if (!actor) return;
+  if (!actor) {
+    if (isEvolution(item)) invalidateEvolutionOptions();
+    return;
+  }
   refreshAssemblies(actor);
   if (!mine(userId) || item.type !== "feat") return;
   if (FEAT_SPELLS[item.slug] && isConvoker(actor)) await grantFeatSpell(actor, item);
+  if (isEvolution(item) && isConvoker(actor) && !item.flags?.[MODULE_ID]?.evolutionSlot) {
+    await fillEvolutionDefaults(actor);
+    if (linkedEidolons(actor).length > 1) {
+      openAssembly(actor, { notice: `${item.name}: each eidolon got it by default. Pick a different evolution feat for any of them below.` });
+    }
+  }
   if (item.slug === FEAT.assembly) {
     await ensureConvokerSpellcasting(actor);
     for (const feat of actor.itemTypes.feat) if (FEAT_SPELLS[feat.slug]) await grantFeatSpell(actor, feat);
@@ -111,6 +125,7 @@ Hooks.on("deleteItem", async (item, _options, userId) => {
   if (!mine(userId)) return;
   if (item.flags?.[MODULE_ID]?.fusion) await cleanupFusion(item);
   if (item.type === "feat" && FEAT_SPELLS[item.slug]) await revokeFeatSpell(actor, item);
+  if (isEvolution(item) && isConvoker(actor) && !item.flags?.[MODULE_ID]?.evolutionSlot) await removeEvolutionSlot(actor, item.id);
 });
 
 Hooks.on("updateItem", (item) => refreshAssemblies(item.actor));

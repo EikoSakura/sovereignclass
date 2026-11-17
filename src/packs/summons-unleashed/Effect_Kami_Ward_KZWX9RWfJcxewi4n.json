@@ -25,15 +25,25 @@
     "rules": [
       {
         "key": "FlatModifier",
+        "slug": "kami-ward",
         "selector": [
           "ac",
           "saving-throw"
         ],
         "type": "circumstance",
-        "value": 1
+        "value": 1,
+        "predicate": [
+          {
+            "not": "unholy"
+          },
+          {
+            "not": "origin:trait:unholy"
+          }
+        ]
       },
       {
         "key": "FlatModifier",
+        "slug": "kami-ward-unholy",
         "selector": [
           "ac",
           "saving-throw"

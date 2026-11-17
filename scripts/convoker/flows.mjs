@@ -322,6 +322,10 @@ export async function fuseFlow(summoner, { alreadyCast = false, rank = null } = 
   const copies = picks.chosen.filter((c) => c.item).map((c) => {
     const d = stripGrantFlags(c.item.toObject());
     d.name = `${c.item.name} (fused: ${c.source.name})`;
+    if (d.flags?.[MODULE_ID]) {
+      delete d.flags[MODULE_ID].evolutionSlot;
+      delete d.flags[MODULE_ID].evolutionSource;
+    }
     foundry.utils.setProperty(d, `flags.${MODULE_ID}.fusedBy`, fusion.id);
     return d;
   });
