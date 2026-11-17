@@ -784,7 +784,7 @@ def _convoker():
     D.append(cfeat("convoker-dedication", "Convoker Dedication", 2,
         p(f"You call upon a member of your assembly to assist you. You obtain the {L(convoke, 'convoke')} focus "
           "spell.", "Add <em>convoke</em> to your summoner focus spells."),
-        prereq="Convoker", traits=["archetype", "class", "dedication"]))
+        prereq="Convoker Assembly", traits=["archetype", "class", "dedication"]))
     D.append(cfeat("assembly-evolution", "Assembly Evolution", 4,
         p(f"You regain the power to transform your assembly at a moment's notice. You obtain the "
           f"{sp('evolution surge')} focus spell. If you cast {L(convoke, 'convoke')} while <em>evolution surge</em> "
@@ -816,7 +816,7 @@ def _convoker():
         p("Though you can only maintain the form of one eidolon of your assembly at a time, you can temporarily call "
           "upon ephemeral manifestations to push the offensive. You gain access to the "
           f"{L(assault, 'assembled assault')} focus spell."),
-        prereq="Convoker"))
+        prereq="Convoker Assembly"))
     D.append(cfeat("expanded-assemblage", "Expanded Assemblage", 6,
         p("Your connection to your wellspring of magic grows, allowing you to call upon an even greater repository "
           "of eidolons for aid. Add an additional eidolon to your assembly; this eidolon can be of your tradition, "
@@ -835,7 +835,7 @@ def _convoker():
     D.append(cfeat("combination-convocation", "Combination Convocation", 12,
         p("You fuse two members of your assembly into a single, greater form. You obtain the "
           f"{L(combo, 'combination convocation')} focus spell."),
-        prereq="Convoker"))
+        prereq="Convoker Assembly"))
 
     D.append(pub(effect(SU, "effect-combination-convocation-size", "Effect: Combination Convocation (Greater Size)",
         p("Your eidolon is fused with another member of your assembly. It is one size larger and its reach "
