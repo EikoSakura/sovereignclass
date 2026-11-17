@@ -459,33 +459,94 @@ export async function ensureFocusEntry(actor) {
   return entry;
 }
 
-// Prepared spellcasting from the assembly, using the chosen tradition and key attribute.
+const isSummonerEntry = (e) => e.flags?.["pf2e-leveler"]?.classSpellcastingEntry === "summoner" || /summoner|convoker/i.test(e.name ?? "");
+
+// Prepared spellcasting from the assembly, using the chosen tradition and key attribute. Keeps exactly one
+// class entry: character builders (PF2e Leveler) create a spontaneous "Summoner" entry, at creation and again on
+// level-ups, so any such entry is folded into the Convoker one. Evolution surge is removed until Assembly Evolution.
 export async function ensureConvokerSpellcasting(actor) {
+  if (!actor?.isOwner) return;
   const sel = assemblySelections(actor);
   const tradition = sel.convokerTradition ?? "arcane";
   const ability = sel.convokerKey ?? "cha";
   const entries = actor.itemTypes.spellcastingEntry.filter((e) => !["focus", "innate", "items", "ritual"].includes(e.system.prepared?.value));
-  const summonerEntry = entries.find((e) => /summoner|convoker/i.test(e.name)) ?? entries[0];
-  if (summonerEntry) {
-    await summonerEntry.update({
-      "system.prepared.value": "prepared",
-      "system.tradition.value": tradition,
-      "system.ability.value": ability,
-    });
+  let main = entries.find((e) => e.flags?.[MODULE_ID]?.convokerEntry)
+    ?? entries.find((e) => e.flags?.["pf2e-leveler"]?.classSpellcastingEntry === "summoner")
+    ?? entries.find(isSummonerEntry)
+    ?? null;
+  const mainUpdate = {
+    name: "Convoker Spells",
+    "system.prepared.value": "prepared",
+    "system.tradition.value": tradition,
+    "system.ability.value": ability,
+    [`flags.${MODULE_ID}.convokerEntry`]: true,
+    "flags.pf2e-leveler.classSpellcastingEntry": "summoner",
+  };
+  if (main) {
+    const s = main.system;
+    const stale = main.name !== "Convoker Spells" || s.prepared?.value !== "prepared" || s.tradition?.value !== tradition
+      || s.ability?.value !== ability || !main.flags?.[MODULE_ID]?.convokerEntry;
+    if (stale) await main.update(mainUpdate);
   } else {
-    await actor.createEmbeddedDocuments("Item", [{
+    [main] = await actor.createEmbeddedDocuments("Item", [{
       name: "Convoker Spells",
       type: "spellcastingEntry",
-      system: {
-        prepared: { value: "prepared" },
-        tradition: { value: tradition },
-        ability: { value: ability },
-        proficiency: { value: 1 },
-      },
+      system: { prepared: { value: "prepared" }, tradition: { value: tradition }, ability: { value: ability }, proficiency: { value: 1 } },
+      flags: { [MODULE_ID]: { convokerEntry: true }, "pf2e-leveler": { classSpellcastingEntry: "summoner" } },
     }]);
   }
+
+  // Fold stray summoner entries into the Convoker one.
+  const strays = actor.itemTypes.spellcastingEntry.filter((e) => e.id !== main.id
+    && !["focus", "innate", "items", "ritual"].includes(e.system.prepared?.value) && isSummonerEntry(e));
+  if (strays.length) {
+    const ids = new Set(strays.map((e) => e.id));
+    const known = new Set(actor.itemTypes.spell.filter((s) => s.system.location?.value === main.id).map((s) => s.sourceId ?? s.slug));
+    const move = [];
+    const drop = [];
+    for (const spell of actor.itemTypes.spell.filter((s) => ids.has(s.system.location?.value))) {
+      const key = spell.sourceId ?? spell.slug;
+      if (known.has(key)) drop.push(spell.id);
+      else {
+        known.add(key);
+        move.push({ _id: spell.id, "system.location.value": main.id });
+      }
+    }
+    // Builders set the new level's slot counts on the entry they create; keep the higher of each.
+    const slotUpdate = {};
+    for (const stray of strays) {
+      for (const [key, slot] of Object.entries(stray.system.slots ?? {})) {
+        const have = Number(main.system.slots?.[key]?.max ?? 0);
+        const want = Math.max(have, Number(slot?.max ?? 0), Number(slotUpdate[`system.slots.${key}.max`] ?? 0));
+        if (want > have) slotUpdate[`system.slots.${key}.max`] = want;
+      }
+    }
+    if (Object.keys(slotUpdate).length) await main.update(slotUpdate);
+    if (move.length) await actor.updateEmbeddedDocuments("Item", move);
+    await actor.deleteEmbeddedDocuments("Item", [...drop, ...ids]);
+  }
+
+  // Convokers don't get evolution surge at 1st level; Assembly Evolution grants it back.
+  if (!hasFeat(actor, FEAT.assemblyEvolution)) {
+    const surge = actor.itemTypes.spell.filter((s) => s.sourceId === EVOLUTION_SURGE).map((s) => s.id);
+    if (surge.length) await actor.deleteEmbeddedDocuments("Item", surge);
+  }
+
   const focus = focusEntry(actor);
-  if (focus) await focus.update({ "system.tradition.value": tradition, "system.ability.value": ability });
+  if (focus && (focus.system.tradition?.value !== tradition || focus.system.ability?.value !== ability)) {
+    await focus.update({ "system.tradition.value": tradition, "system.ability.value": ability });
+  }
+}
+
+// Debounced tidy-up after spellcasting items land on a convoker (lets a builder finish its batch first).
+const tidyTimers = new Map();
+export function scheduleConvokerSpellTidy(actor) {
+  if (!isConvoker(actor) || !actor.isOwner) return;
+  clearTimeout(tidyTimers.get(actor.id));
+  tidyTimers.set(actor.id, setTimeout(() => {
+    tidyTimers.delete(actor.id);
+    ensureConvokerSpellcasting(actor).catch((err) => console.error(`${MODULE_ID} | spell tidy failed`, err));
+  }, 1500));
 }
 
 export async function grantFeatSpell(actor, feat) {

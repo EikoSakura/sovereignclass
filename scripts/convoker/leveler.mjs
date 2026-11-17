@@ -41,3 +41,21 @@ export async function registerWithLeveler() {
     console.warn(`${MODULE_ID} | Couldn't register with PF2e Leveler`, err);
   }
 }
+
+// Leveler works out a subclass's tradition from its own data table (or, failing that, the first tradition word in
+// the item's text, which reads "arcane" for Convoker Assembly). Teach it that Convoker Assembly's tradition is the
+// item's tradition choice, so its spell step, spell list and spell entry use the tradition you picked.
+export async function patchLevelerSubclassData() {
+  if (!game.modules.get(LEVELER)?.active) return;
+  try {
+    const url = foundry.utils.getRoute(`modules/${LEVELER}/scripts/data/subclass-spells.js`);
+    const data = await import(url);
+    if (!data?.SUBCLASS_SPELLS || data.SUBCLASS_SPELLS["convoker-assembly"]) return;
+    data.SUBCLASS_SPELLS["convoker-assembly"] = {
+      choiceFlag: "convokerTradition",
+      choiceOptions: ["arcane", "divine", "occult", "primal"].map((t) => ({ slug: t, tradition: t })),
+    };
+  } catch (err) {
+    console.warn(`${MODULE_ID} | Couldn't teach PF2e Leveler the Convoker's tradition`, err);
+  }
+}
