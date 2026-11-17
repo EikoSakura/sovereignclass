@@ -9,24 +9,29 @@ import sys
 import class_data
 import extras_data
 import feats_data
+import summons_data
 from common import MISSING_ICONS, MODULE_DIR, MODULE_ID
 
-VERSION = "1.0.5"
+VERSION = "1.1.0"
 REPO = "https://github.com/EikoSakura/sovereignclass"
 
 REF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "ref")
 
 PACKS = [
-    ("classes", "Classes", "Item"),
-    ("class-features", "Class Features", "Item"),
-    ("feats", "Feats", "Item"),
-    ("actions", "Actions", "Item"),
-    ("effects", "Effects", "Item"),
-    ("extras", "Extras", "Item"),
+    ("classes", "Sovereign Classes", "Item"),
+    ("class-features", "Sovereign Class Features", "Item"),
+    ("feats", "Sovereign Feats", "Item"),
+    ("actions", "Sovereign Actions", "Item"),
+    ("effects", "Sovereign Effects", "Item"),
+    ("extras", "Sovereign Extras", "Item"),
+    ("summons-unleashed", "Summons Unleashed: Convoker & Eidolons", "Item"),
+    ("su-eidolons", "Summons Unleashed: Eidolon Ancestries", "Item"),
 ]
+SOVEREIGN_PACKS = ["classes", "class-features", "feats", "actions", "effects", "extras"]
+SUMMONS_PACKS = ["summons-unleashed", "su-eidolons"]
 
 data = {k: [] for k, _, _ in PACKS}
-for part in (class_data.build_all(), feats_data.build_all(), extras_data.build_all()):
+for part in (class_data.build_all(), feats_data.build_all(), extras_data.build_all(), summons_data.build_all()):
     for k, docs in part.items():
         data[k].extend(docs)
 
@@ -97,7 +102,8 @@ manifest = {
     "title": "Sovereign Class (PF2e Homebrew)",
     "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their "
                    "court. Includes the class, class features, feats, and effects. Followers come from PF2e "
-                   "Companion Compendia. Also includes automated extras the pf2e system doesn't ship yet.",
+                   "Companion Compendia. Also includes automated extras the pf2e system doesn't ship yet, and the "
+                   "Summons Unleashed homebrew: the Convoker summoner class archetype and eight new eidolons.",
     "version": VERSION,
     "authors": [{"name": "Eiko"}],
     "url": REPO,
@@ -108,15 +114,17 @@ manifest = {
         "systems": [{"id": "pf2e", "type": "system", "compatibility": {}}],
         "requires": [{"id": "pf2e-animal-companions", "type": "module", "compatibility": {}}],
     },
-    "esmodules": ["scripts/sovereign.mjs"],
+    "esmodules": ["scripts/sovereign.mjs", "scripts/convoker/index.mjs"],
+    "socket": True,
     "styles": ["styles/sovereign.css"],
     "packs": [
-        {"name": name, "label": f"Sovereign {label}", "path": f"packs/{name}", "type": typ, "system": "pf2e",
+        {"name": name, "label": label, "path": f"packs/{name}", "type": typ, "system": "pf2e",
          "ownership": {"PLAYER": "OBSERVER", "ASSISTANT": "OWNER"}, "flags": {}}
         for name, label, typ in PACKS
     ],
-    "packFolders": [{"name": "Sovereign", "sorting": "m", "color": "#6b4f1d",
-                     "packs": [name for name, _, _ in PACKS], "folders": []}],
+    "packFolders": [{"name": "Sovereign", "sorting": "m", "color": "#6b4f1d", "packs": SOVEREIGN_PACKS,
+                     "folders": [{"name": "Summons Unleashed", "sorting": "m", "color": "#2d4a6b",
+                                  "packs": SUMMONS_PACKS, "folders": []}]}],
     "flags": {"canUpload": True},
 }
 os.makedirs(MODULE_DIR, exist_ok=True)

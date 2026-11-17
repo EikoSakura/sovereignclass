@@ -1,0 +1,51 @@
+{
+  "_id": "VlaPbCDskarlOSkA",
+  "_key": "!items!VlaPbCDskarlOSkA",
+  "name": "Effect: Malefic Consumption",
+  "type": "effect",
+  "img": "icons/equipment/head/mask-tiger-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your rakshasa eidolon can use Swallow Whole on creatures of its size or smaller that it has grabbed or restrained. A swallowed creature takes @Damage[(4+floor((@actor.level-7)/2))d6[bludgeoning]] damage; rupture [[/r 17+3*floor((@actor.level-7)/2)]].</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-malefic-consumption",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

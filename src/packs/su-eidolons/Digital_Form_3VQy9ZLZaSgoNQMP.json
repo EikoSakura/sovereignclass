@@ -1,0 +1,77 @@
+{
+  "_id": "3VQy9ZLZaSgoNQMP",
+  "_key": "!items!3VQy9ZLZaSgoNQMP",
+  "name": "Digital Form",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon's digital form is materialized, but retains a connection to digital wavelengths. Your eidolon's unarmed attacks gain the versatile force trait. Additionally, when it critically succeeds a Strike against a creature or hazard with the tech trait or a creature that wields or wears a tech item, the target or one required tech item of your choice becomes Glitching 1.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "traits",
+        "value": "versatile-force",
+        "definition": [
+          "item:category:unarmed"
+        ]
+      },
+      {
+        "key": "Note",
+        "selector": "strike-attack-roll",
+        "outcome": [
+          "criticalSuccess"
+        ],
+        "title": "{item|name}",
+        "predicate": [
+          {
+            "or": [
+              "target:trait:tech",
+              "target:item:trait:tech"
+            ]
+          }
+        ],
+        "text": "The target, or one required tech item of your choice, becomes Glitching 1."
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "digital-form",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

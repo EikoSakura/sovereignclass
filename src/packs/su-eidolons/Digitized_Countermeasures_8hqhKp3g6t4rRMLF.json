@@ -1,0 +1,75 @@
+{
+  "_id": "8hqhKp3g6t4rRMLF",
+  "_key": "!items!8hqhKp3g6t4rRMLF",
+  "name": "Digitized Countermeasures",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-symbiosis.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon creates visible digitized signals on all creatures nearby. Your eidolon gains a digitized aura in a @Template[type:emanation|distance:30]. Visible creatures in the aura can't be @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, and invisible creatures are concealed rather than @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}. Your eidolon can disable these countermeasures by spending a single action, which has the concentrate trait and they can take this action again to reinstate their aura.</p><p>Use the toggle on the eidolon's sheet to switch the aura on or off.</p>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "digitized-countermeasures",
+        "toggleable": true,
+        "value": true,
+        "label": "Digitized Countermeasures"
+      },
+      {
+        "key": "Aura",
+        "slug": "digitized-countermeasures",
+        "radius": 30,
+        "traits": [
+          "aura",
+          "visual"
+        ],
+        "predicate": [
+          "digitized-countermeasures"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "aura",
+        "eidolon",
+        "visual"
+      ],
+      "otherTags": []
+    },
+    "slug": "digitized-countermeasures",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

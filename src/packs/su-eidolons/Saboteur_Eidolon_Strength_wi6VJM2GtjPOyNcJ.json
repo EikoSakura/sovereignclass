@@ -1,0 +1,98 @@
+{
+  "_id": "wi6VJM2GtjPOyNcJ",
+  "_key": "!items!wi6VJM2GtjPOyNcJ",
+  "name": "Saboteur Eidolon (Strength)",
+  "type": "feat",
+  "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "ancestryfeature",
+    "description": {
+      "value": "<p>Strength is this eidolon's key attribute.</p><p>Str +4, Dex +2, Con +0, Int +1, Wis +1, Cha +1; +2 AC (+3 Dex cap)</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.abilities.str.mod",
+        "value": 4
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.abilities.dex.mod",
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.abilities.con.mod",
+        "value": 0
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.abilities.int.mod",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.abilities.wis.mod",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.abilities.cha.mod",
+        "value": 1
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "item",
+        "value": 2,
+        "fromEquipment": false
+      },
+      {
+        "key": "DexterityModifierCap",
+        "value": 3
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "saboteur-eidolon-strength",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

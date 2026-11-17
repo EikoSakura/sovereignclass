@@ -1,0 +1,71 @@
+{
+  "_id": "igM8MehFJFLeehpq",
+  "_key": "!items!igM8MehFJFLeehpq",
+  "name": "Fungal Hyphae",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon has an imprecise tremorsense with a range of 30 feet and they gain a +2 circumstance bonus to saving throws against poison and disease effects.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "Sense",
+        "selector": "tremorsense",
+        "acuity": "imprecise",
+        "range": 30
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "circumstance",
+        "value": 2,
+        "predicate": [
+          {
+            "or": [
+              "poison",
+              "disease"
+            ]
+          }
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "fungal-hyphae",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

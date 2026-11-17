@@ -1,0 +1,153 @@
+{
+  "_id": "ZaMeWADZFoYKQj7B",
+  "_key": "!items!ZaMeWADZFoYKQj7B",
+  "name": "Rakshasa Eidolon",
+  "type": "ancestry",
+  "img": "icons/equipment/head/mask-tiger-silver.webp",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Your eidolon is a spirit charged with being an incarnation of all that is foul. Though these spirits seem to delight in atrocity, it's simply the rakshasa's role in the world rather than out of innate personal malice. Summoners bonded to rakshasa eidolons walk a tight line, as some rakshasa are bound to their maleficent role despite personal conscience finding freedom in this bond, while others seek to subvert and corrupt their summoner.</p><p><strong>Tradition</strong> Divine</p><p><strong>Traits</strong> eidolon, rakshasa, spirit, unholy</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> taravati (slashing), fangs (piercing), fist (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +2, <em>Int</em> -1, <em>Wis</em> +0, <em>Cha</em> +2</p><p><strong>Skills</strong> Deception, Religion</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.K2fI83HBbqECaf35]{Hidden Malice}</strong></p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.rGBmGcfeedCZqvvy]{Malice Incarnate}</strong> <span class=\"action-glyph\">2</span></p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.bbLU7ENgZMrMSYAU]{Exemplify the Profane}</strong> <span class=\"action-glyph\">2</span></p><hr /><p>The summoner's half of this eidolon is @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.Q90LLqTPej0JZJM9]{Rakshasa Eidolon} in the Summons Unleashed compendium.</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "eidolonType",
+        "adjustName": false,
+        "prompt": "Choose your eidolon's key attribute.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.Jyjm6RrwxdFb55IR",
+            "label": "Strength"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.AworuLSnvEmAHLX7",
+            "label": "Dexterity"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.eidolonType}",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.deception.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "companionSize",
+        "adjustName": false,
+        "prompt": "PF2E.SpecificRule.Prompt.CreatureSize",
+        "choices": [
+          {
+            "label": "PF2E.ActorSizeMedium",
+            "value": "med"
+          },
+          {
+            "label": "PF2E.ActorSizeSmall",
+            "value": "sm"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.traits.size.value",
+        "value": "{item|flags.system.rulesSelections.companionSize}"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.xPn27nNxcLOByTXJ",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.eidolon-features",
+        "value": {
+          "initial": "Compendium.pf2e-sovereign.su-eidolons.Item.K2fI83HBbqECaf35",
+          "symbiosis": "Compendium.pf2e-sovereign.su-eidolons.Item.rGBmGcfeedCZqvvy",
+          "transcendence": "Compendium.pf2e-sovereign.su-eidolons.Item.bbLU7ENgZMrMSYAU"
+        }
+      }
+    ],
+    "slug": "rakshasa-eidolon",
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "eidolon",
+        "rakshasa",
+        "spirit",
+        "unholy"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "hp": 4,
+    "size": "med",
+    "hands": 2,
+    "reach": 5,
+    "speed": 25,
+    "boosts": {
+      "0": {
+        "value": []
+      },
+      "1": {
+        "value": []
+      },
+      "2": {
+        "value": []
+      }
+    },
+    "flaws": {
+      "0": {
+        "value": []
+      }
+    },
+    "languages": {
+      "value": [],
+      "custom": ""
+    },
+    "additionalLanguages": {
+      "count": 1,
+      "value": [],
+      "custom": ""
+    },
+    "items": {
+      "eidab": {
+        "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+        "name": "Eidolon Ability",
+        "level": 1,
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.5E71mdImeRE9Fh1D"
+      }
+    },
+    "vision": "darkvision",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

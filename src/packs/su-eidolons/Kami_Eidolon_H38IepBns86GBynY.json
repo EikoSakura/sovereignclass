@@ -1,0 +1,152 @@
+{
+  "_id": "H38IepBns86GBynY",
+  "_key": "!items!H38IepBns86GBynY",
+  "name": "Kami Eidolon",
+  "type": "ancestry",
+  "img": "icons/magic/nature/leaf-glow-teal.webp",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Your eidolon is a spirit bound to the land. A kami eidolon's appearance is as varied as the spirits are, and can appear as humanoids, animals, objects, and many other forms. While most kami choose to ward a specific place, you've earned the favor of these spirits enough to harness this bond.</p><p><strong>Tradition</strong> Primal</p><p><strong>Traits</strong> eidolon, kami, spirit</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> fist (bludgeoning), spade (slashing), staff (bludgeoning), katana (slashing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +1, <em>Int</em> -1, <em>Wis</em> +3, <em>Cha</em> +0</p><p><strong>Skills</strong> Nature, Religion</p><p><strong>Senses</strong> low-light vision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.zxnMuV3iEEeCqxVg]{Kami Ward}</strong> <span class=\"action-glyph\">1</span></p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.aTGzqv6fkQVrzJUA]{Warded Regeneration}</strong> <span class=\"action-glyph\">1</span></p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.mc5ZBhAy47eDqrFq]{Bloom and Wilt}</strong></p><hr /><p>The summoner's half of this eidolon is @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.ojbmxjDmGOTlh8qU]{Kami Eidolon} in the Summons Unleashed compendium.</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "eidolonType",
+        "adjustName": false,
+        "prompt": "Choose your eidolon's key attribute.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.CavLlbk2XWZ6ReC6",
+            "label": "Strength"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.ZNfXjc8HBOOLAgWB",
+            "label": "Dexterity"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.eidolonType}",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.nature.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "companionSize",
+        "adjustName": false,
+        "prompt": "PF2E.SpecificRule.Prompt.CreatureSize",
+        "choices": [
+          {
+            "label": "PF2E.ActorSizeMedium",
+            "value": "med"
+          },
+          {
+            "label": "PF2E.ActorSizeSmall",
+            "value": "sm"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.traits.size.value",
+        "value": "{item|flags.system.rulesSelections.companionSize}"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.xPn27nNxcLOByTXJ",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.eidolon-features",
+        "value": {
+          "initial": "Compendium.pf2e-sovereign.su-eidolons.Item.zxnMuV3iEEeCqxVg",
+          "symbiosis": "Compendium.pf2e-sovereign.su-eidolons.Item.aTGzqv6fkQVrzJUA",
+          "transcendence": "Compendium.pf2e-sovereign.su-eidolons.Item.mc5ZBhAy47eDqrFq"
+        }
+      }
+    ],
+    "slug": "kami-eidolon",
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "eidolon",
+        "kami",
+        "spirit"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "hp": 4,
+    "size": "med",
+    "hands": 2,
+    "reach": 5,
+    "speed": 25,
+    "boosts": {
+      "0": {
+        "value": []
+      },
+      "1": {
+        "value": []
+      },
+      "2": {
+        "value": []
+      }
+    },
+    "flaws": {
+      "0": {
+        "value": []
+      }
+    },
+    "languages": {
+      "value": [],
+      "custom": ""
+    },
+    "additionalLanguages": {
+      "count": 1,
+      "value": [],
+      "custom": ""
+    },
+    "items": {
+      "eidab": {
+        "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+        "name": "Eidolon Ability",
+        "level": 1,
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.5E71mdImeRE9Fh1D"
+      }
+    },
+    "vision": "low-light-vision",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

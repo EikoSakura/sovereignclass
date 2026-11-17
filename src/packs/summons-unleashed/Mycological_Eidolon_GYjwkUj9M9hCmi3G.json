@@ -1,0 +1,84 @@
+{
+  "_id": "GYjwkUj9M9hCmi3G",
+  "_key": "!items!GYjwkUj9M9hCmi3G",
+  "name": "Mycological Eidolon",
+  "type": "feat",
+  "img": "icons/consumables/mushrooms/mushroom-spotted-red.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is a vitae inhabiting the form of a fungus. These eidolons are as varied as the many fungi on the world and beyond. Though others may have trouble relating to the strange nature of your eidolon, your ability to share senses with your eidolon has given you a unique outlook on life.</p><p><strong>Tradition</strong> Primal</p><p><strong>Traits</strong> eidolon, fungus</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> spore pod (bludgeoning), claw (slashing), jaw (piercing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +2, <em>Int</em> -1, <em>Wis</em> +2, <em>Cha</em> +0</p><p><strong>Skills</strong> Nature, Survival</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> Fey</p><p><strong>Speed</strong> 20 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.igM8MehFJFLeehpq]{Fungal Hyphae}</strong></p><p>Your eidolon has an imprecise tremorsense with a range of 30 feet and they gain a +2 circumstance bonus to saving throws against poison and disease effects.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.guiJEdOqOFu9cGGn]{Release Spores}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon releases a cloud of spores in a @Template[type:emanation|distance:15]. Creatures in the area take @Damage[(6+@actor.level-7)d4[poison]|options:area-damage] damage with a @Check[fortitude|against:spell|options:area-effect] save against your spell DC. The damage increases by 1d4 for each level you have beyond 7th.</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature takes half damage.</p><p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p><p><strong>Critical Failure</strong> The creature takes double damage and is sickened 2.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.al59m7JCx4xSXJ1a]{Fungal Domination}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon releases spores that invade the body of a creature within 30 feet. That creature attempts a @Check[fortitude|against:spell] saving throw against your spell DC with the effects of <em>@UUID[Compendium.pf2e.spells-srd.Item.OsOhx3TGIZ7AhD0P]{dominate}</em> based on the results of its saving throw.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.1FOnKkdpDCo1TBJZ]{Mycological Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.nature.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.survival.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "primal"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "mycological-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [
+          "fey"
+        ],
+        "slots": 0
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

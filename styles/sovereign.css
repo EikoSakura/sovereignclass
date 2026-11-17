@@ -18,3 +18,303 @@
 .pf2e-sovereign-crown.readonly {
   cursor: default;
 }
+
+/* ---------------------------------------------------------------- Convoker: Assembly window */
+.pf2e-sovereign.assembly-app .window-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 0.75rem;
+}
+
+.assembly-app header.summoner {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.assembly-app header.summoner > img {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--color-border, #7a7971);
+}
+
+.assembly-app header.summoner h2 {
+  margin: 0 0 0.25rem;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.assembly-app .chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.assembly-app .chip,
+.assembly-app .badge {
+  font-size: 0.75rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid var(--color-border, #7a7971);
+  text-transform: capitalize;
+}
+
+.assembly-app .notice {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #4f7ec2;
+  background: rgba(79, 126, 194, 0.12);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.assembly-app .notice.warn {
+  border-color: #c9a227;
+  background: rgba(201, 162, 39, 0.14);
+}
+
+.assembly-app .notice a {
+  margin-left: auto;
+}
+
+.assembly-app .notice button {
+  width: auto;
+  margin-left: auto;
+}
+
+.assembly-app ol.slots {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.5rem;
+}
+
+.assembly-app li.slot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--color-border, #7a7971);
+  min-height: 150px;
+}
+
+.assembly-app li.slot.is-primary {
+  border: 2px solid #4f7ec2;
+}
+
+.assembly-app li.slot.drag-over {
+  outline: 2px dashed #4f7ec2;
+}
+
+.assembly-app li.slot.locked,
+.assembly-app li.slot.empty {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+.assembly-app li.slot.locked {
+  opacity: 0.5;
+}
+
+.assembly-app li.slot .drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.assembly-app li.slot .drop i {
+  font-size: 1.5rem;
+}
+
+.assembly-app li.slot .art {
+  position: relative;
+  align-self: center;
+}
+
+.assembly-app li.slot img.portrait {
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--color-border, #7a7971);
+  cursor: pointer;
+}
+
+.assembly-app li.slot .token-art {
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+}
+
+.assembly-app li.slot .token-art img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid var(--color-border, #7a7971);
+  background: rgba(0, 0, 0, 0.35);
+  object-fit: contain;
+}
+
+.assembly-app li.slot .info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  text-align: center;
+}
+
+.assembly-app li.slot .name {
+  font-weight: bold;
+}
+
+.assembly-app li.slot .type {
+  font-size: 0.8rem;
+}
+
+.assembly-app li.slot .muted,
+.assembly-app li.slot .meta {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+.assembly-app li.slot .warn {
+  font-size: 0.75rem;
+  color: #c9a227;
+}
+
+.assembly-app .badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  min-height: 1.1rem;
+}
+
+.assembly-app .badge.primary { border-color: #4f7ec2; color: #6a9be0; }
+.assembly-app .badge.manifested { border-color: #4caf50; color: #66bb6a; }
+.assembly-app .badge.fused { border-color: #b04fc2; color: #c77ad6; }
+
+.assembly-app li.slot .controls {
+  margin-top: auto;
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.assembly-app li.slot .controls button {
+  flex: 1;
+  font-size: 0.8rem;
+}
+
+.assembly-app li.slot button {
+  font-size: 0.8rem;
+}
+
+.assembly-app footer.bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  border-top: 1px solid var(--color-border, #7a7971);
+  padding-top: 0.5rem;
+}
+
+.assembly-app footer.bar .group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.assembly-app footer.bar button {
+  width: auto;
+  white-space: nowrap;
+}
+
+.assembly-app footer.bar button.primary {
+  border-color: #4f7ec2;
+  background: rgba(79, 126, 194, 0.2);
+}
+
+/* ---------------------------------------------------------------- Convoker: dialogs and chat */
+.pf2e-sovereign-dialog .pf2e-sovereign-choices {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.pf2e-sovereign-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.3rem 0.4rem;
+  border: 1px solid var(--color-border, #7a7971);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pf2e-sovereign-choice:has(input:checked) {
+  border-color: #4f7ec2;
+  background: rgba(79, 126, 194, 0.15);
+}
+
+.pf2e-sovereign-choice img,
+.pf2e-sovereign-dialog legend img {
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: none;
+  vertical-align: middle;
+}
+
+.pf2e-sovereign-choice span {
+  display: flex;
+  flex-direction: column;
+}
+
+.pf2e-sovereign-choice small,
+.pf2e-sovereign-dialog .hint,
+.pf2e-sovereign-card .hint {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.pf2e-sovereign-check {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0.2rem 0;
+}
+
+.pf2e-sovereign-check select {
+  flex: 1;
+}
+
+.pf2e-sovereign-dialog fieldset {
+  margin: 0.4rem 0;
+}
+
+.pf2e-sovereign-card header {
+  font-weight: bold;
+  border-bottom: 1px solid var(--color-border, #7a7971);
+  margin-bottom: 0.3rem;
+  padding-bottom: 0.2rem;
+}
+
+.pf2e-sovereign-card ul {
+  margin: 0.2rem 0;
+  padding-left: 1.2rem;
+}

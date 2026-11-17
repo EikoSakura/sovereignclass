@@ -1,0 +1,82 @@
+{
+  "_id": "Q90LLqTPej0JZJM9",
+  "_key": "!items!Q90LLqTPej0JZJM9",
+  "name": "Rakshasa Eidolon",
+  "type": "feat",
+  "img": "icons/equipment/head/mask-tiger-silver.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is a spirit charged with being an incarnation of all that is foul. Though these spirits seem to delight in atrocity, it's simply the rakshasa's role in the world rather than out of innate personal malice. Summoners bonded to rakshasa eidolons walk a tight line, as some rakshasa are bound to their maleficent role despite personal conscience finding freedom in this bond, while others seek to subvert and corrupt their summoner.</p><p><strong>Tradition</strong> Divine</p><p><strong>Traits</strong> eidolon, rakshasa, spirit, unholy</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> taravati (slashing), fangs (piercing), fist (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +2, <em>Int</em> -1, <em>Wis</em> +0, <em>Cha</em> +2</p><p><strong>Skills</strong> Deception, Religion</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.K2fI83HBbqECaf35]{Hidden Malice}</strong></p><p>Your eidolon's unarmed Strikes gain the unholy trait. Your eidolon gains the Change Shape summoner feat (<em>Summoners+</em> pg 17), despite not meeting the prerequisite level.</p><p>The eidolon is granted the @UUID[Compendium.pf2e.actionspf2e.Item.34E7k2YRcsOU5uyl]{Change Shape} action as a stand-in; use the Summoners+ feat's details for its forms.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.rGBmGcfeedCZqvvy]{Malice Incarnate}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon prepares itself to exemplify some ancient profane edict. It gains one of the following effects depending on its current shape, which gives Malice Incarnate additional traits:</p><ul><li><p><strong>Cruel Majesty</strong> (mental, visual) <strong>Requirements</strong> your eidolon is not in its true shape; <strong>Effect</strong> Your eidolon Changes Shape into its true form in a display that is equal parts terrifying and majestic. Creatures within 30 feet of your eidolon must attempt a @Check[will|against:spell] save against your spell DC.</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against your eidolon's next Strike before the end of your turn.</p><p><strong>Failure</strong> The creature is off-guard for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p><p><strong>Critical Failure</strong> As failure except the creature is frightened 2.</p></li><li><p><strong>Malefic Consumption</strong> (morph) <strong>Requirements</strong> your eidolon is in its true form; <strong>Effect</strong> For 1 minute, your eidolon can use the Swallow Whole ability on creatures of its size or smaller that it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. A swallowed creature takes @Damage[(4+floor((@actor.level-7)/2))d6[bludgeoning]] damage and the eidolon has a rupture value of [[/r 17+3*floor((@actor.level-7)/2)]]. At 9th level and every two levels thereafter, increase the bludgeoning damage by 1d6 and the rupture value by 3. (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.VlaPbCDskarlOSkA]{Effect: Malefic Consumption})</p></li></ul><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.bbLU7ENgZMrMSYAU]{Exemplify the Profane}</strong> <span class=\"action-glyph\">2</span></p><p>The eidolon carves into their foe in a gruesome display. The eidolon makes a @UUID[Compendium.pf2e.actionspf2e.Item.VjxZFuUXrCU94MWR]{Strike}. The Strike deals @Damage[(@actor.level)[persistent,bleed]] damage and each enemy within 15 feet of the target must succeed at a @Check[fortitude|against:spell] save against your spell DC or become @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1} (sickened 2 on a critical failure). Creatures that succeed their save are immune to further attempts to sicken them from Exemplify the Profane.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.ZaMeWADZFoYKQj7B]{Rakshasa Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.deception.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "divine"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "rakshasa-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [],
+        "slots": 1
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

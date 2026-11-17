@@ -1,0 +1,78 @@
+{
+  "_id": "KZWX9RWfJcxewi4n",
+  "_key": "!items!KZWX9RWfJcxewi4n",
+  "name": "Effect: Kami Ward",
+  "type": "effect",
+  "img": "icons/magic/nature/leaf-glow-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>+1 circumstance bonus to AC and saving throws, +2 against unholy effects or effects from unholy creatures. The summoner gains this while adjacent to the eidolon.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "ac",
+          "saving-throw"
+        ],
+        "type": "circumstance",
+        "value": 1
+      },
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "ac",
+          "saving-throw"
+        ],
+        "type": "circumstance",
+        "value": 2,
+        "predicate": [
+          {
+            "or": [
+              "unholy",
+              "origin:trait:unholy"
+            ]
+          }
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-kami-ward",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

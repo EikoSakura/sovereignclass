@@ -1,0 +1,152 @@
+{
+  "_id": "ZFUHECJ5TXXK9HMK",
+  "_key": "!items!ZFUHECJ5TXXK9HMK",
+  "name": "Saboteur Eidolon",
+  "type": "ancestry",
+  "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Your eidolon is the spirit of an ancient trickster of great prowess, their deeds given form in the astral through arcane magic. This phantom might be an ancient ancestor, echoes of a noble thief from a great legend, or perhaps something you envisioned once in an astral daydream.</p><p><strong>Tradition</strong> Arcane</p><p><strong>Traits</strong> eidolon, phantom, spirit</p><p><strong>Home Plane</strong> any plane, commonly Astral</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> dagger (piercing), fighting fan (slashing), sword-cane sheath (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +0, <em>Int</em> +1, <em>Wis</em> +1, <em>Cha</em> +1</p><p><strong>Skills</strong> Arcana, Stealth</p><p><strong>Senses</strong> low-light vision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.bRYWJXS2RyNyz64R]{Expert Lessons}</strong></p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.9G29lyVmWqqAQut4]{Masterful Saboteur}</strong></p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.UT412aJuipFG9uf5]{Legendary Debilitator}</strong></p><hr /><p>The summoner's half of this eidolon is @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.oqaVJQqjHR6T1ZA3]{Saboteur Eidolon} in the Summons Unleashed compendium.</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "eidolonType",
+        "adjustName": false,
+        "prompt": "Choose your eidolon's key attribute.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.wi6VJM2GtjPOyNcJ",
+            "label": "Strength"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.Z77pUycOXhTJQzdF",
+            "label": "Dexterity"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.eidolonType}",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.stealth.rank",
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "companionSize",
+        "adjustName": false,
+        "prompt": "PF2E.SpecificRule.Prompt.CreatureSize",
+        "choices": [
+          {
+            "label": "PF2E.ActorSizeMedium",
+            "value": "med"
+          },
+          {
+            "label": "PF2E.ActorSizeSmall",
+            "value": "sm"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.traits.size.value",
+        "value": "{item|flags.system.rulesSelections.companionSize}"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.xPn27nNxcLOByTXJ",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.eidolon-features",
+        "value": {
+          "initial": "Compendium.pf2e-sovereign.su-eidolons.Item.bRYWJXS2RyNyz64R",
+          "symbiosis": "Compendium.pf2e-sovereign.su-eidolons.Item.9G29lyVmWqqAQut4",
+          "transcendence": "Compendium.pf2e-sovereign.su-eidolons.Item.UT412aJuipFG9uf5"
+        }
+      }
+    ],
+    "slug": "saboteur-eidolon",
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "eidolon",
+        "phantom",
+        "spirit"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "hp": 4,
+    "size": "med",
+    "hands": 2,
+    "reach": 5,
+    "speed": 25,
+    "boosts": {
+      "0": {
+        "value": []
+      },
+      "1": {
+        "value": []
+      },
+      "2": {
+        "value": []
+      }
+    },
+    "flaws": {
+      "0": {
+        "value": []
+      }
+    },
+    "languages": {
+      "value": [],
+      "custom": ""
+    },
+    "additionalLanguages": {
+      "count": 1,
+      "value": [],
+      "custom": ""
+    },
+    "items": {
+      "eidab": {
+        "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+        "name": "Eidolon Ability",
+        "level": 1,
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.5E71mdImeRE9Fh1D"
+      }
+    },
+    "vision": "low-light-vision",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

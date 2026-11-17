@@ -38,7 +38,19 @@
             ]
           },
           {
-            "not": "self:effect:effect-stellar-dance-zenith"
+            "not": "self:effect:stellar-dance-zenith"
+          }
+        ],
+        "title": "{item|name}",
+        "text": "Your dance reaches its zenith. Apply @UUID[Compendium.pf2e-sovereign.extras.Item.dVUkaA5ZQdr6Xm3P]{Effect: Stellar Dance Zenith}."
+      },
+      {
+        "key": "Note",
+        "selector": "performance",
+        "predicate": [
+          "action:feint",
+          {
+            "not": "self:effect:stellar-dance-zenith"
           }
         ],
         "title": "{item|name}",

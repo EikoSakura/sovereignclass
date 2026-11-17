@@ -1,0 +1,62 @@
+{
+  "_id": "B9PQe0kix87wgFZT",
+  "_key": "!items!B9PQe0kix87wgFZT",
+  "name": "Effect: Combination Convocation (Greater Size)",
+  "type": "effect",
+  "img": "icons/magic/symbols/circle-ouroboros.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your eidolon is fused with another member of your assembly. It is one size larger and its reach increases by 5 feet.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "CreatureSize",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.attributes.reach.base",
+        "value": 5
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-combination-convocation-greater-size",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

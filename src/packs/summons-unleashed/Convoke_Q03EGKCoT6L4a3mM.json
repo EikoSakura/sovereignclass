@@ -1,0 +1,67 @@
+{
+  "_id": "Q03EGKCoT6L4a3mM",
+  "_key": "!items!Q03EGKCoT6L4a3mM",
+  "name": "Convoke",
+  "type": "spell",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "area": null,
+    "cost": {
+      "value": ""
+    },
+    "counteraction": false,
+    "damage": {},
+    "defense": null,
+    "description": {
+      "value": "<p>You summon a member of your assembly, summoning it in the original's place. Pick one of your non-primary eidolons in your assembly; you change your primary eidolon to that eidolon, swapping your currently manifested eidolon for that one. The new eidolon retains all conditions and effects from the previous eidolon, including things like persistent damage and damage suffered. If the new eidolon is larger than the current eidolon and it doesn't have space to accommodate it, <em>convoke</em> fails. For 1 round after casting <em>convoke</em> your eidolon cannot use any action with a frequency, such as an elemental eidolon's elemental burst action.</p><p><em>Warping Convoke:</em> you can teleport the new eidolon up to 15 feet (30 feet at 16th level) without triggering reactions.</p>"
+    },
+    "duration": {
+      "sustained": false,
+      "value": ""
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "range": {
+      "value": "100 feet"
+    },
+    "requirements": "",
+    "rules": [],
+    "target": {
+      "value": "your eidolon"
+    },
+    "time": {
+      "value": "1"
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "traditions": [],
+      "value": [
+        "concentrate",
+        "focus",
+        "manipulate",
+        "summoner",
+        "teleportation"
+      ]
+    },
+    "slug": "convoke",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

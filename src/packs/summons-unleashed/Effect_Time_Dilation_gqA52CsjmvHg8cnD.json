@@ -1,0 +1,59 @@
+{
+  "_id": "gqA52CsjmvHg8cnD",
+  "_key": "!items!gqA52CsjmvHg8cnD",
+  "name": "Effect: Time Dilation",
+  "type": "effect",
+  "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p>A time eidolon siphoned time into you: quickened 1 for 1 minute.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        }
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-time-dilation",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

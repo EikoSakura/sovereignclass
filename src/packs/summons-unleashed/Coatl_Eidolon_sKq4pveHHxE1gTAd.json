@@ -1,0 +1,82 @@
+{
+  "_id": "sKq4pveHHxE1gTAd",
+  "_key": "!items!sKq4pveHHxE1gTAd",
+  "name": "Coatl Eidolon",
+  "type": "feat",
+  "img": "icons/creatures/reptiles/serpent-horned-green.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is a sacred feathered serpent. Coatl eidolon can resemble all manner of coatl, though a majestic skybound serpent covered in radiant plumage is the most common. A bond with a coatl comes most often when a coatl has already chosen to guide and defend the settlement the summoner resides.</p><p><strong>Tradition</strong> Divine</p><p><strong>Traits</strong> beast, coatl, eidolon, holy</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> coil (bludgeoning), wings (bludgeoning), jaws (piercing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +1, <em>Int</em> +0, <em>Wis</em> +1, <em>Cha</em> +1</p><p><strong>Skills</strong> Diplomacy, Religion</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 15 feet; fly 20 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.fB08hAHytVnyLBjl]{Skybound Serpent}</strong></p><p>When flying due to the eidolon's innate fly speed, it must begin and end its movement on a solid surface or immediately fall. If it gains another fly speed, increase that fly speed by 10 feet. Additionally, your eidolon's unarmed Strikes gain the holy trait.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.4SUCZ5dvsW698TR2]{Radiant Wings}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon unfurls its radiant wings in a grand display. Each creature in a @Template[type:emanation|distance:30] must attempt a @Check[will|against:class|options:area-effect] save against your class DC.</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.TkIyaNPgTZFBCCuh]{Dazzled} for 1 round.</p><p><strong>Failure</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.XgEqL1kFApUbl5Z2]{Blinded} for 1 round, and dazzled for 1 minute. If the creature was unholy, the creature is also @UUID[Compendium.pf2e.conditionitems.Item.dfCMdR4wnpbYNTix]{Stunned 1}.</p><p><strong>Critical Failure</strong> The creature is blinded for 1 round, dazzled for 1 minute, and stunned 1. If the creature was unholy, the creature is stunned 2.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.UJfG1kp0kAf7GcR1]{Serpent Hope}</strong></p><p>Your eidolon is surrounded by an aura of hope in a @Template[type:emanation|distance:30]. It has the aura and divine traits. Whenever your eidolon becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, reduce the condition value by 1 (to a minimum of 0). At the end of your turn, each ally in the eidolon's aura reduces its frightened value by 1. Allies within your eidolon's aura gain a +2 status bonus to saves against fear and unholy effects and are immune to the effects of your eidolon's Radiant Wings.</p><p>Allies in the aura receive @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.sGiACqCE3eCa9qW7]{Effect: Serpent Hope} automatically.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.M2kN0VjJ9VxThg90]{Coatl Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.diplomacy.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "divine"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "coatl-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [],
+        "slots": 1
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

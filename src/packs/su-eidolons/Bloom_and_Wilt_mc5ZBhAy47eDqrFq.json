@@ -1,0 +1,50 @@
+{
+  "_id": "mc5ZBhAy47eDqrFq",
+  "_key": "!items!mc5ZBhAy47eDqrFq",
+  "name": "Bloom and Wilt",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-transcendence.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your kami empowers the life around it or saps at it. They can cast either <em>@UUID[Compendium.pf2e.spells-srd.Item.Z9OrRXKgAPv6Hn5l]{execute}</em> or <em>@UUID[Compendium.pf2e.spells-srd.Item.2Vkd1IxylPceUAAF]{regenerate}</em> once per day as a 9th-rank divine innate spell. At 19th level, the spell becomes 10th-rank instead.</p>"
+    },
+    "level": {
+      "value": 17
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "bloom-and-wilt",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

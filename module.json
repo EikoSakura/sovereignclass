@@ -1,8 +1,8 @@
 {
   "id": "pf2e-sovereign",
   "title": "Sovereign Class (PF2e Homebrew)",
-  "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their court. Includes the class, class features, feats, and effects. Followers come from PF2e Companion Compendia. Also includes automated extras the pf2e system doesn't ship yet.",
-  "version": "1.0.5",
+  "description": "The Sovereign: a ruler who leads a loyal follower, bears regalia, and draws power from their court. Includes the class, class features, feats, and effects. Followers come from PF2e Companion Compendia. Also includes automated extras the pf2e system doesn't ship yet, and the Summons Unleashed homebrew: the Convoker summoner class archetype and eight new eidolons.",
+  "version": "1.1.0",
   "authors": [
     {
       "name": "Eiko"
@@ -10,7 +10,7 @@
   ],
   "url": "https://github.com/EikoSakura/sovereignclass",
   "manifest": "https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.json",
-  "download": "https://github.com/EikoSakura/sovereignclass/releases/download/v1.0.5/module.zip",
+  "download": "https://github.com/EikoSakura/sovereignclass/releases/download/v1.1.0/module.zip",
   "compatibility": {
     "minimum": "13",
     "verified": "14"
@@ -32,8 +32,10 @@
     ]
   },
   "esmodules": [
-    "scripts/sovereign.mjs"
+    "scripts/sovereign.mjs",
+    "scripts/convoker/index.mjs"
   ],
+  "socket": true,
   "styles": [
     "styles/sovereign.css"
   ],
@@ -109,6 +111,30 @@
         "ASSISTANT": "OWNER"
       },
       "flags": {}
+    },
+    {
+      "name": "summons-unleashed",
+      "label": "Summons Unleashed: Convoker & Eidolons",
+      "path": "packs/summons-unleashed",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
+    },
+    {
+      "name": "su-eidolons",
+      "label": "Summons Unleashed: Eidolon Ancestries",
+      "path": "packs/su-eidolons",
+      "type": "Item",
+      "system": "pf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      },
+      "flags": {}
     }
   ],
   "packFolders": [
@@ -124,7 +150,18 @@
         "effects",
         "extras"
       ],
-      "folders": []
+      "folders": [
+        {
+          "name": "Summons Unleashed",
+          "sorting": "m",
+          "color": "#2d4a6b",
+          "packs": [
+            "summons-unleashed",
+            "su-eidolons"
+          ],
+          "folders": []
+        }
+      ]
     }
   ],
   "flags": {

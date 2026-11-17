@@ -1,0 +1,154 @@
+{
+  "_id": "sYhhAaVY1sWsS4xH",
+  "_key": "!items!sYhhAaVY1sWsS4xH",
+  "name": "Time Eidolon",
+  "type": "ancestry",
+  "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Your eidolon is from the rivers of time itself. The forms of these eidolons are innumerable and at times inscrutable, sometimes emotional echoes given form like a siktempora while others something utterly alien like a hound of Tindalos or ancient one. These bonds are liminal, as the eidolon often has a unique perspective of their summoner's timeline.</p><p><strong>Tradition</strong> Occult</p><p><strong>Traits</strong> aberration, eidolon, time</p><p><strong>Home Plane</strong> Dimension of Time</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> tentacle (bludgeoning), claws (slashing), jaws (piercing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +2, <em>Int</em> +1, <em>Wis</em> +1, <em>Cha</em> -1</p><p><strong>Skills</strong> Occultism, Stealth</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> Aklo</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.EVLnP7NF10q6MJj3]{Time and Time Again}</strong> <span class=\"action-glyph\">R</span></p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.dnYFDAiFKy1HWPmf]{Time Flicker Strike}</strong> <span class=\"action-glyph\">2</span></p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.NJAPZsU45s0PdmHz]{Time Dilation}</strong> <span class=\"action-glyph\">2</span></p><hr /><p>The summoner's half of this eidolon is @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.YZ9AcxFrb6NZ5xIE]{Time Eidolon} in the Summons Unleashed compendium.</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "eidolonType",
+        "adjustName": false,
+        "prompt": "Choose your eidolon's key attribute.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.zxmHsVdjKnnA2E8P",
+            "label": "Strength"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.rUmwWTSWe5LINQYa",
+            "label": "Dexterity"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.eidolonType}",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.occultism.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.stealth.rank",
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "companionSize",
+        "adjustName": false,
+        "prompt": "PF2E.SpecificRule.Prompt.CreatureSize",
+        "choices": [
+          {
+            "label": "PF2E.ActorSizeMedium",
+            "value": "med"
+          },
+          {
+            "label": "PF2E.ActorSizeSmall",
+            "value": "sm"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.traits.size.value",
+        "value": "{item|flags.system.rulesSelections.companionSize}"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.xPn27nNxcLOByTXJ",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.eidolon-features",
+        "value": {
+          "initial": "Compendium.pf2e-sovereign.su-eidolons.Item.EVLnP7NF10q6MJj3",
+          "symbiosis": "Compendium.pf2e-sovereign.su-eidolons.Item.dnYFDAiFKy1HWPmf",
+          "transcendence": "Compendium.pf2e-sovereign.su-eidolons.Item.NJAPZsU45s0PdmHz"
+        }
+      }
+    ],
+    "slug": "time-eidolon",
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "aberration",
+        "eidolon",
+        "time"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "hp": 4,
+    "size": "med",
+    "hands": 2,
+    "reach": 5,
+    "speed": 25,
+    "boosts": {
+      "0": {
+        "value": []
+      },
+      "1": {
+        "value": []
+      },
+      "2": {
+        "value": []
+      }
+    },
+    "flaws": {
+      "0": {
+        "value": []
+      }
+    },
+    "languages": {
+      "value": [
+        "aklo"
+      ],
+      "custom": ""
+    },
+    "additionalLanguages": {
+      "count": 0,
+      "value": [],
+      "custom": ""
+    },
+    "items": {
+      "eidab": {
+        "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+        "name": "Eidolon Ability",
+        "level": 1,
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.5E71mdImeRE9Fh1D"
+      }
+    },
+    "vision": "darkvision",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_id": "guiJEdOqOFu9cGGn",
+  "_key": "!items!guiJEdOqOFu9cGGn",
+  "name": "Release Spores",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-symbiosis.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon releases a cloud of spores in a @Template[type:emanation|distance:15]. Creatures in the area take @Damage[(6+@actor.level-7)d4[poison]|options:area-damage] damage with a @Check[fortitude|against:spell|options:area-effect] save against your spell DC. The damage increases by 1d4 for each level you have beyond 7th.</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature takes half damage.</p><p><strong>Failure</strong> The creature takes full damage and is @UUID[Compendium.pf2e.conditionitems.Item.fesd1n5eVhpCSS18]{Sickened 1}.</p><p><strong>Critical Failure</strong> The creature takes double damage and is sickened 2.</p>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "eidolon",
+        "fungus",
+        "poison",
+        "primal"
+      ],
+      "otherTags": []
+    },
+    "slug": "release-spores",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "PT10M"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

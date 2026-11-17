@@ -1,0 +1,58 @@
+{
+  "_id": "NJAPZsU45s0PdmHz",
+  "_key": "!items!NJAPZsU45s0PdmHz",
+  "name": "Time Dilation",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-transcendence.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon siphons time from its foes and imbues it into its allies. Choose up to 6 creatures within 30 feet of you, at least one must be an enemy and one must be an ally. Allies you target become @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened 1} for 1 minute (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.gqA52CsjmvHg8cnD]{Effect: Time Dilation}) and enemies you target must make a @Check[fortitude|against:class] save against your class DC with the effects of <em>@UUID[Compendium.pf2e.spells-srd.Item.WsUwpfmhKrKwoIe3]{slow}</em>.</p>"
+    },
+    "level": {
+      "value": 17
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "concentrate",
+        "eidolon",
+        "time"
+      ],
+      "otherTags": []
+    },
+    "slug": "time-dilation",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "akAhbRjgwBfoBYIJ",
+  "_key": "!items!akAhbRjgwBfoBYIJ",
+  "name": "Effect: Befuddling Knowledge (Failure)",
+  "type": "effect",
+  "img": "icons/commodities/materials/feather-white-glowing-beams.webp",
+  "system": {
+    "description": {
+      "value": "<p>Off-guard, and a -3 circumstance penalty to Perception and Will saves. Ends when the creature succeeds at a Recall Knowledge check against the summoner's spell DC.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "perception",
+          "will"
+        ],
+        "type": "circumstance",
+        "value": -3
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        }
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-befuddling-knowledge-failure",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

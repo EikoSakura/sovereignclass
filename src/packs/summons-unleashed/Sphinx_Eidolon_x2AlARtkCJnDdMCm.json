@@ -1,0 +1,84 @@
+{
+  "_id": "x2AlARtkCJnDdMCm",
+  "_key": "!items!x2AlARtkCJnDdMCm",
+  "name": "Sphinx Eidolon",
+  "type": "feat",
+  "img": "icons/commodities/materials/feather-white-glowing-beams.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is a mystical beast steeped in knowledge. These eidolons most often resemble the form of a lion with the wings of a mighty falcon and the head of a human. Sphinx eidolons most often come to bond with humanoids they find interesting, either for the humanoid themself or for where they might travel.</p><p><strong>Tradition</strong> Occult</p><p><strong>Traits</strong> beast, eidolon, sphinx</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> claw (slashing), jaw (piercing), wing (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +0, <em>Int</em> +3, <em>Wis</em> +0, <em>Cha</em> +0</p><p><strong>Skills</strong> Occultism, Society</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> Sphinx</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.FLIU1atD9oEDz0Hi]{Riddlemaster}</strong></p><p>Your eidolon is trained in Bardic Lore, a special Lore skill that can be used only to @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recall Knowledge}, but on any topic. If you have legendary proficiency in Occultism, you gain expert proficiency in Bardic Lore, but you can't increase your proficiency rank in Bardic Lore by any other means.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.Bbyz3uFD1xnMPj4r]{Befuddling Knowledge}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon shares some strange bit of lore that distracts the target's mind. Your eidolon @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recalls Knowledge} on the target and the target must attempt a @Check[will|against:spell] save against your spell DC. The target takes a -1 circumstance penalty to its Will DC against this effect if your eidolon succeeded its Recall Knowledge check (-2 on a critical success).</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature is off-guard and takes a -2 circumstance penalty to Perception and Will saves for 1 round (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.ESDK9v26NhkL31VV]{Effect: Befuddling Knowledge (Success)}).</p><p><strong>Failure</strong> As success except the circumstance penalty is -3 and it doesn't end automatically. The target can end the effect early by succeeding a Recall Knowledge check against your spell DC (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.akAhbRjgwBfoBYIJ]{Effect: Befuddling Knowledge (Failure)}).</p><p><strong>Critical Failure</strong> As failure except the target is also stunned 1 as it processes new information.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.tYQ4HdclpdrfqoXy]{Words of the Ancients}</strong></p><p>Your eidolon is permanently affected by the <em>@UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]{truespeech}</em> spell. Additionally, it can spend 10 minutes to produce the effects of both a <em>@UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{clairaudience}</em> and <em>@UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{clairvoyance}</em> spell, but both spells must target the same location.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.H0U4IFdmtfACUZiF]{Sphinx Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.occultism.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.society.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "occult"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "sphinx-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [
+          "sphinx"
+        ],
+        "slots": 0
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "_id": "ESDK9v26NhkL31VV",
+  "_key": "!items!ESDK9v26NhkL31VV",
+  "name": "Effect: Befuddling Knowledge (Success)",
+  "type": "effect",
+  "img": "icons/commodities/materials/feather-white-glowing-beams.webp",
+  "system": {
+    "description": {
+      "value": "<p>Off-guard, and a -2 circumstance penalty to Perception and Will saves.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": [
+          "perception",
+          "will"
+        ],
+        "type": "circumstance",
+        "value": -2
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg",
+        "onDeleteActions": {
+          "grantee": "restrict"
+        }
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-befuddling-knowledge-success",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

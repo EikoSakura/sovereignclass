@@ -1,0 +1,65 @@
+{
+  "_id": "K2fI83HBbqECaf35",
+  "_key": "!items!K2fI83HBbqECaf35",
+  "name": "Hidden Malice",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon's unarmed Strikes gain the unholy trait. Your eidolon gains the Change Shape summoner feat (<em>Summoners+</em> pg 17), despite not meeting the prerequisite level.</p><p>The eidolon is granted the @UUID[Compendium.pf2e.actionspf2e.Item.34E7k2YRcsOU5uyl]{Change Shape} action as a stand-in; use the Summoners+ feat's details for its forms.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "traits",
+        "value": "unholy",
+        "definition": [
+          "item:category:unarmed"
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e.actionspf2e.Item.34E7k2YRcsOU5uyl",
+        "allowDuplicate": false
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "hidden-malice",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

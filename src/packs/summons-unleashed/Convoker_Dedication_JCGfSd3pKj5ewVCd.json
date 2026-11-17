@@ -1,0 +1,58 @@
+{
+  "_id": "JCGfSd3pKj5ewVCd",
+  "_key": "!items!JCGfSd3pKj5ewVCd",
+  "name": "Convoker Dedication",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You call upon a member of your assembly to assist you. You obtain the @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.Q03EGKCoT6L4a3mM]{convoke} focus spell.</p><p>Add <em>convoke</em> to your summoner focus spells.</p>"
+    },
+    "level": {
+      "value": 2
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Convoker"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "archetype",
+        "class",
+        "dedication"
+      ],
+      "otherTags": []
+    },
+    "slug": "convoker-dedication",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

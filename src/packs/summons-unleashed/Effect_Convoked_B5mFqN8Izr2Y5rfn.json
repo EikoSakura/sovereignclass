@@ -1,0 +1,57 @@
+{
+  "_id": "B5mFqN8Izr2Y5rfn",
+  "_key": "!items!B5mFqN8Izr2Y5rfn",
+  "name": "Effect: Convoked",
+  "type": "effect",
+  "img": "icons/magic/movement/portal-vortex-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>This eidolon was just convoked. It can't use any action with a frequency (such as an elemental eidolon's elemental burst) until the summoner's next turn.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "rounds",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "convoked"
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-convoked",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

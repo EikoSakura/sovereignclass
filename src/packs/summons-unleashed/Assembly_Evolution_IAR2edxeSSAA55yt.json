@@ -1,0 +1,56 @@
+{
+  "_id": "IAR2edxeSSAA55yt",
+  "_key": "!items!IAR2edxeSSAA55yt",
+  "name": "Assembly Evolution",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>You regain the power to transform your assembly at a moment's notice. You obtain the <em>@UUID[Compendium.pf2e.spells-srd.Item.lV8FkHZtzZu7Cy6j]{evolution surge}</em> focus spell. If you cast @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.Q03EGKCoT6L4a3mM]{convoke} while <em>evolution surge</em> is active, you can choose a new effect for the newly summoned eidolon.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Convoker Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "assembly-evolution",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

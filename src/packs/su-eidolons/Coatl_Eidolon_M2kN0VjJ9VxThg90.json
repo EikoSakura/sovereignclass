@@ -1,0 +1,158 @@
+{
+  "_id": "M2kN0VjJ9VxThg90",
+  "_key": "!items!M2kN0VjJ9VxThg90",
+  "name": "Coatl Eidolon",
+  "type": "ancestry",
+  "img": "icons/creatures/reptiles/serpent-horned-green.webp",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Your eidolon is a sacred feathered serpent. Coatl eidolon can resemble all manner of coatl, though a majestic skybound serpent covered in radiant plumage is the most common. A bond with a coatl comes most often when a coatl has already chosen to guide and defend the settlement the summoner resides.</p><p><strong>Tradition</strong> Divine</p><p><strong>Traits</strong> beast, coatl, eidolon, holy</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> coil (bludgeoning), wings (bludgeoning), jaws (piercing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +1, <em>Int</em> +0, <em>Wis</em> +1, <em>Cha</em> +1</p><p><strong>Skills</strong> Diplomacy, Religion</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 15 feet; fly 20 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.fB08hAHytVnyLBjl]{Skybound Serpent}</strong></p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.4SUCZ5dvsW698TR2]{Radiant Wings}</strong> <span class=\"action-glyph\">2</span></p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.UJfG1kp0kAf7GcR1]{Serpent Hope}</strong></p><hr /><p>The summoner's half of this eidolon is @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.sKq4pveHHxE1gTAd]{Coatl Eidolon} in the Summons Unleashed compendium.</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "eidolonType",
+        "adjustName": false,
+        "prompt": "Choose your eidolon's key attribute.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.m7EgSNGz8zKjuLKA",
+            "label": "Strength"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.cJ4VvVGv13mq5cif",
+            "label": "Dexterity"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.eidolonType}",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.diplomacy.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "companionSize",
+        "adjustName": false,
+        "prompt": "PF2E.SpecificRule.Prompt.CreatureSize",
+        "choices": [
+          {
+            "label": "PF2E.ActorSizeMedium",
+            "value": "med"
+          },
+          {
+            "label": "PF2E.ActorSizeSmall",
+            "value": "sm"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.traits.size.value",
+        "value": "{item|flags.system.rulesSelections.companionSize}"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.xPn27nNxcLOByTXJ",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.eidolon-features",
+        "value": {
+          "initial": "Compendium.pf2e-sovereign.su-eidolons.Item.fB08hAHytVnyLBjl",
+          "symbiosis": "Compendium.pf2e-sovereign.su-eidolons.Item.4SUCZ5dvsW698TR2",
+          "transcendence": "Compendium.pf2e-sovereign.su-eidolons.Item.UJfG1kp0kAf7GcR1"
+        }
+      },
+      {
+        "key": "BaseSpeed",
+        "selector": "fly",
+        "value": 20
+      }
+    ],
+    "slug": "coatl-eidolon",
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "beast",
+        "coatl",
+        "eidolon",
+        "holy"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "hp": 4,
+    "size": "med",
+    "hands": 2,
+    "reach": 5,
+    "speed": 15,
+    "boosts": {
+      "0": {
+        "value": []
+      },
+      "1": {
+        "value": []
+      },
+      "2": {
+        "value": []
+      }
+    },
+    "flaws": {
+      "0": {
+        "value": []
+      }
+    },
+    "languages": {
+      "value": [],
+      "custom": ""
+    },
+    "additionalLanguages": {
+      "count": 1,
+      "value": [],
+      "custom": ""
+    },
+    "items": {
+      "eidab": {
+        "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+        "name": "Eidolon Ability",
+        "level": 1,
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.5E71mdImeRE9Fh1D"
+      }
+    },
+    "vision": "darkvision",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

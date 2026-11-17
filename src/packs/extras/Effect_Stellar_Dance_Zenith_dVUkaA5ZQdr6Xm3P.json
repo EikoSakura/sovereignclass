@@ -30,7 +30,7 @@
         "damageType": "force",
         "value": "@weapon.system.damage.dice",
         "predicate": [
-          "self:effect:stance-stellar-dance-stance",
+          "self:effect:stellar-dance-stance",
           {
             "or": [
               "item:trait:agile",

@@ -1,0 +1,82 @@
+{
+  "_id": "oqaVJQqjHR6T1ZA3",
+  "_key": "!items!oqaVJQqjHR6T1ZA3",
+  "name": "Saboteur Eidolon",
+  "type": "feat",
+  "img": "icons/creatures/magical/spirit-undead-masked-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is the spirit of an ancient trickster of great prowess, their deeds given form in the astral through arcane magic. This phantom might be an ancient ancestor, echoes of a noble thief from a great legend, or perhaps something you envisioned once in an astral daydream.</p><p><strong>Tradition</strong> Arcane</p><p><strong>Traits</strong> eidolon, phantom, spirit</p><p><strong>Home Plane</strong> any plane, commonly Astral</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> dagger (piercing), fighting fan (slashing), sword-cane sheath (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +0, <em>Int</em> +1, <em>Wis</em> +1, <em>Cha</em> +1</p><p><strong>Skills</strong> Arcana, Stealth</p><p><strong>Senses</strong> low-light vision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.bRYWJXS2RyNyz64R]{Expert Lessons}</strong></p><p>Your eidolon gains a 1st-level skill feat. At second level, your eidolon increases their proficiency rank in one of their skills from trained to expert.</p><p>Choose the skill when this ability is granted; it becomes expert at 2nd level. Add the skill feat to the eidolon by hand.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.9G29lyVmWqqAQut4]{Masterful Saboteur}</strong></p><p>Your eidolon increases their proficiency rank in one of their skills from expert to master and gains a 7th-level skill feat for the chosen skill. While a creature is off-guard to your eidolon, that creature also takes a -1 circumstance penalty to saving throws against your spells.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.UT412aJuipFG9uf5]{Legendary Debilitator}</strong></p><p>Your eidolon increases their proficiency rank in one of their skills from master to legendary and gains a 15th-level skill feat for the chosen skill. When your eidolon Strikes and deals damage to an off-guard creature, the target becomes @UUID[Compendium.pf2e.conditionitems.Item.e1XGnhKNSQIm5IXg]{Stupefied 1} until the end of your next turn.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.ZFUHECJ5TXXK9HMK]{Saboteur Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.stealth.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "arcane"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "saboteur-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [],
+        "slots": 1
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

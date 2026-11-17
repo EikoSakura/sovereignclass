@@ -1,0 +1,56 @@
+{
+  "_id": "nz4NHKTj4OqG64ss",
+  "_key": "!items!nz4NHKTj4OqG64ss",
+  "name": "Assembled Assault",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Though you can only maintain the form of one eidolon of your assembly at a time, you can temporarily call upon ephemeral manifestations to push the offensive. You gain access to the @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.3Bit8lqDu9Zl9lnP]{assembled assault} focus spell.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Convoker"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "assembled-assault",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

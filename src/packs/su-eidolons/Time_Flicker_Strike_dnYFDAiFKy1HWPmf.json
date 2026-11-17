@@ -1,0 +1,52 @@
+{
+  "_id": "dnYFDAiFKy1HWPmf",
+  "_key": "!items!dnYFDAiFKy1HWPmf",
+  "name": "Time Flicker Strike",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-symbiosis.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon flickers through time toward an unsuspecting target. Your eidolon @UUID[Compendium.pf2e.actionspf2e.Item.Bcxarzksqt9ezrs6]{Strides} up to its Speed. While it takes this action, time pauses. All other creatures are completely unaware of its actions, can't speak, and can't use any actions that would be triggered by your movement. If they end their movement within melee reach of at least one enemy, they can make a melee Strike against that enemy and then teleport back to the square from which they began their Time Flicker Strike. Your eidolon can use Time Flicker Strike while Burrowing, Climbing, Flying, or Swimming instead of Striding.</p>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "eidolon"
+      ],
+      "otherTags": []
+    },
+    "slug": "time-flicker-strike",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

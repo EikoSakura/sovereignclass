@@ -1,0 +1,56 @@
+{
+  "_id": "AzkL51rHDsSvSnur",
+  "_key": "!items!AzkL51rHDsSvSnur",
+  "name": "Warping Convoke",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>By drawing on the very teleportation magicks that allow for the summoning of your convocation, you tactically reposition your active eidolon. When you cast @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.Q03EGKCoT6L4a3mM]{convoke}, you can choose to teleport your eidolon up to 15 feet without triggering reactions. At 16th level, the range of this teleport increases to 30 feet.</p>"
+    },
+    "level": {
+      "value": 8
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Convoker Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "warping-convoke",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

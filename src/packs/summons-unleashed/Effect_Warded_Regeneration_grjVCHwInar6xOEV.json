@@ -1,0 +1,58 @@
+{
+  "_id": "grjVCHwInar6xOEV",
+  "_key": "!items!grjVCHwInar6xOEV",
+  "name": "Effect: Warded Regeneration",
+  "type": "effect",
+  "img": "icons/magic/nature/leaf-glow-teal.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your kami eidolon wards you: +1 status bonus to AC.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "minutes",
+      "value": 1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "ac",
+        "type": "status",
+        "value": 1
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-warded-regeneration",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

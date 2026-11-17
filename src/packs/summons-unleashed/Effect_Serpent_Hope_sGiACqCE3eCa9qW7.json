@@ -1,0 +1,66 @@
+{
+  "_id": "sGiACqCE3eCa9qW7",
+  "_key": "!items!sGiACqCE3eCa9qW7",
+  "name": "Effect: Serpent Hope",
+  "type": "effect",
+  "img": "icons/creatures/reptiles/serpent-horned-green.webp",
+  "system": {
+    "description": {
+      "value": "<p>You are in a coatl eidolon's aura of hope: +2 status bonus to saves against fear and unholy effects, and you reduce your frightened value by 1 at the end of the summoner's turn.</p>"
+    },
+    "duration": {
+      "expiry": "turn-start",
+      "sustained": false,
+      "unit": "unlimited",
+      "value": -1
+    },
+    "level": {
+      "value": 1
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "status",
+        "value": 2,
+        "predicate": [
+          {
+            "or": [
+              "fear",
+              "unholy"
+            ]
+          }
+        ]
+      }
+    ],
+    "start": {
+      "initiative": null,
+      "value": 0
+    },
+    "tokenIcon": {
+      "show": true
+    },
+    "traits": {
+      "value": []
+    },
+    "slug": "effect-serpent-hope",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "tOJYzaVAteKmSXOB",
+  "_key": "!items!tOJYzaVAteKmSXOB",
+  "name": "Combination Convocation",
+  "type": "spell",
+  "img": "icons/magic/symbols/circle-ouroboros.webp",
+  "system": {
+    "area": null,
+    "cost": {
+      "value": ""
+    },
+    "counteraction": false,
+    "damage": {},
+    "defense": null,
+    "description": {
+      "value": "<p>You call forth another eidolon within your assembly, using the threads of connection between it and your currently deployed eidolon to combine the two into a new form. When you Cast the Spell, choose a non-primary eidolon in your assembly. It's temporarily called forth, and your magic fuses it with your primary eidolon, granting it up to two benefits. During this spell's duration, if you Cast <em>convoke</em> or unmanifest your eidolon, the spell ends.</p><ul><li><p>One evolution feat from the other eidolon. It must be a feat not currently on the primary eidolon, and the primary eidolon must meet the prerequisites for that feat, if any.</p></li><li><p>The initial ability of the other eidolon. If the ability has a choice, it must be the same choice as the other eidolon's.</p></li><li><p>One of the eidolon's unarmed attacks.</p></li><li><p>The two combine their forms into a greater size, increasing one category larger and increasing its reach by 5 feet (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.B9PQe0kix87wgFZT]{Effect: Combination Convocation (Greater Size)}).</p></li><li><p>You use excess power released from the fusion into a blast that knocks foes away. Creatures in a @Template[type:emanation|distance:30] of the primary eidolon when you Cast this Spell must succeed at a @Check[fortitude|against:spell] save or be pushed 10 feet away (20 feet on a critical failure).</p></li></ul><hr /><p><strong>Heightened (+1)</strong> You can choose up to three benefits. Additionally, you can choose up to two eidolons in your assembly to determine benefits from.</p>"
+    },
+    "duration": {
+      "sustained": false,
+      "value": "1 minute"
+    },
+    "level": {
+      "value": 6
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "range": {
+      "value": "100 feet"
+    },
+    "requirements": "",
+    "rules": [],
+    "target": {
+      "value": "your eidolon"
+    },
+    "time": {
+      "value": "3"
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "traditions": [],
+      "value": [
+        "concentrate",
+        "focus",
+        "manipulate",
+        "polymorph",
+        "summoner"
+      ]
+    },
+    "slug": "combination-convocation",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

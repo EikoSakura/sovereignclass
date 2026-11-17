@@ -1,0 +1,56 @@
+{
+  "_id": "Bbyz3uFD1xnMPj4r",
+  "_key": "!items!Bbyz3uFD1xnMPj4r",
+  "name": "Befuddling Knowledge",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-symbiosis.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon shares some strange bit of lore that distracts the target's mind. Your eidolon @UUID[Compendium.pf2e.actionspf2e.Item.1OagaWtBpVXExToo]{Recalls Knowledge} on the target and the target must attempt a @Check[will|against:spell] save against your spell DC. The target takes a -1 circumstance penalty to its Will DC against this effect if your eidolon succeeded its Recall Knowledge check (-2 on a critical success).</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature is off-guard and takes a -2 circumstance penalty to Perception and Will saves for 1 round (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.ESDK9v26NhkL31VV]{Effect: Befuddling Knowledge (Success)}).</p><p><strong>Failure</strong> As success except the circumstance penalty is -3 and it doesn't end automatically. The target can end the effect early by succeeding a Recall Knowledge check against your spell DC (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.akAhbRjgwBfoBYIJ]{Effect: Befuddling Knowledge (Failure)}).</p><p><strong>Critical Failure</strong> As failure except the target is also stunned 1 as it processes new information.</p>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "auditory",
+        "concentrate",
+        "eidolon",
+        "emotion",
+        "mental"
+      ],
+      "otherTags": []
+    },
+    "slug": "befuddling-knowledge",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

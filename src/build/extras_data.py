@@ -5,9 +5,10 @@ PACK = "extras"
 FEYBOUND = {"license": "ORC", "remaster": True, "title": "Pathfinder Feybound"}
 
 STANCE_NAME = "Stance: Stellar Dance Stance"
-STANCE_SLUG = "stance-stellar-dance-stance"
+# pf2e strips "stance-"/"effect-" prefixes from effect roll options: self:effect:<these>
+STANCE_OPTION = "stellar-dance-stance"
 ZENITH_NAME = "Effect: Stellar Dance Zenith"
-ZENITH_SLUG = "effect-stellar-dance-zenith"
+ZENITH_OPTION = "stellar-dance-zenith"
 
 STAR_IMG = "icons/magic/light/explosion-star-glow-blue.webp"
 ZENITH_IMG = "icons/magic/light/explosion-star-glow-yellow.webp"
@@ -49,17 +50,27 @@ def build_all():
           "[[/act escape skill=performance]] or [[/act tumble-through skill=performance]]; "
           f"success brings your dance to its zenith (@UUID[{zenith_uuid}]{{Zenith}})."),
         duration=("encounter", -1, "turn-start"), img=STAR_IMG,
-        rules=[{
-            "key": "Note",
-            "selector": "performance",
-            "outcome": ["success", "criticalSuccess"],
-            "predicate": [
-                {"or": ["action:escape", "action:tumble-through"]},
-                {"not": f"self:effect:{ZENITH_SLUG}"},
-            ],
-            "title": "{item|name}",
-            "text": f"Your dance reaches its zenith. Apply @UUID[{zenith_uuid}]{{Effect: Stellar Dance Zenith}}.",
-        }],
+        rules=[
+            {
+                "key": "Note",
+                "selector": "performance",
+                "outcome": ["success", "criticalSuccess"],
+                "predicate": [
+                    {"or": ["action:escape", "action:tumble-through"]},
+                    {"not": f"self:effect:{ZENITH_OPTION}"},
+                ],
+                "title": "{item|name}",
+                "text": f"Your dance reaches its zenith. Apply @UUID[{zenith_uuid}]{{Effect: Stellar Dance Zenith}}.",
+            },
+            {
+                # Dance of the Galactic Whirl: a Performance Feint brings the dance to its zenith on any result.
+                "key": "Note",
+                "selector": "performance",
+                "predicate": ["action:feint", {"not": f"self:effect:{ZENITH_OPTION}"}],
+                "title": "{item|name}",
+                "text": f"Your dance reaches its zenith. Apply @UUID[{zenith_uuid}]{{Effect: Stellar Dance Zenith}}.",
+            },
+        ],
     ))
 
     zenith = _feybound(effect(
@@ -75,7 +86,7 @@ def build_all():
             "damageType": "force",
             "value": "@weapon.system.damage.dice",
             "predicate": [
-                f"self:effect:{STANCE_SLUG}",
+                f"self:effect:{STANCE_OPTION}",
                 {"or": ["item:trait:agile", "item:trait:finesse", "item:category:unarmed"]},
             ],
         }],

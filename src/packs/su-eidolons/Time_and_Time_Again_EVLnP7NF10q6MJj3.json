@@ -1,0 +1,66 @@
+{
+  "_id": "EVLnP7NF10q6MJj3",
+  "_key": "!items!EVLnP7NF10q6MJj3",
+  "name": "Time and Time Again",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+  "system": {
+    "actionType": {
+      "value": "reaction"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon gains a +1 circumstance bonus against effects that inflict the @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} condition. Once per day, it can use a reaction when it or you fail a skill check or saving throw to revert the timeline, allowing you to roll again with a +1 circumstance bonus.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "selector": "saving-throw",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "inflicts:slowed"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "eidolon"
+      ],
+      "otherTags": []
+    },
+    "slug": "time-and-time-again",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "_id": "njylpFSS7L2qQGdE",
+  "_key": "!items!njylpFSS7L2qQGdE",
+  "name": "Expanded Assemblage",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>Your connection to your wellspring of magic grows, allowing you to call upon an even greater repository of eidolons for aid. Add an additional eidolon to your assembly; this eidolon can be of your tradition, or any non-opposing tradition. For instance, an arcane convoker could select an arcane, primal, or occult eidolon, but not a divine eidolon. If you choose an eidolon from a tradition other than your own, it is considered an eidolon of that tradition for the sake of feats and prerequisites.</p><p><strong>Special</strong> You can select this feat two additional times, gaining an additional eidolon to add to your assembly.</p>"
+    },
+    "level": {
+      "value": 6
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Convoker Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "expandedEidolon",
+        "adjustName": true,
+        "prompt": "Choose the eidolon to add to your assembly.",
+        "choices": {
+          "itemType": "feat",
+          "filter": [
+            "item:tag:summoner-eidolon",
+            {
+              "not": "item:slug:convoker-assembly"
+            }
+          ]
+        }
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "expanded-assemblage",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "maxTakable": 3
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

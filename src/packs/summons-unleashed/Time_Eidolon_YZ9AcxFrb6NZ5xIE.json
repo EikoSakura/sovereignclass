@@ -1,0 +1,84 @@
+{
+  "_id": "YZ9AcxFrb6NZ5xIE",
+  "_key": "!items!YZ9AcxFrb6NZ5xIE",
+  "name": "Time Eidolon",
+  "type": "feat",
+  "img": "icons/magic/time/hourglass-tilted-glowing-gold.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is from the rivers of time itself. The forms of these eidolons are innumerable and at times inscrutable, sometimes emotional echoes given form like a siktempora while others something utterly alien like a hound of Tindalos or ancient one. These bonds are liminal, as the eidolon often has a unique perspective of their summoner's timeline.</p><p><strong>Tradition</strong> Occult</p><p><strong>Traits</strong> aberration, eidolon, time</p><p><strong>Home Plane</strong> Dimension of Time</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> tentacle (bludgeoning), claws (slashing), jaws (piercing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +2, <em>Int</em> +1, <em>Wis</em> +1, <em>Cha</em> -1</p><p><strong>Skills</strong> Occultism, Stealth</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> Aklo</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.EVLnP7NF10q6MJj3]{Time and Time Again}</strong> <span class=\"action-glyph\">R</span></p><p>Your eidolon gains a +1 circumstance bonus against effects that inflict the @UUID[Compendium.pf2e.conditionitems.Item.xYTAsEpcJE1Ccni3]{Slowed} condition. Once per day, it can use a reaction when it or you fail a skill check or saving throw to revert the timeline, allowing you to roll again with a +1 circumstance bonus.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.dnYFDAiFKy1HWPmf]{Time Flicker Strike}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon flickers through time toward an unsuspecting target. Your eidolon @UUID[Compendium.pf2e.actionspf2e.Item.Bcxarzksqt9ezrs6]{Strides} up to its Speed. While it takes this action, time pauses. All other creatures are completely unaware of its actions, can't speak, and can't use any actions that would be triggered by your movement. If they end their movement within melee reach of at least one enemy, they can make a melee Strike against that enemy and then teleport back to the square from which they began their Time Flicker Strike. Your eidolon can use Time Flicker Strike while Burrowing, Climbing, Flying, or Swimming instead of Striding.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.NJAPZsU45s0PdmHz]{Time Dilation}</strong> <span class=\"action-glyph\">2</span></p><p>Your eidolon siphons time from its foes and imbues it into its allies. Choose up to 6 creatures within 30 feet of you, at least one must be an enemy and one must be an ally. Allies you target become @UUID[Compendium.pf2e.conditionitems.Item.nlCjDvLMf2EkV2dl]{Quickened 1} for 1 minute (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.gqA52CsjmvHg8cnD]{Effect: Time Dilation}) and enemies you target must make a @Check[fortitude|against:class] save against your class DC with the effects of <em>@UUID[Compendium.pf2e.spells-srd.Item.WsUwpfmhKrKwoIe3]{slow}</em>.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.sYhhAaVY1sWsS4xH]{Time Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.occultism.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.stealth.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "occult"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "time-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [
+          "aklo"
+        ],
+        "slots": 0
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "_id": "3Bit8lqDu9Zl9lnP",
+  "_key": "!items!3Bit8lqDu9Zl9lnP",
+  "name": "Assembled Assault",
+  "type": "spell",
+  "img": "icons/magic/symbols/runes-triangle-blue.webp",
+  "system": {
+    "area": null,
+    "cost": {
+      "value": ""
+    },
+    "counteraction": false,
+    "damage": {},
+    "defense": null,
+    "description": {
+      "value": "<p>Coordinating with your primary eidolon, you briefly summon a secondary eidolon to launch a combined attack against your foes. You summon a secondary eidolon from your assembly within range; that eidolon provides flanking for you and your allies using their reach. Your primary eidolon and secondary eidolon both make a @UUID[Compendium.pf2e.actionspf2e.Item.VjxZFuUXrCU94MWR]{Strike} against a creature within their reach. If your primary eidolon is currently under the effects of <em>@UUID[Compendium.pf2e.spells-srd.Item.HStu2Yhw3iQER9tY]{boost eidolon}</em>, the secondary eidolon is as well. If both hit the same creature, combine their damage for the purpose of resistances and weaknesses. Furthermore, both attacks count toward your multiple attack penalty, but the penalty doesn't increase until after both attacks have been made. The secondary eidolon returns to your assembly upon the spell's completion.</p>"
+    },
+    "duration": {
+      "sustained": false,
+      "value": ""
+    },
+    "level": {
+      "value": 3
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "range": {
+      "value": "60 feet"
+    },
+    "requirements": "",
+    "rules": [],
+    "target": {
+      "value": "1 creature"
+    },
+    "time": {
+      "value": "2"
+    },
+    "traits": {
+      "rarity": "uncommon",
+      "traditions": [],
+      "value": [
+        "concentrate",
+        "focus",
+        "manipulate",
+        "summon",
+        "summoner"
+      ]
+    },
+    "slug": "assembled-assault",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

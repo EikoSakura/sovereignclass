@@ -27,7 +27,28 @@ https://github.com/EikoSakura/sovereignclass/releases/latest/download/module.jso
 | Sovereign Effects | Effects to drag onto tokens from feat descriptions |
 | Sovereign Extras | Automated rules the pf2e system doesn't ship yet: Stellar Dancer Dedication, Stellar Dance Stance, and its stance and zenith effects |
 
+| Summons Unleashed: Convoker & Eidolons | The Convoker class archetype (Convoker Assembly, 7 archetype feats, the *convoke*, *assembled assault* and *combination convocation* focus spells), the summoner's side of 8 new eidolons, and their effects |
+| Summons Unleashed: Eidolon Ancestries | The eidolon actor's side of the 8 new eidolons (Coatl, Kami, Mycological, Program, Rakshasa, Saboteur, Sphinx, Time): an ancestry, Strength and Dexterity key-attribute builds, and initial, symbiosis and transcendence abilities |
+
 The module also adds **Chain Blade** to the Base Weapon list on weapon sheets.
+
+## Summons Unleashed eidolons
+
+The new eidolons work like the system's own: a summoner picks one (for example **Coatl Eidolon**) from the Eidolon class feature's list. The eidolon actor takes the matching ancestry from **Summons Unleashed: Eidolon Ancestries**, which grants the Companion Compendia **Eidolon** class and the eidolon's abilities at 1st, 7th and 17th level.
+
+A **Convoker** picks **Convoker Assembly** as their eidolon. It sets the tradition, its skill, the key attribute (Charisma or Intelligence), and records the three assembly eidolons. Spellcasting switches to prepared, and focus spells are added as you take the feats that grant them.
+
+Each eidolon is its own actor. The **Assembly** window (button in the sheet header) shows one card per slot:
+
+- **Create** an eidolon from a slot (right ancestry, your level, linked back to you), or drop an existing eidolon actor onto it. Click a portrait or the token picture to change art.
+- **Manifest** places the primary next to you; **Set primary** swaps for free at daily preparations or Refocus.
+- **Convoke** swaps tokens on the scene, moves conditions and effects over, applies the 1-round frequency lockout, and lets you click a square for Warping Convoke.
+- **Assembled Assault** places the secondary within 60 feet (copying Boost Eidolon) until you click Return or your turn ends.
+- **Fuse** (Combination Convocation) copies the chosen evolution feat, initial ability or unarmed attack onto the primary, and can grow it a size or post the fusion blast. Everything is removed when the effect ends.
+- Casting those spells from the sheet, or using Manifest Eidolon, runs the same steps.
+- **Export / Import** (or the sidebar's Export Data / Import Data on the summoner) saves and restores the summoner with every eidolon, their links, and any custom images in one JSON file.
+
+Turn on pf2e-toolbelt's **Shared Data** setting so the eidolons share the summoner's Hit Points. Players without permission to create tokens or actors are covered by a logged-in GM.
 
 ## Followers
 

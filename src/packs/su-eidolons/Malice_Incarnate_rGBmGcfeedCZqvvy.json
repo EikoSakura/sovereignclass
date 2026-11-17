@@ -1,0 +1,59 @@
+{
+  "_id": "rGBmGcfeedCZqvvy",
+  "_key": "!items!rGBmGcfeedCZqvvy",
+  "name": "Malice Incarnate",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-symbiosis.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon prepares itself to exemplify some ancient profane edict. It gains one of the following effects depending on its current shape, which gives Malice Incarnate additional traits:</p><ul><li><p><strong>Cruel Majesty</strong> (mental, visual) <strong>Requirements</strong> your eidolon is not in its true shape; <strong>Effect</strong> Your eidolon Changes Shape into its true form in a display that is equal parts terrifying and majestic. Creatures within 30 feet of your eidolon must attempt a @Check[will|against:spell] save against your spell DC.</p><p><strong>Critical Success</strong> The creature is unaffected.</p><p><strong>Success</strong> The creature is @UUID[Compendium.pf2e.conditionitems.Item.AJh5ex99aV6VTggg]{Off-Guard} against your eidolon's next Strike before the end of your turn.</p><p><strong>Failure</strong> The creature is off-guard for 1 round and @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened 1}.</p><p><strong>Critical Failure</strong> As failure except the creature is frightened 2.</p></li><li><p><strong>Malefic Consumption</strong> (morph) <strong>Requirements</strong> your eidolon is in its true form; <strong>Effect</strong> For 1 minute, your eidolon can use the Swallow Whole ability on creatures of its size or smaller that it has @UUID[Compendium.pf2e.conditionitems.Item.kWc1fhmv9LBiTuei]{Grabbed} or @UUID[Compendium.pf2e.conditionitems.Item.VcDeM8A5oI6VqhbM]{Restrained}. A swallowed creature takes @Damage[(4+floor((@actor.level-7)/2))d6[bludgeoning]] damage and the eidolon has a rupture value of [[/r 17+3*floor((@actor.level-7)/2)]]. At 9th level and every two levels thereafter, increase the bludgeoning damage by 1d6 and the rupture value by 3. (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.VlaPbCDskarlOSkA]{Effect: Malefic Consumption})</p></li></ul>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "concentrate",
+        "divine",
+        "eidolon",
+        "unholy"
+      ],
+      "otherTags": []
+    },
+    "slug": "malice-incarnate",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "PT1H"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "_id": "aTGzqv6fkQVrzJUA",
+  "_key": "!items!aTGzqv6fkQVrzJUA",
+  "name": "Warded Regeneration",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-symbiosis.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon can enter you as its ward to bolster your health. You regain @Damage[(4+floor((@actor.level-7)/2))d8[healing]] Hit Points and gain a +1 status bonus to your AC for 1 minute (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.grjVCHwInar6xOEV]{Effect: Warded Regeneration}), and then your eidolon unmanifests. After using Warded Regeneration, you can @UUID[Compendium.pf2e.actionspf2e.Item.n5vwBnLSlIXL9ptp]{Manifest Eidolon} as a single action until the end of your next turn. At 9th level and every 2 levels thereafter, the healing increases by 1d8. If your eidolon has an active Kami Ward, you gain the benefits of that action as if your eidolon was adjacent to you until the start of your next turn.</p>"
+    },
+    "level": {
+      "value": 7
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "eidolon",
+        "healing",
+        "primal",
+        "vitality"
+      ],
+      "otherTags": []
+    },
+    "slug": "warded-regeneration",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "PT10M"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

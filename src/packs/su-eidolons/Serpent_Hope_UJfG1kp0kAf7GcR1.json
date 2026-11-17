@@ -1,0 +1,70 @@
+{
+  "_id": "UJfG1kp0kAf7GcR1",
+  "_key": "!items!UJfG1kp0kAf7GcR1",
+  "name": "Serpent Hope",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-transcendence.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is surrounded by an aura of hope in a @Template[type:emanation|distance:30]. It has the aura and divine traits. Whenever your eidolon becomes @UUID[Compendium.pf2e.conditionitems.Item.TBSHQspnbcqxsmjL]{Frightened}, reduce the condition value by 1 (to a minimum of 0). At the end of your turn, each ally in the eidolon's aura reduces its frightened value by 1. Allies within your eidolon's aura gain a +2 status bonus to saves against fear and unholy effects and are immune to the effects of your eidolon's Radiant Wings.</p><p>Allies in the aura receive @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.sGiACqCE3eCa9qW7]{Effect: Serpent Hope} automatically.</p>"
+    },
+    "level": {
+      "value": 17
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "Aura",
+        "slug": "serpent-hope",
+        "radius": 30,
+        "traits": [
+          "aura",
+          "divine"
+        ],
+        "effects": [
+          {
+            "uuid": "Compendium.pf2e-sovereign.summons-unleashed.Item.sGiACqCE3eCa9qW7",
+            "affects": "allies",
+            "includesSelf": false
+          }
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "aura",
+        "divine"
+      ],
+      "otherTags": []
+    },
+    "slug": "serpent-hope",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

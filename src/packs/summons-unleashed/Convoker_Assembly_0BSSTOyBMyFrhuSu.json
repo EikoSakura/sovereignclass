@@ -1,0 +1,198 @@
+{
+  "_id": "0BSSTOyBMyFrhuSu",
+  "_key": "!items!0BSSTOyBMyFrhuSu",
+  "name": "Convoker Assembly",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p><em>Convoker class archetype.</em> Choose this as your eidolon when you take the Eidolon class feature. Though many summoners draw their power from a singular connection they forge with an eidolon, you harness the power of many, switching between them as the situation demands. Unlike Summoners, a Convoker is rarely born by accident. Many who take up this practice commonly study and perform a Binding Pact with their soon-to-be eidolons. While many are content with managing a triumvirate of eidolons, others seek to expand their convocation over time.</p><p><strong>Prerequisites</strong> You must be a summoner.</p><p><strong>Convoker Adjustments</strong> Your number of skills changes to equal 3 plus your Intelligence modifier, you do not gain your eidolon's languages, or obtain the <em>@UUID[Compendium.pf2e.spells-srd.Item.lV8FkHZtzZu7Cy6j]{evolution surge}</em> focus spell at 1st level. Furthermore, you can choose for your key attribute and spellcasting modifier to be Intelligence instead of Charisma. You become a prepared caster instead of spontaneous, preparing spells each day directly from your assembly much like a magus preparing their spells during daily preparations. Your assembly contains spells much like a spellbook but is an intangible repository of knowledge and cannot be destroyed. You must select @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.JCGfSd3pKj5ewVCd]{Convoker Dedication} as your 2nd-level class feat.</p><hr /><h2>Assembly</h2><p>Your connection is shared amongst many, a cacophony of voices bound to your form. At 1st level, instead of selecting a single eidolon, you choose a single tradition of magic from which to draw your power: arcane, divine, occult, or primal. This choice determines your casting tradition and you become trained in the associated tradition's skill. Choose 3 eidolons from the tradition matching your spellcasting tradition; these eidolons form your assembly. When choosing eidolons, they can be variations of the same eidolon type, such as multiple dragon eidolons with different damage type selections for their breath weapon, or entirely different types of eidolons so long as they are from the same tradition. When forming your assembly and selecting eidolons, you can have them have different primary and secondary attacks if you so choose. Each day, choose one eidolon from your assembly to be your primary eidolon, allowing you to @UUID[Compendium.pf2e.actionspf2e.Item.n5vwBnLSlIXL9ptp]{Manifest that Eidolon} and work alongside it as normal for the summoner class. When you Refocus, you can change which of your eidolons in your assembly is your primary eidolon. Each eidolon in your assembly shares the same items and benefits; for example, any items with the eidolon trait are shared across each eidolon in the assembly and your handwraps of mighty blows applies to all of them.</p><p>When you gain evolution feats, you can choose a number of evolution feats equal to the size of your assembly that you could qualify for, applying each to an eidolon in your assembly. Additionally, when you make your daily preparations, you can retrain any evolution feats you know for any other evolution feats available at the level you took the exchanged feats (including lower-level feats, as usual). You must meet all the new feat's other prerequisites. If you choose the Magical Understudy, Magical Adept, or Magical Master feats, the innate spells are shared across each eidolon, and you can still only cast them once per day, regardless of how many eidolons have these evolution feats.</p><hr /><h2>Running a Convoker in Foundry</h2><ul><li><p>This item records your tradition (and trains its skill), your key attribute, and your three assembly eidolons. It doesn't grant the eidolons' skills or languages to you. Your summoner spellcasting becomes prepared, using your tradition and key attribute.</p></li><li><p>Each eidolon is its own actor. Open the <strong>Assembly</strong> window from the button in your sheet's header: create each eidolon from its slot (it gets the right ancestry, your level, and a link back to you), or drop an existing eidolon actor onto a slot. Click a portrait or token picture to change the art.</p></li><li><p>Casting @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.Q03EGKCoT6L4a3mM]{convoke}, <em>assembled assault</em> or <em>combination convocation</em> from your sheet (or from the window) swaps, calls forth, or fuses your eidolons on the scene. Using Manifest Eidolon places or removes your primary eidolon.</p></li><li><p>With pf2e-toolbelt's Shared Data turned on, every eidolon shares your Hit Points automatically.</p></li><li><p>Exporting this actor (from the sidebar or the window) saves your whole assembly and its images in one file; importing it restores and relinks every eidolon.</p></li><li><p>Put Convoker Dedication in your 2nd-level class feat slot. Your focus spells are added as you take the feats that grant them.</p></li></ul>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "convokerTradition",
+        "rollOption": "convoker-tradition",
+        "adjustName": false,
+        "prompt": "Choose your assembly's magical tradition.",
+        "choices": [
+          {
+            "label": "PF2E.TraitArcane",
+            "value": "arcane"
+          },
+          {
+            "label": "PF2E.TraitDivine",
+            "value": "divine"
+          },
+          {
+            "label": "PF2E.TraitOccult",
+            "value": "occult"
+          },
+          {
+            "label": "PF2E.TraitPrimal",
+            "value": "primal"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "{item|flags.system.rulesSelections.convokerTradition}"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "value": 1,
+        "predicate": [
+          "convoker-tradition:arcane"
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1,
+        "predicate": [
+          "convoker-tradition:divine"
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.occultism.rank",
+        "value": 1,
+        "predicate": [
+          "convoker-tradition:occult"
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.nature.rank",
+        "value": 1,
+        "predicate": [
+          "convoker-tradition:primal"
+        ]
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "convokerKey",
+        "adjustName": false,
+        "prompt": "Choose your key attribute and spellcasting attribute.",
+        "choices": [
+          {
+            "label": "PF2E.AbilityCha",
+            "value": "cha"
+          },
+          {
+            "label": "PF2E.AbilityInt",
+            "value": "int"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.details.keyability.value",
+        "value": "{item|flags.system.rulesSelections.convokerKey}"
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "assemblyEidolon1",
+        "adjustName": false,
+        "prompt": "Choose assembly eidolon 1 (it must match your tradition).",
+        "choices": {
+          "itemType": "feat",
+          "filter": [
+            "item:tag:summoner-eidolon",
+            {
+              "not": "item:slug:convoker-assembly"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "assemblyEidolon2",
+        "adjustName": false,
+        "prompt": "Choose assembly eidolon 2 (it must match your tradition).",
+        "choices": {
+          "itemType": "feat",
+          "filter": [
+            "item:tag:summoner-eidolon",
+            {
+              "not": "item:slug:convoker-assembly"
+            }
+          ]
+        }
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "assemblyEidolon3",
+        "adjustName": false,
+        "prompt": "Choose assembly eidolon 3 (it must match your tradition).",
+        "choices": {
+          "itemType": "feat",
+          "filter": [
+            "item:tag:summoner-eidolon",
+            {
+              "not": "item:slug:convoker-assembly"
+            }
+          ]
+        }
+      }
+    ],
+    "traits": {
+      "rarity": "uncommon",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "convoker-assembly",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [],
+        "slots": 0
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

@@ -1,0 +1,506 @@
+{
+  "_id": "FBZxACHGhPAKtin2",
+  "_key": "!items!FBZxACHGhPAKtin2",
+  "name": "Shared Knowledge",
+  "type": "feat",
+  "img": "icons/magic/symbols/runes-star-pentagon-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "class",
+    "description": {
+      "value": "<p>The wisdom and knowledge of your assembly fills your mind. You become trained in one of the skills corresponding to your current primary eidolon. At 8th level, you become expert in this skill and at 16th level you become master in this skill. When you change your primary eidolon, this skill changes as well.</p><p>Since this proficiency is temporary, it can't be used for prerequisites. If you have the same proficiency rank or higher in the skill your primary eidolon would grant, you instead gain a +1 circumstance bonus to that skill.</p><p>Pick the skill from the dropdown on your sheet's Actions tab when your primary eidolon changes, and turn on the second toggle if you already have that rank.</p>"
+    },
+    "level": {
+      "value": 4
+    },
+    "prerequisites": {
+      "value": [
+        {
+          "value": "Convoker Dedication"
+        }
+      ]
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "shared-knowledge",
+        "toggleable": true,
+        "alwaysActive": true,
+        "label": "Shared Knowledge skill",
+        "suboptions": [
+          {
+            "label": "PF2E.Skill.Acrobatics",
+            "value": "acrobatics"
+          },
+          {
+            "label": "PF2E.Skill.Arcana",
+            "value": "arcana"
+          },
+          {
+            "label": "PF2E.Skill.Athletics",
+            "value": "athletics"
+          },
+          {
+            "label": "PF2E.Skill.Crafting",
+            "value": "crafting"
+          },
+          {
+            "label": "PF2E.Skill.Deception",
+            "value": "deception"
+          },
+          {
+            "label": "PF2E.Skill.Diplomacy",
+            "value": "diplomacy"
+          },
+          {
+            "label": "PF2E.Skill.Intimidation",
+            "value": "intimidation"
+          },
+          {
+            "label": "PF2E.Skill.Medicine",
+            "value": "medicine"
+          },
+          {
+            "label": "PF2E.Skill.Nature",
+            "value": "nature"
+          },
+          {
+            "label": "PF2E.Skill.Occultism",
+            "value": "occultism"
+          },
+          {
+            "label": "PF2E.Skill.Performance",
+            "value": "performance"
+          },
+          {
+            "label": "PF2E.Skill.Religion",
+            "value": "religion"
+          },
+          {
+            "label": "PF2E.Skill.Society",
+            "value": "society"
+          },
+          {
+            "label": "PF2E.Skill.Stealth",
+            "value": "stealth"
+          },
+          {
+            "label": "PF2E.Skill.Survival",
+            "value": "survival"
+          },
+          {
+            "label": "PF2E.Skill.Thievery",
+            "value": "thievery"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.acrobatics.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:acrobatics",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:arcana",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.athletics.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:athletics",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.crafting.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:crafting",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.deception.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:deception",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.diplomacy.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:diplomacy",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.intimidation.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:intimidation",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.medicine.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:medicine",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.nature.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:nature",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.occultism.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:occultism",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.performance.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:performance",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:religion",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.society.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:society",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.stealth.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:stealth",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.survival.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:survival",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.thievery.rank",
+        "priority": 51,
+        "predicate": [
+          "shared-knowledge:thievery",
+          {
+            "not": "shared-knowledge-bonus"
+          }
+        ],
+        "value": "ternary(gte(@actor.level,16),3,ternary(gte(@actor.level,8),2,1))"
+      },
+      {
+        "key": "RollOption",
+        "domain": "all",
+        "option": "shared-knowledge-bonus",
+        "toggleable": true,
+        "label": "Already at this rank (+1 circumstance instead)"
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "acrobatics",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:acrobatics",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "arcana",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:arcana",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "athletics",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:athletics",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "crafting",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:crafting",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "deception",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:deception",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "diplomacy",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:diplomacy",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "intimidation",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:intimidation",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "medicine",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:medicine",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "nature",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:nature",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "occultism",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:occultism",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "performance",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:performance",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "religion",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:religion",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "society",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:society",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "stealth",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:stealth",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "survival",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:survival",
+          "shared-knowledge-bonus"
+        ]
+      },
+      {
+        "key": "FlatModifier",
+        "selector": "thievery",
+        "type": "circumstance",
+        "value": 1,
+        "predicate": [
+          "shared-knowledge:thievery",
+          "shared-knowledge-bonus"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "archetype"
+      ],
+      "otherTags": []
+    },
+    "slug": "shared-knowledge",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

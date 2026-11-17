@@ -1,0 +1,60 @@
+{
+  "_id": "fB08hAHytVnyLBjl",
+  "_key": "!items!fB08hAHytVnyLBjl",
+  "name": "Skybound Serpent",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>When flying due to the eidolon's innate fly speed, it must begin and end its movement on a solid surface or immediately fall. If it gains another fly speed, increase that fly speed by 10 feet. Additionally, your eidolon's unarmed Strikes gain the holy trait.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "traits",
+        "value": "holy",
+        "definition": [
+          "item:category:unarmed"
+        ]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "skybound-serpent",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

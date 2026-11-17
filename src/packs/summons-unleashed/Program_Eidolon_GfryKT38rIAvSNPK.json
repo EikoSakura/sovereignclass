@@ -1,0 +1,86 @@
+{
+  "_id": "GfryKT38rIAvSNPK",
+  "_key": "!items!GfryKT38rIAvSNPK",
+  "name": "Program Eidolon",
+  "type": "feat",
+  "img": "icons/skills/trades/electronics-tech-circuit-blue.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is a digital interface given form. It may resemble a virtual pet, a video game character, a digital assistant, or any other form that exists within your holopad. Given form, your eidolon most resembles hardlight constructs and can similarly adept at causing interference with other tech beings.</p><p><strong>Tradition</strong> Arcane</p><p><strong>Traits</strong> construct, eidolon, tech</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> sword (slashing), jaws (piercing), advert (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +1, <em>Int</em> +2, <em>Wis</em> -1, <em>Cha</em> +1</p><p><strong>Skills</strong> Arcana, Computers</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.3VQy9ZLZaSgoNQMP]{Digital Form}</strong></p><p>Your eidolon's digital form is materialized, but retains a connection to digital wavelengths. Your eidolon's unarmed attacks gain the versatile force trait. Additionally, when it critically succeeds a Strike against a creature or hazard with the tech trait or a creature that wields or wears a tech item, the target or one required tech item of your choice becomes Glitching 1.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.8hqhKp3g6t4rRMLF]{Digitized Countermeasures}</strong></p><p>Your eidolon creates visible digitized signals on all creatures nearby. Your eidolon gains a digitized aura in a @Template[type:emanation|distance:30]. Visible creatures in the aura can't be @UUID[Compendium.pf2e.conditionitems.Item.DmAIPqOBomZ7H95W]{Concealed}, and invisible creatures are concealed rather than @UUID[Compendium.pf2e.conditionitems.Item.VRSef5y1LmL2Hkjf]{Undetected}. Your eidolon can disable these countermeasures by spending a single action, which has the concentrate trait and they can take this action again to reinstate their aura.</p><p>Use the toggle on the eidolon's sheet to switch the aura on or off.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.Fr2yEBPa9aHOyIcQ]{Technomatic Mastery}</strong></p><p>Your eidolon can cast <em>read memory</em>, <em>holographic stand-in</em>, and <em>overload systems</em> once per day each as 9th-rank arcane innate spells.</p><p><em>Starfinder 2e content.</em> Computers is a Starfinder skill; in a Pathfinder-only game it is tracked as a Computers Lore skill.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.hkRmy0VjTCAD8F2x]{Program Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.skills.computers-lore",
+        "value": {
+          "attribute": "int",
+          "label": "Computers",
+          "rank": 1
+        }
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "arcane"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "program-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [],
+        "slots": 1
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

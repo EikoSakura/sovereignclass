@@ -1,0 +1,156 @@
+{
+  "_id": "hkRmy0VjTCAD8F2x",
+  "_key": "!items!hkRmy0VjTCAD8F2x",
+  "name": "Program Eidolon",
+  "type": "ancestry",
+  "img": "icons/skills/trades/electronics-tech-circuit-blue.webp",
+  "system": {
+    "description": {
+      "gm": "",
+      "value": "<p>Your eidolon is a digital interface given form. It may resemble a virtual pet, a video game character, a digital assistant, or any other form that exists within your holopad. Given form, your eidolon most resembles hardlight constructs and can similarly adept at causing interference with other tech beings.</p><p><strong>Tradition</strong> Arcane</p><p><strong>Traits</strong> construct, eidolon, tech</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> sword (slashing), jaws (piercing), advert (bludgeoning)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +1, <em>Int</em> +2, <em>Wis</em> -1, <em>Cha</em> +1</p><p><strong>Skills</strong> Arcana, Computers</p><p><strong>Senses</strong> darkvision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.3VQy9ZLZaSgoNQMP]{Digital Form}</strong></p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.8hqhKp3g6t4rRMLF]{Digitized Countermeasures}</strong></p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.Fr2yEBPa9aHOyIcQ]{Technomatic Mastery}</strong></p><p><em>Starfinder 2e content.</em> Computers is a Starfinder skill; in a Pathfinder-only game it is tracked as a Computers Lore skill.</p><hr /><p>The summoner's half of this eidolon is @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.GfryKT38rIAvSNPK]{Program Eidolon} in the Summons Unleashed compendium.</p>"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "flag": "eidolonType",
+        "adjustName": false,
+        "prompt": "Choose your eidolon's key attribute.",
+        "choices": [
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.wgGAvO9jWqRuaQGE",
+            "label": "Strength"
+          },
+          {
+            "value": "Compendium.pf2e-sovereign.su-eidolons.Item.Rqvjwc7lh7GYzyj5",
+            "label": "Dexterity"
+          }
+        ]
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.eidolonType}",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "flag": "companionSize",
+        "adjustName": false,
+        "prompt": "PF2E.SpecificRule.Prompt.CreatureSize",
+        "choices": [
+          {
+            "label": "PF2E.ActorSizeMedium",
+            "value": "med"
+          },
+          {
+            "label": "PF2E.ActorSizeSmall",
+            "value": "sm"
+          }
+        ]
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.traits.size.value",
+        "value": "{item|flags.system.rulesSelections.companionSize}"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.xPn27nNxcLOByTXJ",
+        "allowDuplicate": false
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.pf2e.eidolon-features",
+        "value": {
+          "initial": "Compendium.pf2e-sovereign.su-eidolons.Item.3VQy9ZLZaSgoNQMP",
+          "symbiosis": "Compendium.pf2e-sovereign.su-eidolons.Item.8hqhKp3g6t4rRMLF",
+          "transcendence": "Compendium.pf2e-sovereign.su-eidolons.Item.Fr2yEBPa9aHOyIcQ"
+        }
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "system.skills.computers-lore",
+        "value": {
+          "attribute": "int",
+          "label": "Computers",
+          "rank": 1
+        }
+      }
+    ],
+    "slug": "program-eidolon",
+    "traits": {
+      "otherTags": [],
+      "value": [
+        "construct",
+        "eidolon",
+        "tech"
+      ],
+      "rarity": "common"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "hp": 4,
+    "size": "med",
+    "hands": 2,
+    "reach": 5,
+    "speed": 25,
+    "boosts": {
+      "0": {
+        "value": []
+      },
+      "1": {
+        "value": []
+      },
+      "2": {
+        "value": []
+      }
+    },
+    "flaws": {
+      "0": {
+        "value": []
+      }
+    },
+    "languages": {
+      "value": [],
+      "custom": ""
+    },
+    "additionalLanguages": {
+      "count": 1,
+      "value": [],
+      "custom": ""
+    },
+    "items": {
+      "eidab": {
+        "img": "systems/pf2e/icons/features/classes/eidolon.webp",
+        "name": "Eidolon Ability",
+        "level": 1,
+        "uuid": "Compendium.pf2e-animal-companions.AC-Features.Item.5E71mdImeRE9Fh1D"
+      }
+    },
+    "vision": "darkvision",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

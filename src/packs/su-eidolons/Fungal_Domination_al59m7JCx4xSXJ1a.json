@@ -1,0 +1,59 @@
+{
+  "_id": "al59m7JCx4xSXJ1a",
+  "_key": "!items!al59m7JCx4xSXJ1a",
+  "name": "Fungal Domination",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-transcendence.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 2
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon releases spores that invade the body of a creature within 30 feet. That creature attempts a @Check[fortitude|against:spell] saving throw against your spell DC with the effects of <em>@UUID[Compendium.pf2e.spells-srd.Item.OsOhx3TGIZ7AhD0P]{dominate}</em> based on the results of its saving throw.</p>"
+    },
+    "level": {
+      "value": 17
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "eidolon",
+        "fungus",
+        "incapacitation",
+        "primal"
+      ],
+      "otherTags": []
+    },
+    "slug": "fungal-domination",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "frequency": {
+      "max": 1,
+      "per": "day"
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

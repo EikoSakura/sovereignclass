@@ -1,0 +1,50 @@
+{
+  "_id": "tYQ4HdclpdrfqoXy",
+  "_key": "!items!tYQ4HdclpdrfqoXy",
+  "name": "Words of the Ancients",
+  "type": "feat",
+  "img": "systems/pf2e/icons/features/classes/eidolon-transcendence.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is permanently affected by the <em>@UUID[Compendium.pf2e.spells-srd.Item.SwUiVavHKMWG7t5K]{truespeech}</em> spell. Additionally, it can spend 10 minutes to produce the effects of both a <em>@UUID[Compendium.pf2e.spells-srd.Item.HXhWYJviWalN5tQ2]{clairaudience}</em> and <em>@UUID[Compendium.pf2e.spells-srd.Item.zvKWclOZ7A53DObE]{clairvoyance}</em> spell, but both spells must target the same location.</p>"
+    },
+    "level": {
+      "value": 17
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [],
+    "traits": {
+      "rarity": "common",
+      "value": [],
+      "otherTags": []
+    },
+    "slug": "words-of-the-ancients",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

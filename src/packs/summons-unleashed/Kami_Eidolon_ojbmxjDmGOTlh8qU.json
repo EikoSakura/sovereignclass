@@ -1,0 +1,82 @@
+{
+  "_id": "ojbmxjDmGOTlh8qU",
+  "_key": "!items!ojbmxjDmGOTlh8qU",
+  "name": "Kami Eidolon",
+  "type": "feat",
+  "img": "icons/magic/nature/leaf-glow-teal.webp",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your eidolon is a spirit bound to the land. A kami eidolon's appearance is as varied as the spirits are, and can appear as humanoids, animals, objects, and many other forms. While most kami choose to ward a specific place, you've earned the favor of these spirits enough to harness this bond.</p><p><strong>Tradition</strong> Primal</p><p><strong>Traits</strong> eidolon, kami, spirit</p><p><strong>Home Plane</strong> the Universe</p><hr /><p><strong>Size</strong> Medium or Small</p><p><strong>Suggested Attacks</strong> fist (bludgeoning), spade (slashing), staff (bludgeoning), katana (slashing)</p><p><strong>Eidolon Attributes</strong> <em>Con</em> +1, <em>Int</em> -1, <em>Wis</em> +3, <em>Cha</em> +0</p><p><strong>Skills</strong> Nature, Religion</p><p><strong>Senses</strong> low-light vision</p><p><strong>Language</strong> one common language</p><p><strong>Speed</strong> 25 feet</p><hr /><p><strong>Initial (1st) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.zxnMuV3iEEeCqxVg]{Kami Ward}</strong> <span class=\"action-glyph\">1</span></p><p>Your eidolon can spend a single action to gain a +1 circumstance bonus to AC and saving throws until the start of its next turn, and you gain this bonus so long as you are adjacent to your eidolon. This bonus increases to +2 against unholy effects or effects originating from unholy creatures.</p><p>Apply @UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.KZWX9RWfJcxewi4n]{Effect: Kami Ward} to the eidolon, and to yourself while adjacent.</p><p><strong>Symbiosis (7th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.aTGzqv6fkQVrzJUA]{Warded Regeneration}</strong> <span class=\"action-glyph\">1</span></p><p>Your eidolon can enter you as its ward to bolster your health. You regain @Damage[(4+floor((@actor.level-7)/2))d8[healing]] Hit Points and gain a +1 status bonus to your AC for 1 minute (@UUID[Compendium.pf2e-sovereign.summons-unleashed.Item.grjVCHwInar6xOEV]{Effect: Warded Regeneration}), and then your eidolon unmanifests. After using Warded Regeneration, you can @UUID[Compendium.pf2e.actionspf2e.Item.n5vwBnLSlIXL9ptp]{Manifest Eidolon} as a single action until the end of your next turn. At 9th level and every 2 levels thereafter, the healing increases by 1d8. If your eidolon has an active Kami Ward, you gain the benefits of that action as if your eidolon was adjacent to you until the start of your next turn.</p><p><strong>Transcendence (17th) @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.mc5ZBhAy47eDqrFq]{Bloom and Wilt}</strong></p><p>Your kami empowers the life around it or saps at it. They can cast either <em>@UUID[Compendium.pf2e.spells-srd.Item.Z9OrRXKgAPv6Hn5l]{execute}</em> or <em>@UUID[Compendium.pf2e.spells-srd.Item.2Vkd1IxylPceUAAF]{regenerate}</em> once per day as a 9th-rank divine innate spell. At 19th level, the spell becomes 10th-rank instead.</p><hr /><p><strong>Eidolon actor:</strong> give your eidolon the @UUID[Compendium.pf2e-sovereign.su-eidolons.Item.H38IepBns86GBynY]{Kami Eidolon} ancestry from the Summons Unleashed Eidolons compendium.</p>"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Summons Unleashed"
+    },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.nature.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.religion.rank",
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "override",
+        "path": "flags.system.eidolon.tradition",
+        "value": "primal"
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "summoner"
+      ],
+      "otherTags": [
+        "summoner-eidolon"
+      ]
+    },
+    "slug": "kami-eidolon",
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    },
+    "subfeatures": {
+      "languages": {
+        "granted": [],
+        "slots": 1
+      },
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}
