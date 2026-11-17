@@ -645,8 +645,6 @@ def _convoker():
 
     # ---------------------------------------------------------------- 1st level: Assembly (picked as the Eidolon)
     trad_choices = [{"label": f"PF2E.Trait{t.capitalize()}", "value": t} for t in TRADITION_SKILL]
-    # Any eidolon ancestry from any compendium or the world: this module, Companion Compendia, Summoners+, homebrew.
-    eid_filter = {"itemType": "ancestry", "filter": ["item:trait:eidolon"]}
     rules = [
         {"key": "ChoiceSet", "flag": "convokerTradition", "rollOption": "convoker-tradition", "adjustName": False,
          "prompt": "Choose your assembly's magical tradition.", "choices": trad_choices},
@@ -659,10 +657,8 @@ def _convoker():
         {"key": "ActiveEffectLike", "mode": "override", "path": "system.details.keyability.value",
          "value": "{item|flags.system.rulesSelections.convokerKey}"},
     ]
-    for i in (1, 2, 3):
-        rules.append({"key": "ChoiceSet", "flag": f"assemblyEidolon{i}", "adjustName": False,
-                      "prompt": f"Choose assembly eidolon {i} (it should match your tradition).",
-                      "choices": eid_filter})
+    # The assembly's eidolons are chosen per slot in the Assembly window (any eidolon ancestry from any
+    # compendium), so character builders like PF2e Leveler only have to handle the two simple choices above.
 
     desc = (
         p("<em>Convoker class archetype.</em> Choose this as your eidolon when you take the Eidolon class feature. "
@@ -705,13 +701,14 @@ def _convoker():
             "them once per day, regardless of how many eidolons have these evolution feats.")
         + HR
         + "<h2>Running a Convoker in Foundry</h2>"
-        + "<ul><li><p>This item records your tradition (and trains its skill), your key attribute, and your three "
-          "assembly eidolons. It doesn't grant the eidolons' skills or languages to you. Your summoner spellcasting "
-          "becomes prepared, using your tradition and key attribute.</p></li>"
-          "<li><p>Each eidolon is its own actor. Open the <strong>Assembly</strong> window from the button in your "
-          "sheet's header: create each eidolon from its slot (it gets the right ancestry, your level, and a link "
-          "back to you), or drop an existing eidolon actor onto a slot. Click a portrait or token picture to change "
-          "the art.</p></li>"
+        + "<ul><li><p>This item records your tradition (and trains its skill) and your key attribute. It doesn't "
+          "grant the eidolons' skills or languages to you. Your summoner spellcasting becomes prepared, using your "
+          "tradition and key attribute.</p></li>"
+          "<li><p>Each eidolon is its own actor. Open the <strong>Assembly</strong> tab on your sheet (or the "
+          "window from the header button), choose each slot's eidolon from its dropdown (any eidolon from any "
+          "compendium, Summoners+ included), and click Create: it gets the right ancestry, your level, and a link "
+          "back to you. You can also drop an eidolon ancestry or an existing eidolon actor onto a slot. Click a "
+          "portrait or token picture to change the art.</p></li>"
           f"<li><p>Casting {L(convoke, 'convoke')}, <em>assembled assault</em> or <em>combination convocation</em> "
           "from your sheet (or from the window) swaps, calls forth, or fuses your eidolons on the scene. Using "
           "Manifest Eidolon places or removes your primary eidolon.</p></li>"
@@ -722,7 +719,7 @@ def _convoker():
           "take the feats that grant them.</p></li></ul>"
     )
     doc = pub(feat(SU, "convoker-assembly", "Convoker Assembly", 1, desc, category="classfeature",
-                   traits=["summoner"], other_tags=["summoner-eidolon"], rarity="uncommon", rules=rules,
+                   traits=["summoner"], other_tags=["summoner-eidolon"], rules=rules,
                    img=CONVOKER_IMG))
     doc["system"]["subfeatures"] = {"languages": {"granted": [], "slots": 0}, "proficiencies": {}, "senses": {},
                                     "suppressedFeatures": []}
@@ -827,10 +824,8 @@ def _convoker():
           "eidolon, but not a divine eidolon. If you choose an eidolon from a tradition other than your own, it is "
           "considered an eidolon of that tradition for the sake of feats and prerequisites.")
         + block("Special", "You can select this feat two additional times, gaining an additional eidolon to add to "
-                "your assembly."),
-        rules=[{"key": "ChoiceSet", "flag": "expandedEidolon", "adjustName": True,
-                "prompt": "Choose the eidolon to add to your assembly.",
-                "choices": {"itemType": "ancestry", "filter": ["item:trait:eidolon"]}}]))
+                "your assembly.")
+        + p("Taking this feat opens another slot in your Assembly; choose its eidolon there.")))
     D[-1]["system"]["maxTakable"] = 3
     D.append(cfeat("warping-convoke", "Warping Convoke", 8,
         p("By drawing on the very teleportation magicks that allow for the summoning of your convocation, you "

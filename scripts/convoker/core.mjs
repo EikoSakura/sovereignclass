@@ -177,16 +177,59 @@ export function slotCount(actor) {
 export function getState(actor) {
   const raw = actor.getFlag(MODULE_ID, "assembly") ?? {};
   const count = slotCount(actor);
-  const slots = Array.from({ length: Math.max(count, raw.slots?.length ?? 0) }, (_, i) => raw.slots?.[i] ?? null);
-  return { slots, primary: raw.primary ?? null };
+  const length = Math.max(count, raw.slots?.length ?? 0);
+  const slots = Array.from({ length }, (_, i) => raw.slots?.[i] ?? null);
+  const types = Array.from({ length }, (_, i) => raw.types?.[i] ?? null);
+  return { slots, types, primary: raw.primary ?? null };
 }
 
 export async function saveState(actor, state) {
-  await actor.update({ [`flags.${MODULE_ID}.assembly`]: { slots: state.slots, primary: state.primary } });
+  await actor.update({
+    [`flags.${MODULE_ID}.assembly`]: { slots: state.slots, types: state.types ?? [], primary: state.primary },
+  });
 }
 
-// Eidolon types chosen on the Convoker Assembly (3) and each Expanded Assemblage (1 each).
+// Chooses which eidolon a slot holds (an eidolon ancestry uuid), before or instead of creating its actor.
+export async function setSlotType(actor, index, uuid) {
+  const state = getState(actor);
+  state.types[index] = uuid || null;
+  await saveState(actor, state);
+}
+
+// Every eidolon ancestry in any compendium or the world, for the slot dropdowns. Grouped by source.
+let ANCESTRY_OPTIONS = null;
+export async function eidolonAncestryOptions() {
+  if (ANCESTRY_OPTIONS) return ANCESTRY_OPTIONS;
+  const out = [];
+  for (const pack of game.packs.filter((p) => p.metadata.type === "Item")) {
+    const index = await pack.getIndex({ fields: ["system.traits.value"] });
+    for (const e of index) {
+      if (e.type === "ancestry" && (e.system?.traits?.value ?? []).includes("eidolon")) {
+        out.push({ uuid: e.uuid, name: e.name, source: pack.metadata.label });
+      }
+    }
+  }
+  for (const item of game.items) {
+    if (item.type === "ancestry" && item.system.traits?.value?.includes("eidolon")) {
+      out.push({ uuid: item.uuid, name: item.name, source: "World" });
+    }
+  }
+  ANCESTRY_OPTIONS = out.sort((a, b) => a.source.localeCompare(b.source) || a.name.localeCompare(b.name));
+  return ANCESTRY_OPTIONS;
+}
+export function invalidateAncestryOptions() {
+  ANCESTRY_OPTIONS = null;
+}
+
+// Each slot's eidolon type: chosen in the Assembly view, or (for older characters) on the Convoker Assembly
+// (3) and each Expanded Assemblage (1 each).
 export function slotTypes(actor) {
+  const chosen = getState(actor).types;
+  const legacy = legacySlotTypes(actor);
+  return Array.from({ length: Math.max(chosen.length, legacy.length) }, (_, i) => chosen[i] ?? legacy[i] ?? null);
+}
+
+function legacySlotTypes(actor) {
   const assembly = actor.itemTypes.feat.find((f) => f.slug === FEAT.assembly);
   const sel = assembly?.flags?.pf2e?.rulesSelections ?? {};
   const types = [sel.assemblyEidolon1, sel.assemblyEidolon2, sel.assemblyEidolon3];
@@ -364,6 +407,7 @@ export async function createEidolonActor(summoner, index, typeOverride = null) {
     notify(`No eidolon ancestry was found for ${type.name}. Add one to ${name} by hand.`, "warn");
   }
   await linkEidolon(summoner, eidolon, index);
+  if (typeOverride) await setSlotType(summoner, index, typeOverride);
   return eidolon;
 }
 

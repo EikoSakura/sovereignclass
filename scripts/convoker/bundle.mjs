@@ -64,7 +64,8 @@ export async function buildBundle(summoner) {
     const url = await toDataURL(path);
     if (url) images[path] = url;
   }
-  foundry.utils.setProperty(data, `flags.${MODULE_ID}.bundle`, { version: BUNDLE_VERSION, slots, primary, eidolons, images });
+  const types = state.types ?? [];
+  foundry.utils.setProperty(data, `flags.${MODULE_ID}.bundle`, { version: BUNDLE_VERSION, slots, types, primary, eidolons, images });
   return data;
 }
 
@@ -176,7 +177,7 @@ export async function restoreBundle(summoner, bundle) {
 
   const slots = bundle.slots.map((i) => (i === null || i === undefined ? null : created[i]?.id ?? null));
   const primary = bundle.primary >= 0 ? created[bundle.primary]?.id ?? null : slots.find(Boolean) ?? null;
-  await saveState(summoner, { slots, primary });
+  await saveState(summoner, { slots, types: bundle.types ?? [], primary });
   await summoner.unsetFlag(MODULE_ID, "bundle");
   const n = created.filter(Boolean).length;
   notify(`Restored ${n} eidolon${n === 1 ? "" : "s"} for ${summoner.name}.`);

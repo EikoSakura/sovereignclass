@@ -1,7 +1,7 @@
 // The Assembly view: one card per slot (each its own eidolon actor) plus each eidolon's evolution feats.
 // The same view renders in its own window (AssemblyApp) and in an "Assembly" tab on the summoner's sheet.
 import {
-  FEAT, MODULE_ID, createEidolonActor, ensureConvokerSpellcasting, getConvoker, getMembers, getPrimary, hasFeat,
+  FEAT, MODULE_ID, createEidolonActor, eidolonAncestryOptions, setSlotType, ensureConvokerSpellcasting, getConvoker, getMembers, getPrimary, hasFeat,
   isConvoker, linkEidolon, localizeLabel as esc, notify, sceneTokenOf, slotCount, syncSharedGear,
   toolbeltShareEnabled, unlinkEidolon,
 } from "./core.mjs";
@@ -22,7 +22,21 @@ function sizeName(actor) {
   return game.i18n.localize(CONFIG.PF2E.actorSizes?.[actor.system.traits?.size?.value] ?? "");
 }
 
-function card(m, editable) {
+function typeSelect(m, ancestries) {
+  const groups = new Map();
+  for (const o of ancestries ?? []) {
+    if (!groups.has(o.source)) groups.set(o.source, []);
+    groups.get(o.source).push(o);
+  }
+  const known = m.typeUuid && !(ancestries ?? []).some((o) => o.uuid === m.typeUuid)
+    ? `<option value="${esc(m.typeUuid)}" selected>${esc(m.typeName ?? "Chosen eidolon")}</option>` : "";
+  const body = [...groups].map(([source, list]) => `<optgroup label="${esc(source)}">${list
+    .map((o) => `<option value="${esc(o.uuid)}" ${o.uuid === m.typeUuid ? "selected" : ""}>${esc(o.name)}</option>`).join("")}</optgroup>`).join("");
+  return `<select class="type-select" data-assembly-type data-slot="${m.index}">
+    <option value="" ${m.typeUuid ? "" : "selected"}>Choose an eidolon...</option>${known}${body}</select>`;
+}
+
+function card(m, editable, ancestries = null) {
   if (m.locked) {
     return `<li class="slot locked" data-slot="${m.index}"><i class="fa-solid fa-lock"></i><span>Take Expanded Assemblage to open this slot</span></li>`;
   }
@@ -32,9 +46,10 @@ function card(m, editable) {
       ? `<button type="button" data-assembly="create" data-slot="${m.index}"><i class="fa-solid fa-plus"></i> Create ${esc(m.typeName ?? "eidolon")}</button>`
       : "";
     const missing = m.missing ? `<span class="warn">The linked actor was deleted</span>` : "";
+    const pick = editable ? typeSelect(m, ancestries) : type;
     return `<li class="slot empty" data-slot="${m.index}">
-      <div class="drop"><i class="fa-solid fa-user-plus"></i><span>Drop an eidolon actor or ancestry here</span></div>
-      ${type}${missing}${create}</li>`;
+      <div class="drop"><i class="fa-solid fa-user-plus"></i><span>Choose an eidolon, or drop an eidolon actor or ancestry here</span></div>
+      ${pick}${missing}${create}</li>`;
   }
   const a = m.actor;
   const owner = a.isOwner;
@@ -99,6 +114,7 @@ export async function renderAssembly(actor, { notice = null, inSheet = false } =
   const focus = actor.system.resources.focus ?? { value: 0, max: 0 };
   const hp = actor.system.attributes.hp;
   const options = evolutionSlots(actor).length ? await evolutionOptions() : [];
+  const ancestries = editable && members.some((m) => !m.actor && !m.locked) ? await eidolonAncestryOptions() : null;
 
   const notices = [];
   if (notice) notices.push(`<p class="notice">${esc(notice)} <a data-assembly="dismissNotice"><i class="fa-solid fa-xmark"></i></a></p>`);
@@ -135,7 +151,7 @@ export async function renderAssembly(actor, { notice = null, inSheet = false } =
     </footer>` : "";
   return `<div class="${MODULE_ID}-assembly-view" data-summoner-id="${actor.id}">
     ${header}${notices.join("")}
-    <ol class="slots">${members.map((m) => card(m, editable)).join("")}</ol>
+    <ol class="slots">${members.map((m) => card(m, editable, ancestries)).join("")}</ol>
     ${bar}
     <section class="evolution-section"><h3><i class="fa-solid fa-dna"></i> Evolution feats</h3>${evolutionTable(actor, members, options, editable)}</section>
   </div>`;
@@ -267,6 +283,12 @@ export function bindAssembly(root, actor, { onDismissNotice = null } = {}) {
     }
   });
   root.addEventListener("change", async (event) => {
+    const typePick = event.target.closest("select[data-assembly-type]");
+    if (typePick) {
+      event.stopPropagation();
+      await setSlotType(actor, Number(typePick.dataset.slot), typePick.value || null);
+      return;
+    }
     const select = event.target.closest("select[data-assembly-evolution]");
     if (!select) return;
     event.stopPropagation();

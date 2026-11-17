@@ -13,7 +13,7 @@
     },
     "category": "class",
     "description": {
-      "value": "<p>Your connection to your wellspring of magic grows, allowing you to call upon an even greater repository of eidolons for aid. Add an additional eidolon to your assembly; this eidolon can be of your tradition, or any non-opposing tradition. For instance, an arcane convoker could select an arcane, primal, or occult eidolon, but not a divine eidolon. If you choose an eidolon from a tradition other than your own, it is considered an eidolon of that tradition for the sake of feats and prerequisites.</p><p><strong>Special</strong> You can select this feat two additional times, gaining an additional eidolon to add to your assembly.</p>"
+      "value": "<p>Your connection to your wellspring of magic grows, allowing you to call upon an even greater repository of eidolons for aid. Add an additional eidolon to your assembly; this eidolon can be of your tradition, or any non-opposing tradition. For instance, an arcane convoker could select an arcane, primal, or occult eidolon, but not a divine eidolon. If you choose an eidolon from a tradition other than your own, it is considered an eidolon of that tradition for the sake of feats and prerequisites.</p><p><strong>Special</strong> You can select this feat two additional times, gaining an additional eidolon to add to your assembly.</p><p>Taking this feat opens another slot in your Assembly; choose its eidolon there.</p>"
     },
     "level": {
       "value": 6
@@ -30,20 +30,7 @@
       "remaster": true,
       "title": "Summons Unleashed"
     },
-    "rules": [
-      {
-        "key": "ChoiceSet",
-        "flag": "expandedEidolon",
-        "adjustName": true,
-        "prompt": "Choose the eidolon to add to your assembly.",
-        "choices": {
-          "itemType": "ancestry",
-          "filter": [
-            "item:trait:eidolon"
-          ]
-        }
-      }
-    ],
+    "rules": [],
     "traits": {
       "rarity": "common",
       "value": [

@@ -8,9 +8,15 @@ import { assaultFlow, castMessageInfo, cleanupFusion, convokeFlow, endAssault, f
 import { injectSheetTab, openAssembly, refreshAssemblies } from "./app.mjs";
 import { fillEvolutionDefaults, invalidateEvolutionOptions, isEvolution, removeEvolutionSlot } from "./evolutions.mjs";
 import { registerKamiWard } from "./kami.mjs";
+import { registerLevelerSetting, registerWithLeveler } from "./leveler.mjs";
+import { invalidateAncestryOptions } from "./core.mjs";
 import { exportAssembly, patchExportImport, restoreBundle } from "./bundle.mjs";
 
 const mine = (userId) => userId === game.user.id;
+
+Hooks.once("init", () => {
+  registerLevelerSetting();
+});
 
 Hooks.once("setup", () => {
   patchExportImport();
@@ -19,6 +25,7 @@ Hooks.once("setup", () => {
 Hooks.once("ready", () => {
   registerSocket();
   registerKamiWard();
+  registerWithLeveler();
   game.modules.get(MODULE_ID).api = {
     openAssembly,
     convoke: (actor) => convokeFlow(actor),
@@ -100,6 +107,7 @@ Hooks.on("createItem", async (item, _options, userId) => {
   const actor = item.actor;
   if (!actor) {
     if (isEvolution(item)) invalidateEvolutionOptions();
+    if (item.type === "ancestry") invalidateAncestryOptions();
     return;
   }
   refreshAssemblies(actor);
@@ -114,7 +122,7 @@ Hooks.on("createItem", async (item, _options, userId) => {
   if (item.slug === FEAT.assembly) {
     await ensureConvokerSpellcasting(actor);
     for (const feat of actor.itemTypes.feat) if (FEAT_SPELLS[feat.slug]) await grantFeatSpell(actor, feat);
-    openAssembly(actor, { notice: "Create or drop an eidolon actor into each slot of your assembly." });
+    openAssembly(actor, { notice: "Choose an eidolon for each slot of your assembly, then click Create (or drop an eidolon actor or ancestry on a slot)." });
   }
 });
 
