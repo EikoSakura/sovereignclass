@@ -10,6 +10,7 @@ PACK = "martial-memoires"
 PUB = {"license": "ORC", "remaster": True, "title": "Martial Memoires"}
 
 TAG = "item:tag:favored-blade"
+NATIVE = "item:tag:favored-blade-thrown"  # set by the script when the Favored Blade can already be thrown
 STANCE_OPTION = "self:effect:bladework-stance"  # pf2e drops the "stance-" prefix from effect roll options
 IMG = "icons/weapons/swords/sword-flanged-lightning.webp"
 STANCE_IMG = "icons/magic/air/air-burst-spiral-blue-gray.webp"
@@ -31,6 +32,8 @@ def build_all():
     surf_eff = uuid(PACK, "effect-blade-surfing")
     rending = uuid(PACK, "rending-recall")
     punitive = uuid(PACK, "punitive-strike")
+    command = uuid(PACK, "command-blades")
+    placed_eff = uuid(PACK, "effect-battlefield-blade")
     D = []
 
     def sfeat(key, name, level, desc, *, prereq="Soaring Blade Dedication", req=None, **kw):
@@ -49,10 +52,12 @@ def build_all():
           "your favored blade by spending 1 day of downtime with a new weapon. The DC for an ability gained via "
           "this archetype is either your class DC or spell DC, whichever is higher, and is called your soaring "
           "blade DC.",
-          f"You gain the @UUID[{stance_act}]{{Bladework Stance}} action.",
-          "<em>Foundry:</em> mark your Favored Blade with the flying-blade toggle on its row in your inventory."),
+          f"You gain the @UUID[{stance_act}]{{Bladework Stance}} action, and @UUID[{command}]{{Command Blades}} "
+          "to call back or send out your copies.",
+          "<em>Foundry:</em> mark your Favored Blade with the feather toggle on its row in your inventory."),
         prereq="trained in martial weapons", traits=["dedication"],
-        rules=[{"key": "GrantItem", "uuid": stance_act, "allowDuplicate": False}]))
+        rules=[{"key": "GrantItem", "uuid": stance_act, "allowDuplicate": False},
+               {"key": "GrantItem", "uuid": command, "allowDuplicate": False}]))
 
     stance_desc = (
         block("Requirements", "You are wielding your Favored Blade.") + HR
@@ -83,14 +88,17 @@ def build_all():
         duration=("unlimited", -1, "turn-start"), img=STANCE_IMG,
         badge={"type": "counter", "value": 1, "label": "Blades flying"},
         rules=[
+            # A melee blade that can't be thrown gains thrown 15 ft. (25 ft. with Ubiquitous Blade).
             {"key": "AdjustStrike", "mode": "add", "property": "weapon-traits", "value": "thrown-15",
-             "definition": [TAG, "item:melee", {"not": "item:thrown-melee"}],
+             "definition": [TAG, "item:melee", {"not": NATIVE}],
              "predicate": [{"not": "feat:ubiquitous-blade"}]},
             {"key": "AdjustStrike", "mode": "add", "property": "weapon-traits", "value": "thrown-25",
-             "definition": [TAG, "item:melee", {"not": "item:thrown-melee"}],
+             "definition": [TAG, "item:melee", {"not": NATIVE}],
              "predicate": ["feat:ubiquitous-blade"]},
+            # A blade that could already be thrown (a thrown melee weapon's thrown use, or a thrown ranged weapon)
+            # gets +10 feet of range increment.
             {"key": "AdjustStrike", "mode": "add", "property": "range-increment", "value": 10,
-             "definition": [TAG, "item:ranged"]},
+             "definition": [TAG, NATIVE, "item:thrown"]},
             {"key": "RollOption", "domain": "all", "option": "soaring-blade-splash", "toggleable": True,
              "label": "Raining Assault / Downpour of Steel splash", "predicate": split},
             {"key": "FlatModifier", "selector": "strike-damage", "slug": "soaring-blade-splash",
@@ -104,6 +112,14 @@ def build_all():
              "diceNumber": "@item.badge.value", "predicate": [TAG, "item:melee", "true-blades-strike"]},
         ])))
 
+    D.append(pub(action_item(PACK, "command-blades", "Command Blades",
+        block("Requirements", "You're in Bladework Stance.") + HR
+        + p("You call back one or more copies of your Favored Blade within its first range increment, or move one "
+            "or more copies flying around you to any place within your first range increment.",
+            "<em>Foundry:</em> using this opens a dialog to recall every blade (including ones stuck in enemies or "
+            "left by Battlefield Control) or to send some out; the stance's blade count follows."),
+        action="action", actions=1, traits=["concentrate"], img=STANCE_IMG)))
+
     # ------------------------------------------------------------------------------------------------ 4th
     D.append(sfeat("slashing-recall", "Slashing Recall", 4,
         p("With a little more concentration, your blades stay deadly even when returning to you. Recall all blades "
@@ -113,11 +129,14 @@ def build_all():
           "The damage type is the same as your Favored Blade. An enemy can only take this damage once, even if "
           "inside the path of two or more blades."),
         req=STANCE_REQ, action="action", actions=2))
+    D[-1]["system"]["description"]["value"] += p("<em>Foundry:</em> using this posts the damage, rolled from your "
+        "Favored Blade's dice, and the Reflex save, then recalls every blade.")
     D.append(sfeat("focused-parry", "Focused Parry", 4,
         p("As steel whirls around you, foes who try to attack you are blocked effortlessly. While you're in "
           "Bladework Stance, your Favored Blade gains the parry trait. If it already has it, the circumstance bonus "
           "to AC increases to +2.",
-          "<em>Foundry:</em> turn on the toggle if your Favored Blade already had the parry trait."),
+          "<em>Foundry:</em> the +2 turns on by itself when the weapon you mark as your Favored Blade already has "
+          "the parry trait."),
         rules=[
             {"key": "AdjustStrike", "mode": "add", "property": "weapon-traits", "value": "parry",
              "definition": [TAG], "predicate": [STANCE_OPTION]},
@@ -133,6 +152,8 @@ def build_all():
           "Blade. The DC of this action is affected by your multiple attack penalty."),
         req="You're in Bladework Stance and your Favored Blade is a melee weapon.",
         action="action", actions=1, traits=["attack"]))
+    D[-1]["system"]["description"]["value"] += p("<em>Foundry:</em> using this posts the damage, rolled from your "
+        "Favored Blade's dice, and the Reflex save at each multiple attack penalty.")
 
     # ------------------------------------------------------------------------------------------------ 8th
     D.append(sfeat("flying-pincer", "Flying Pincer", 8,
@@ -151,8 +172,9 @@ def build_all():
         p("You let many blades fall down at once, so that your target can't possibly dodge them all. Make a Strike. "
           "It deals splash damage equal to the number of blades flying over you. After this Strike, all your "
           "flying blades fall in the space of your target as if you had thrown them.",
-          "<em>Foundry:</em> turn on the splash toggle from Bladework Stance before the Strike; it adds splash "
-          "equal to the stance's blade count."),
+          "<em>Foundry:</em> using this turns on the splash for your next Strike with the Favored Blade "
+          "(splash equal to the stance's blade count); after that Strike, every flying blade drops at the target "
+          "until you recall it with Command Blades."),
         req=STANCE_REQ, action="action", actions=1))
     D.append(sfeat("focused-riposte", "Focused Riposte", 10,
         block("Trigger", "An enemy within your weapon's first range increment critically misses you with a "
@@ -202,7 +224,7 @@ def build_all():
             {"key": "AdjustStrike", "mode": "add", "property": "weapon-traits", "value": "reach",
              "definition": [TAG, "item:melee"]},
             {"key": "AdjustStrike", "mode": "add", "property": "range-increment", "value": 10,
-             "definition": [TAG, "item:ranged"]},
+             "definition": [TAG, NATIVE, "item:thrown"]},
         ]))
 
     # ------------------------------------------------------------------------------------------------ 16th
@@ -213,6 +235,10 @@ def build_all():
           f"You gain the @UUID[{punitive}]{{Punitive Strike}} reaction."),
         req=STANCE_REQ, action="action", actions=1,
         rules=[{"key": "GrantItem", "uuid": punitive, "allowDuplicate": False}]))
+    D.append(pub(effect(PACK, "effect-battlefield-blade", "Effect: Battlefield Blade",
+        p("A copy of your Favored Blade floats where you placed it with Battlefield Control. Enemies within 5 feet "
+          "of it can provoke your Punitive Strike. When this ends, the blade returns above you."),
+        duration=("minutes", 1, "turn-start"), img=IMG)))
     D.append(pub(action_item(PACK, "punitive-strike", "Punitive Strike",
         block("Trigger", "An enemy within 5 feet of a blade you placed with Battlefield Control uses a Manipulate "
                          "action, makes a ranged Strike, or leaves a square during a move action.") + HR
@@ -226,15 +252,17 @@ def build_all():
           "Favored Blade. Its damage die increases by one step, and for every blade flying above you, you deal an "
           "additional die of damage. This Strike counts as three attacks when calculating your multiple attack "
           "penalty. After using this activity, you exit your Bladework Stance.",
-          "<em>Foundry:</em> turn on the True Blade's Strike toggle from Bladework Stance for the Strike; it "
-          "upgrades the die and adds dice equal to the stance's blade count."),
+          "<em>Foundry:</em> using this turns on True Blade's Strike for your next Strike with the Favored Blade "
+          "(die one step larger, plus a die per flying blade); after its damage roll you leave Bladework Stance."),
         req=STANCE_REQ, action="action", actions=2))
     D.append(sfeat("downpour-of-steel", "Downpour of Steel", 20,
         p("Your blades rain down all around you. Make a thrown Strike against each foe within your blade's first "
           "range increment. Those Strikes deal splash damage equal to the number of copied blades flying above you, "
           "but the same enemy can only take splash damage once from this activity. Each Strike counts toward your "
           "multiple attack penalty, but do not increase your penalty until you have made all your attacks. After "
-          "using this activity, you exit your Bladework Stance."),
+          "using this activity, you exit your Bladework Stance.",
+          "<em>Foundry:</em> using this turns on the splash for your thrown Strikes; click Finish on its chat card "
+          "when you're done to leave Bladework Stance."),
         req=STANCE_REQ, action="action", actions=2))
 
     return {PACK: D}

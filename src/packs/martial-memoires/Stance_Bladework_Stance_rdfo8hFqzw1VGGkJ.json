@@ -32,7 +32,7 @@
           "item:tag:favored-blade",
           "item:melee",
           {
-            "not": "item:thrown-melee"
+            "not": "item:tag:favored-blade-thrown"
           }
         ],
         "predicate": [
@@ -50,7 +50,7 @@
           "item:tag:favored-blade",
           "item:melee",
           {
-            "not": "item:thrown-melee"
+            "not": "item:tag:favored-blade-thrown"
           }
         ],
         "predicate": [
@@ -64,7 +64,8 @@
         "value": 10,
         "definition": [
           "item:tag:favored-blade",
-          "item:ranged"
+          "item:tag:favored-blade-thrown",
+          "item:thrown"
         ]
       },
       {

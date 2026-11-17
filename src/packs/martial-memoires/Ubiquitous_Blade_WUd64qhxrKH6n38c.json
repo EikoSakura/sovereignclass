@@ -48,7 +48,8 @@
         "value": 10,
         "definition": [
           "item:tag:favored-blade",
-          "item:ranged"
+          "item:tag:favored-blade-thrown",
+          "item:thrown"
         ]
       }
     ],

@@ -13,7 +13,7 @@
     },
     "category": "class",
     "description": {
-      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>Your blades rain down all around you. Make a thrown Strike against each foe within your blade's first range increment. Those Strikes deal splash damage equal to the number of copied blades flying above you, but the same enemy can only take splash damage once from this activity. Each Strike counts toward your multiple attack penalty, but do not increase your penalty until you have made all your attacks. After using this activity, you exit your Bladework Stance.</p>"
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>Your blades rain down all around you. Make a thrown Strike against each foe within your blade's first range increment. Those Strikes deal splash damage equal to the number of copied blades flying above you, but the same enemy can only take splash damage once from this activity. Each Strike counts toward your multiple attack penalty, but do not increase your penalty until you have made all your attacks. After using this activity, you exit your Bladework Stance.</p><p><em>Foundry:</em> using this turns on the splash for your thrown Strikes; click Finish on its chat card when you're done to leave Bladework Stance.</p>"
     },
     "level": {
       "value": 20

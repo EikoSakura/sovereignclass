@@ -1,0 +1,45 @@
+{
+  "_id": "NiqXhFmOvmHgyfQA",
+  "_key": "!items!NiqXhFmOvmHgyfQA",
+  "name": "Command Blades",
+  "type": "action",
+  "img": "icons/magic/air/air-burst-spiral-blue-gray.webp",
+  "system": {
+    "actionType": {
+      "value": "action"
+    },
+    "actions": {
+      "value": 1
+    },
+    "category": null,
+    "description": {
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance.</p><hr /><p>You call back one or more copies of your Favored Blade within its first range increment, or move one or more copies flying around you to any place within your first range increment.</p><p><em>Foundry:</em> using this opens a dialog to recall every blade (including ones stuck in enemies or left by Battlefield Control) or to send some out; the stance's blade count follows.</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Martial Memoires"
+    },
+    "rules": [],
+    "slug": "command-blades",
+    "traits": {
+      "rarity": "common",
+      "value": [
+        "concentrate"
+      ]
+    },
+    "_migration": {
+      "version": 0.959,
+      "previous": null
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "sort": 0,
+  "flags": {},
+  "_stats": {
+    "coreVersion": "14.361",
+    "systemId": "pf2e",
+    "systemVersion": "8.6.1"
+  }
+}

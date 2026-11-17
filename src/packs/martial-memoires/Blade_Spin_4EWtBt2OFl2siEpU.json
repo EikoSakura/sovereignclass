@@ -13,7 +13,7 @@
     },
     "category": "class",
     "description": {
-      "value": "<p><strong>Requirements</strong> You're in Bladework Stance and your Favored Blade is a melee weapon.</p><hr /><p>With a quick movement, your blades spin around you, tearing your enemies away. All creatures within your Favored Blade's reach take damage equal to your Favored Blade's damage dice with a @Check[reflex|against:class-spell|basic] save against your soaring blade DC. The damage type is the same as your Favored Blade. The DC of this action is affected by your multiple attack penalty.</p>"
+      "value": "<p><strong>Requirements</strong> You're in Bladework Stance and your Favored Blade is a melee weapon.</p><hr /><p>With a quick movement, your blades spin around you, tearing your enemies away. All creatures within your Favored Blade's reach take damage equal to your Favored Blade's damage dice with a @Check[reflex|against:class-spell|basic] save against your soaring blade DC. The damage type is the same as your Favored Blade. The DC of this action is affected by your multiple attack penalty.</p><p><em>Foundry:</em> using this posts the damage, rolled from your Favored Blade's dice, and the Reflex save at each multiple attack penalty.</p>"
     },
     "level": {
       "value": 4

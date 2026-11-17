@@ -13,7 +13,7 @@
     },
     "category": "class",
     "description": {
-      "value": "<p>As steel whirls around you, foes who try to attack you are blocked effortlessly. While you're in Bladework Stance, your Favored Blade gains the parry trait. If it already has it, the circumstance bonus to AC increases to +2.</p><p><em>Foundry:</em> turn on the toggle if your Favored Blade already had the parry trait.</p>"
+      "value": "<p>As steel whirls around you, foes who try to attack you are blocked effortlessly. While you're in Bladework Stance, your Favored Blade gains the parry trait. If it already has it, the circumstance bonus to AC increases to +2.</p><p><em>Foundry:</em> the +2 turns on by itself when the weapon you mark as your Favored Blade already has the parry trait.</p>"
     },
     "level": {
       "value": 4

@@ -36,7 +36,9 @@ The module also adds **Chain Blade** to the Base Weapon list on weapon sheets.
 
 ## Soaring Blade
 
-Take **Soaring Blade Dedication**, then mark your Favored Blade with the feather toggle on its inventory row. Entering **Bladework Stance** counts the blades flying above you (its badge, set from the Favored Blade's damage dice) and gives the Favored Blade thrown 15 ft. (or +10 feet of range increment). The stance effect also carries toggles for Raining Assault / Downpour of Steel splash and True Blade's Strike, which read that blade count.
+Take **Soaring Blade Dedication**, then mark your Favored Blade with the feather toggle on its inventory row. Entering **Bladework Stance** counts the blades flying above you (its badge, set from the Favored Blade's damage dice) and gives the Favored Blade thrown 15 ft. (or +10 feet of range increment if it could already be thrown).
+
+The count looks after itself: thrown copies leave (or stick in the target with Impaling Strikes), Blade Surfing and Battlefield Control take one, Raining Assault drops them all on the target, and **Command Blades** recalls or sends them out. Slashing Recall, Blade Spin, Sharp Steps and Rending Recall post their damage (rolled from your Favored Blade, or the bleed per stuck blade) with the save against your soaring blade DC. Raining Assault, Downpour of Steel and True Blade's Strike switch their splash or extra dice on for you, and the last two end the stance.
 
 ## Summons Unleashed eidolons
 
